@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/Users/student/Desktop/1/assgn2/fourmux.xst" -ofn "C:/Users/student/Desktop/1/assgn2/fourmux.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s400-pq208-4 fourmux.ngc fourmux.ngd  

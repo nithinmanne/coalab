@@ -1,0 +1,3 @@
+verilog work "datareg.v"
+verilog work "alu.v"
+verilog work "datapath.v"

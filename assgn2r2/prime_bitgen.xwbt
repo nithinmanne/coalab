@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\student\Desktop\1\assgn2r2\prime.ncd
+OUTFILE=C:\Users\student\Desktop\1\assgn2r2\prime.bit
+FAMILY=Spartan3
+PART=xc3s400-4pq208
+WORKINGDIR=C:\Users\student\Desktop\1\assgn2r2
+LICENSE=WebPack
+USER_INFO=210925135_0_0_943

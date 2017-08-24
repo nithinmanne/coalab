@@ -1,0 +1,7 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib simprims_ver -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o C:/Users/student/Desktop/1/assgn1/count01test_isim_translate.exe -prj C:/Users/student/Desktop/1/assgn1/count01test_translate.prj work.count01test work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/student/Desktop/1/assgn1/count01test.v" into library work
+ERROR:Simulator:702 - Can not find design unit work.glbl in library work located at isim/work 

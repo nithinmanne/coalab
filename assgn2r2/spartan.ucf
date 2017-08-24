@@ -1,0 +1,21 @@
+net "sw[0]" loc = "p191";
+net "sw[1]" loc = "p190";
+net "sw[2]" loc = "p196";
+net "sw[3]" loc = "p194";
+net "sw[4]" loc = "p198";
+net "sw[5]" loc = "p197";
+net "sw[6]" loc = "p200";
+net "sw[7]" loc = "p199";
+net "sw[8]" loc = "p5";
+net "sw[9]" loc = "p7";
+net "sw[10]" loc = "p3";
+net "sw[11]" loc = "p4";
+net "sw[12]" loc = "p205";
+net "sw[13]" loc = "p2";
+net "sw[14]" loc = "p203";
+net "sw[15]" loc = "p204";
+
+net "go" loc = "p27";
+net "stp" loc = "p139";
+net "res" loc = "p140";
+net "clk" loc = "p76";  //System 4M Clock

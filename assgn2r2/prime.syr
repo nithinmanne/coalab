@@ -1,0 +1,525 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Reading design: prime.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "prime.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "prime"
+Output Format                      : NGC
+Target Device                      : xc3s400-4-pq208
+
+---- Source Options
+Top Module Name                    : prime
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "datareg.v" in library work
+Compiling verilog file "alu.v" in library work
+Module <datareg> compiled
+Module <alu> compiled
+Module <inc> compiled
+Module <sub> compiled
+Module <equal> compiled
+Module <twomux> compiled
+Compiling verilog file "datapath.v" in library work
+Module <fourmux> compiled
+Compiling verilog file "controller.v" in library work
+Module <datapath> compiled
+Compiling verilog file "prime.v" in library work
+Module <controller> compiled
+Module <prime> compiled
+No errors in compilation
+Analysis of file <"prime.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <prime> in library <work>.
+
+Analyzing hierarchy for module <datapath> in library <work>.
+
+Analyzing hierarchy for module <controller> in library <work>.
+
+Analyzing hierarchy for module <alu> in library <work>.
+
+Analyzing hierarchy for module <datareg> in library <work>.
+
+Analyzing hierarchy for module <inc> in library <work>.
+
+Analyzing hierarchy for module <sub> in library <work>.
+
+Analyzing hierarchy for module <equal> in library <work>.
+
+Analyzing hierarchy for module <fourmux> in library <work>.
+
+Analyzing hierarchy for module <twomux> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <prime>.
+Module <prime> is correct for synthesis.
+ 
+Analyzing module <datapath> in library <work>.
+Module <datapath> is correct for synthesis.
+ 
+Analyzing module <alu> in library <work>.
+Module <alu> is correct for synthesis.
+ 
+Analyzing module <inc> in library <work>.
+Module <inc> is correct for synthesis.
+ 
+Analyzing module <sub> in library <work>.
+Module <sub> is correct for synthesis.
+ 
+Analyzing module <equal> in library <work>.
+Module <equal> is correct for synthesis.
+ 
+Analyzing module <fourmux> in library <work>.
+Module <fourmux> is correct for synthesis.
+ 
+Analyzing module <twomux> in library <work>.
+Module <twomux> is correct for synthesis.
+ 
+Analyzing module <datareg> in library <work>.
+Module <datareg> is correct for synthesis.
+ 
+Analyzing module <controller> in library <work>.
+Module <controller> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <controller>.
+    Related source file is "controller.v".
+    Found 1-bit register for signal <stp>.
+    Found 3-bit register for signal <q>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <controller> synthesized.
+
+
+Synthesizing Unit <datareg>.
+    Related source file is "datareg.v".
+    Found 16-bit register for signal <div>.
+    Found 16-bit register for signal <n>.
+    Found 16-bit register for signal <rem>.
+    Found 1-bit register for signal <res>.
+    Summary:
+	inferred  49 D-type flip-flop(s).
+Unit <datareg> synthesized.
+
+
+Synthesizing Unit <inc>.
+    Related source file is "alu.v".
+    Found 16-bit adder for signal <z>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <inc> synthesized.
+
+
+Synthesizing Unit <sub>.
+    Related source file is "alu.v".
+    Found 16-bit subtractor for signal <z>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <sub> synthesized.
+
+
+Synthesizing Unit <equal>.
+    Related source file is "alu.v".
+    Found 1-bit xor2 for signal <e$xor0000> created at line 61.
+    Found 1-bit xor2 for signal <e$xor0001> created at line 61.
+    Found 1-bit xor2 for signal <e$xor0002> created at line 61.
+    Found 1-bit xor2 for signal <e$xor0003> created at line 61.
+    Found 1-bit xor2 for signal <e$xor0004> created at line 61.
+    Found 1-bit xor2 for signal <e$xor0005> created at line 61.
+    Found 1-bit xor2 for signal <e$xor0006> created at line 61.
+    Found 1-bit xor2 for signal <e$xor0007> created at line 61.
+    Found 1-bit xor2 for signal <e$xor0008> created at line 61.
+    Found 1-bit xor2 for signal <e$xor0009> created at line 61.
+    Found 1-bit xor2 for signal <e$xor0010> created at line 61.
+    Found 1-bit xor2 for signal <e$xor0011> created at line 61.
+    Found 1-bit xor2 for signal <e$xor0012> created at line 61.
+    Found 1-bit xor2 for signal <e$xor0013> created at line 61.
+    Found 1-bit xor2 for signal <e$xor0014> created at line 61.
+    Found 1-bit xor2 for signal <e$xor0015> created at line 61.
+Unit <equal> synthesized.
+
+
+Synthesizing Unit <twomux>.
+    Related source file is "alu.v".
+Unit <twomux> synthesized.
+
+
+Synthesizing Unit <fourmux>.
+    Related source file is "alu.v".
+Unit <fourmux> synthesized.
+
+
+Synthesizing Unit <alu>.
+    Related source file is "alu.v".
+WARNING:Xst:647 - Input <res> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <alu> synthesized.
+
+
+Synthesizing Unit <datapath>.
+    Related source file is "datapath.v".
+Unit <datapath> synthesized.
+
+
+Synthesizing Unit <prime>.
+    Related source file is "prime.v".
+WARNING:Xst:646 - Signal <resi> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <prime> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 16-bit adder                                          : 1
+ 16-bit subtractor                                     : 1
+# Registers                                            : 8
+ 1-bit register                                        : 5
+ 16-bit register                                       : 3
+# Xors                                                 : 16
+ 1-bit xor2                                            : 16
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 16-bit adder                                          : 1
+ 16-bit subtractor                                     : 1
+# Registers                                            : 53
+ Flip-Flops                                            : 53
+# Xors                                                 : 16
+ 1-bit xor2                                            : 16
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <prime> ...
+
+Optimizing unit <controller> ...
+
+Optimizing unit <datareg> ...
+
+Optimizing unit <datapath> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block prime, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 53
+ Flip-Flops                                            : 53
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : prime.ngr
+Top Level Output File Name         : prime
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 20
+
+Cell Usage :
+# BELS                             : 204
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 15
+#      LUT2                        : 23
+#      LUT2_L                      : 1
+#      LUT3                        : 21
+#      LUT3_D                      : 1
+#      LUT3_L                      : 14
+#      LUT4                        : 54
+#      LUT4_D                      : 2
+#      LUT4_L                      : 3
+#      MUXCY                       : 30
+#      MUXF5                       : 4
+#      VCC                         : 1
+#      XORCY                       : 32
+# FlipFlops/Latches                : 53
+#      FDE                         : 16
+#      FDRE                        : 32
+#      FDRE_1                      : 4
+#      FDSE                        : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 19
+#      IBUF                        : 17
+#      OBUF                        : 2
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s400pq208-4 
+
+ Number of Slices:                       81  out of   3584     2%  
+ Number of Slice Flip Flops:             53  out of   7168     0%  
+ Number of 4 input LUTs:                136  out of   7168     1%  
+ Number of IOs:                          20
+ Number of bonded IOBs:                  20  out of    141    14%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 53    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 24.764ns (Maximum Frequency: 40.381MHz)
+   Minimum input arrival time before clock: 3.820ns
+   Maximum output required time after clock: 16.601ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 24.764ns (frequency: 40.381MHz)
+  Total number of paths / destination ports: 8457 / 73
+-------------------------------------------------------------------------
+Delay:               12.382ns (Levels of Logic = 7)
+  Source:            datapath0/datareg0/res (FF)
+  Destination:       controller0/q_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk falling
+
+  Data Path: datapath0/datareg0/res to controller0/q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDSE:C->Q             3   0.720   0.933  datapath0/datareg0/res (datapath0/datareg0/res)
+     LUT4_D:I3->O         25   0.551   1.839  datapath0/x<0>11 (datapath0/N4)
+     LUT4:I3->O            3   0.551   0.975  datapath0/x<14>1 (datapath0/x<14>)
+     LUT3:I2->O            1   0.551   0.827  datapath0/alu0/equal0/e74 (datapath0/alu0/equal0/e74)
+     LUT4:I3->O            2   0.551   1.216  datapath0/alu0/equal0/e95 (datapath0/alu0/equal0/e95)
+     LUT4:I0->O            4   0.551   0.943  datapath0/alu0/equal0/e487 (s<1>)
+     LUT4:I3->O            1   0.551   0.869  controller0/q_0_or0000_SW0 (N9)
+     LUT3:I2->O            1   0.551   0.000  controller0/q_0_or0000 (controller0/q_0_or0000)
+     FDRE_1:D                  0.203          controller0/q_0
+    ----------------------------------------
+    Total                     12.382ns (4.780ns logic, 7.602ns route)
+                                       (38.6% logic, 61.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 69 / 69
+-------------------------------------------------------------------------
+Offset:              3.820ns (Levels of Logic = 1)
+  Source:            go (PAD)
+  Destination:       controller0/q_0 (FF)
+  Destination Clock: clk falling
+
+  Data Path: go to controller0/q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            53   0.821   1.973  go_IBUF (go_IBUF)
+     FDRE_1:R                  1.026          controller0/stp
+    ----------------------------------------
+    Total                      3.820ns (1.847ns logic, 1.973ns route)
+                                       (48.3% logic, 51.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 220 / 2
+-------------------------------------------------------------------------
+Offset:              16.601ns (Levels of Logic = 6)
+  Source:            controller0/q_1 (FF)
+  Destination:       res (PAD)
+  Source Clock:      clk falling
+
+  Data Path: controller0/q_1 to res
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE_1:C->Q          17   0.720   1.684  controller0/q_1 (controller0/q_1)
+     LUT2:I0->O           19   0.551   1.789  controller0/sc_1_and00001 (sc<1>)
+     LUT2:I0->O            1   0.551   0.996  datapath0/x<10>1_SW1 (N65)
+     LUT4:I1->O            1   0.551   0.996  datapath0/alu0/equal0/e26 (datapath0/alu0/equal0/e26)
+     LUT4:I1->O            2   0.551   1.216  datapath0/alu0/equal0/e95 (datapath0/alu0/equal0/e95)
+     LUT4:I0->O            1   0.551   0.801  res1 (res_OBUF)
+     OBUF:I->O                 5.644          res_OBUF (res)
+    ----------------------------------------
+    Total                     16.601ns (9.119ns logic, 7.482ns route)
+                                       (54.9% logic, 45.1% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.01 secs
+ 
+--> 
+
+Total memory usage is 260580 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

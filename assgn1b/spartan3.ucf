@@ -1,0 +1,13 @@
+net "z" loc = "p139";
+net "x" loc = "p191";
+net "rst" loc = "p190";
+net "clk" loc = "p196";
+net "clk" CLOCK_DEDICATED_ROUTE = FALSE;
+net "disp[]" loc = "";
+net "disp[]" loc = "";
+net "disp[]" loc = "";
+net "disp[]" loc = "";
+net "disp[]" loc = "";
+net "disp[]" loc = "";
+net "disp[]" loc = "";
+net "disp[]" loc = "";

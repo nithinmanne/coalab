@@ -1,0 +1,60 @@
+ISim log file
+Running: C:\Users\student\Desktop\1\assgn2r2\primetest_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/student/Desktop/1/assgn2r2/primetest_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+    3
+    5
+    7
+# run all
+   11
+   13
+   17
+   19
+   23
+   29
+   31
+   37
+   41
+   43
+   47
+   53
+   59
+   61
+   67
+   71
+   73
+   79
+   83
+   89
+   97
+  101
+  103
+  107
+  109
+  113
+  127
+  131
+  137
+  139
+  149
+  151
+  157
+  163
+  167
+  173
+  179
+  181
+  191
+  193
+  197
+  199
+Stopped at time : 14144930 ns : File "C:/Users/student/Desktop/1/assgn2r2/controller.v" Line 46

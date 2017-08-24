@@ -1,0 +1,42 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/student/Desktop/1/assgn2r2/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/student/Desktop/1/assgn2r2/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "alu.v" in library work
+Module <alu> compiled
+ERROR:HDLCompilers:26 - "alu.v" line 29 expecting 'endmodule', found 'module'
+ERROR:HDLCompilers:208 - "alu.v" line 30 Port reference 'x' was not declared as input, inout or output
+ERROR:HDLCompilers:208 - "alu.v" line 30 Port reference 'y' was not declared as input, inout or output
+ERROR:HDLCompilers:208 - "alu.v" line 30 Port reference 'subw' was not declared as input, inout or output
+Module <sub> compiled
+ERROR:HDLCompilers:26 - "alu.v" line 31 expecting 'endmodule', found 'module'
+Module <inc> compiled
+ERROR:HDLCompilers:27 - "alu.v" line 42 Illegal redeclaration of 'sub'
+Module <sub> compiled
+Module <comp> compiled
+Module <twomux> compiled
+Module <fourmux> compiled
+Analysis of file <".prj"> failed.
+--> 
+
+Total memory usage is 212236 kilobytes
+
+Number of errors   :    6 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

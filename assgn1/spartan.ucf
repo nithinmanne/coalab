@@ -1,0 +1,14 @@
+net "z" loc = "p139";
+net "x" loc = "p191";
+net "rst" loc = "p190";
+net "clko" loc = "p140";  //Clock LED
+net "clki" loc = "p76";  //System 4M Clock
+net "clks" loc = "p196";  //Clock ON/OFF
+net "disp[7]" loc = "p117"; //7 Segment Disp
+net "disp[0]" loc = "p120";
+net "disp[1]" loc = "p124";
+net "disp[2]" loc = "p123";
+net "disp[3]" loc = "p126";
+net "disp[4]" loc = "p125";
+net "disp[5]" loc = "p130";
+net "disp[6]" loc = "p128";

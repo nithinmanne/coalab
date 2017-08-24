@@ -1,0 +1,7 @@
+verilog work "datareg.v"
+verilog work "alu.v"
+verilog work "datapath.v"
+verilog work "controller.v"
+verilog work "prime.v"
+verilog work "primetest.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

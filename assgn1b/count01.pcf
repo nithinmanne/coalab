@@ -1,0 +1,14 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Fri Jul 28 15:08:01 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "P196" LEVEL 1;
+PIN clk_pin<0> = BEL "clk" PINNAME PAD;
+PIN "clk_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "x" LOCATE = SITE "P191" LEVEL 1;
+COMP "z" LOCATE = SITE "P139" LEVEL 1;
+COMP "rst" LOCATE = SITE "P190" LEVEL 1;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

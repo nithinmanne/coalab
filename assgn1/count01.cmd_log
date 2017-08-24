@@ -1,0 +1,18 @@
+xst -ise "C:/assgn1/assgn1.ise" -intstyle ise -ifn "C:/assgn1/count01.xst" -ofn "C:/assgn1/count01.syr"
+xst -ise "C:/assgn1/assgn1.ise" -intstyle ise -ifn "C:/assgn1/count01.xst" -ofn "C:/assgn1/count01.syr"
+xst -ise "C:/assgn1/assgn1.ise" -intstyle ise -ifn "C:/assgn1/count01.xst" -ofn "C:/assgn1/count01.syr"
+ngdbuild -ise "C:/assgn1/assgn1.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc3s400-pq208-4 "count01.ngc" count01.ngd
+map -ise "C:/assgn1/assgn1.ise" -intstyle ise -p xc3s400-pq208-4 -cm area -pr off -k 4 -c 100 -o count01_map.ncd count01.ngd count01.pcf
+par -ise "C:/assgn1/assgn1.ise" -w -intstyle ise -ol std -t 1 count01_map.ncd count01.ncd count01.pcf
+trce -ise "C:/assgn1/assgn1.ise" -intstyle ise -v 3 -s 4 -xml count01 count01.ncd -o count01.twr count01.pcf
+xst -ise "C:/assgn1/assgn1.ise" -intstyle ise -ifn "C:/assgn1/count01.xst" -ofn "C:/assgn1/count01.syr"
+ngdbuild -ise "C:/assgn1/assgn1.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc3s400-pq208-4 "count01.ngc" count01.ngd
+map -ise "C:/assgn1/assgn1.ise" -intstyle ise -p xc3s400-pq208-4 -cm area -pr off -k 4 -c 100 -o count01_map.ncd count01.ngd count01.pcf
+par -ise "C:/assgn1/assgn1.ise" -w -intstyle ise -ol std -t 1 count01_map.ncd count01.ncd count01.pcf
+trce -ise "C:/assgn1/assgn1.ise" -intstyle ise -v 3 -s 4 -xml count01 count01.ncd -o count01.twr count01.pcf
+netgen -ise "C:/assgn1/assgn1.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim count01.ngc count01_synthesis.v
+xst -ise "C:/assgn1/assgn1.ise" -intstyle ise -ifn "C:/assgn1/count01.xst" -ofn "C:/assgn1/count01.syr"
+ngdbuild -ise "C:/assgn1/assgn1.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc3s400-pq208-4 "count01.ngc" count01.ngd
+map -ise "C:/assgn1/assgn1.ise" -intstyle ise -p xc3s400-pq208-4 -cm area -pr off -k 4 -c 100 -o count01_map.ncd count01.ngd count01.pcf
+par -ise "C:/assgn1/assgn1.ise" -w -intstyle ise -ol std -t 1 count01_map.ncd count01.ncd count01.pcf
+trce -ise "C:/assgn1/assgn1.ise" -intstyle ise -v 3 -s 4 -xml count01 count01.ncd -o count01.twr count01.pcf

@@ -1,0 +1,12 @@
+MO cmp NULL alu.v vlg3C/cmp.bin 1501839766
+MO datapath NULL datapath.v vlg27/datapath.bin 1502961782
+MO twomux NULL alu.v vlg24/twomux.bin 1502961782
+MO sub NULL alu.v vlg66/sub.bin 1502961782
+MO prime NULL prime.v vlg61/prime.bin 1502961782
+MO equal NULL alu.v vlg00/equal.bin 1502961782
+MO fourmux NULL alu.v vlg46/fourmux.bin 1502961782
+MO datareg NULL datareg.v vlg2C/datareg.bin 1502961782
+MO controller NULL controller.v vlg54/controller.bin 1502961782
+MO comp NULL alu.v vlg3F/comp.bin 1501842187
+MO inc NULL alu.v vlg4A/inc.bin 1502961782
+MO alu NULL alu.v vlg0A/alu.bin 1502961782
