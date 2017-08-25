@@ -1,5 +1,7 @@
-MO datapath NULL datapath.v vlg27/datapath.bin 1503572873
-MO partproduct NULL datapath.v vlg78/partproduct.bin 1503572873
-MO top NULL top.v vlg6F/top.bin 1503572873
-MO controller NULL controller.v vlg54/controller.bin 1503572873
-MO alu NULL datapath.v vlg0A/alu.bin 1503572873
+MO seg NULL seg.v vlg1B/seg.bin 1503657034
+MO datapath NULL datapath.v vlg27/datapath.bin 1503657034
+MO seven NULL seg.v vlg01/seven.bin 1503657034
+MO partproduct NULL datapath.v vlg78/partproduct.bin 1503657034
+MO top NULL top.v vlg6F/top.bin 1503657034
+MO controller NULL controller.v vlg54/controller.bin 1503657034
+MO alu NULL datapath.v vlg0A/alu.bin 1503657034

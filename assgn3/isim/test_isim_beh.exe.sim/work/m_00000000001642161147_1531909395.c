@@ -25,7 +25,7 @@ static const char *ng0 = "C:/Users/student/Desktop/1/assgn3/datapath.v";
 
 
 
-static void Cont_106_0(char *t0)
+static void Cont_110_0(char *t0)
 {
     char t3[8];
     char t6[8];
@@ -111,7 +111,7 @@ LAB0:    t1 = (t0 + 3168U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(106, ng0);
+LAB2:    xsi_set_current_line(110, ng0);
     t2 = (t0 + 1048U);
     t4 = *((char **)t2);
     t2 = (t0 + 1368U);
@@ -237,7 +237,7 @@ LAB12:    t57 = *((unsigned int *)t3);
 
 }
 
-static void Cont_107_1(char *t0)
+static void Cont_111_1(char *t0)
 {
     char t3[8];
     char t6[8];
@@ -323,7 +323,7 @@ LAB0:    t1 = (t0 + 3416U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(107, ng0);
+LAB2:    xsi_set_current_line(111, ng0);
     t2 = (t0 + 1208U);
     t4 = *((char **)t2);
     t2 = (t0 + 1368U);
@@ -449,7 +449,7 @@ LAB12:    t57 = *((unsigned int *)t3);
 
 }
 
-static void Cont_108_2(char *t0)
+static void Cont_112_2(char *t0)
 {
     char t3[8];
     char t6[8];
@@ -526,7 +526,7 @@ LAB0:    t1 = (t0 + 3664U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(108, ng0);
+LAB2:    xsi_set_current_line(112, ng0);
     t2 = (t0 + 1688U);
     t4 = *((char **)t2);
     t2 = (t0 + 1848U);
@@ -641,7 +641,7 @@ LAB12:    t48 = *((unsigned int *)t3);
 
 }
 
-static void Cont_109_3(char *t0)
+static void Cont_113_3(char *t0)
 {
     char t5[8];
     char t13[8];
@@ -691,7 +691,7 @@ LAB0:    t1 = (t0 + 3912U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(109, ng0);
+LAB2:    xsi_set_current_line(113, ng0);
     t2 = (t0 + 2008U);
     t3 = *((char **)t2);
     t2 = (t0 + 1368U);
@@ -757,7 +757,7 @@ LAB4:    t25 = *((unsigned int *)t13);
 
 extern void work_m_00000000001642161147_1531909395_init()
 {
-	static char *pe[] = {(void *)Cont_106_0,(void *)Cont_107_1,(void *)Cont_108_2,(void *)Cont_109_3};
+	static char *pe[] = {(void *)Cont_110_0,(void *)Cont_111_1,(void *)Cont_112_2,(void *)Cont_113_3};
 	xsi_register_didat("work_m_00000000001642161147_1531909395", "isim/test_isim_beh.exe.sim/work/m_00000000001642161147_1531909395.didat");
 	xsi_register_executes(pe);
 }

@@ -51,14 +51,24 @@ module test;
 		// Initialize Inputs
 		go = 0;
 		clk = 0;
-		ain = 2;
-		pin = 2;
+		ain = 20;
+		pin = -10;
 
 		// Wait 100 ns for global reset to finish
 		#105;
         
 		// Add stimulus here
 		go = 1;
+		
+		#1000 go=0;
+		ain = -10;
+		pin = -60;
+		#1000 go=1;
+		#1000 go=0;
+		
+		ain = 25;
+		pin = 40;
+		#1000 go=1;
 
 	end
       

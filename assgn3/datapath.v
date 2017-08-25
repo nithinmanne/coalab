@@ -18,11 +18,12 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module datapath(ain, pin, clk, status, control, xld, cntld, pld, ald, funsel, reset, p);
+module datapath(ain, pin, clk, status, control, xld, cntld, pld, ald, funsel, reset, po);
 input clk, xld, cntld, pld, ald, control, reset;
 input [7:0] ain, pin;
 input [2:0] funsel;
-output status, p;
+output status, po;
+wire [15:0] po;
 wire [5:0] status;
 
 reg [2:0] cnt;
@@ -32,6 +33,7 @@ reg [7:0] a;
 
 wire [15:0] ap, sp, qp;
 wire [2:0] qx, qcnt;
+wire psign;
 
 assign status[5] = cnt[2];
 assign status[4] = cnt[1];
@@ -39,9 +41,11 @@ assign status[3] = cnt[0];
 assign status[2] = x[2];
 assign status[1] = x[1];
 assign status[0] = x[0];
+assign psign = p[15];
+assign po = p + pin[7];
 
 alu alu0(a, p, funsel, ap);
-assign sp = p>>>2;
+assign sp = (p>>2) + ((psign<<15) + (psign<<14));
 assign qp = (control==1)?(sp):(ap);
 assign qcnt = cnt + 1;
 assign qx[0] = p[1];
@@ -52,12 +56,12 @@ always @(posedge clk)
 begin
 if(reset == 1)
 begin
-p <= pin;
+p <= (pin) + ((pin[7]<<15)+(pin[7]<<14)+(pin[7]<<13)+(pin[7]<<12)+(pin[7]<<11)+(pin[7]<<10)+(pin[7]<<9)+(pin[7]<<8));
 a <= ain;
 cnt <= 0;
 x[0] <= 0;
-x[1] <= ain[0];
-x[2] <= ain[1];
+x[1] <= pin[0];
+x[2] <= pin[1];
 end
 else
 begin
@@ -93,7 +97,7 @@ assign o[2] = 0;
 assign o[1] = 0;
 assign o[0] = 0;
 
-assign out = p + o + funsel[0]<<8;
+assign out = p + o + (funsel[0]<<8);
 
 endmodule
 

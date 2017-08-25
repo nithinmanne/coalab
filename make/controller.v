@@ -40,7 +40,7 @@ assign cntld = ~state[1]&state[0];
 assign funsel[2] = status[1]^status[0];
 assign funsel[1] = status[2]==0?(status[1]&status[0]):(~status[1]&~status[0]);
 assign funsel[0] = status[2];
-assign qdone = status[5];
+assign qdone = status[5]&status[3];
 assign qstate[1] = qdone|(state[0]);
 assign qstate[0] = qdone|(~state[1]);
 
