@@ -339,8 +339,8 @@ makeArr:
 			lw $t4, 0($t0)		#Get word from old array
 			addi $t0, $t0, 4	#Increment old array iterator
 			beq $a1, $t3, makeArrinnerskip	#Check if skippable row
-			sw $t4, 0($t2)
-			addi $t2, $t2, 4
+			sw $t4, 0($t2)		#Storing in new array
+			addi $t2, $t2, 4	#Incrementing new array address
 			makeArrinnerskip:
 			addi $t3, $t3, -1
 			bgtz $t3, makeArrinner
