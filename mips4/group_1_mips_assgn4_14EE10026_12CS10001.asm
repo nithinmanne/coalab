@@ -55,7 +55,7 @@ main:
  	lw $t0, -8($fp)			#Initialize $t0 = s
  	li $t5, 330				#Initialize a
  	li $t6, 100				#Initialize c
- 	li $t7, 481				#Initialize m
+ 	li $t7, 17				#Initialize m
  	aloop:					#Loop for getting the n*n values of a
  		sw $t0, 0($t4)		#Storing in memory location
  		mul $t0, $t0, $t5	#$t0 = a*$t0

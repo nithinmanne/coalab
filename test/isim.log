@@ -1,5 +1,5 @@
 ISim log file
-Running: C:\Users\student\Desktop\1\test\top_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/student/Desktop/1/test/top_isim_beh.wdb 
+Running: C:\Users\student\Desktop\1\test\controllertest_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/student/Desktop/1/test/controllertest_isim_beh.wdb 
 ISim P.20131013 (signature 0x7708f090)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -11,18 +11,4 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-x = 0, z = 0
-x = 0, z = 0
-x = 1, z = 0
-x = 0, z = 0
-x = 0, z = 0
-x = 0, z = 0
-x = 1, z = 1
-x = 1, z = 0
-x = 1, z = 0
-x = 0, z = 0
-x = 1, z = 1
-x = 1, z = 0
-x = 0, z = 1
-x = 0, z = 0
-Stopped at time : 240 ns : File "C:/Users/student/Desktop/1/test/test.v" Line 117
+# run 2.00us
