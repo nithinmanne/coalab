@@ -18,15 +18,14 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module controller(clk, reset, isr, sreg, funsel, lsp, lpc, lmdr, lmar, lisr, ly, wrr, mrw, rsel, spmar, pcmar, mdrz, mdrm, tr, tsp, tpc, tmdr, tisr);
+module controller(clk, reset, isr, funsel, lsp, lpc, lmdr, lmar, lisr, ly, wrr, mrw, rsel, spmar, pcmar, mdrz, mdrm, tr, tsp, tpc, tmdr, tisr, sflag, cc);
 input [15:0] isr;
-input [3:0] sreg;
 input clk, reset;
-output funsel, lsp, lpc, lmdr, lmar, lisr, ly, wrr, mrw, rsel, spmar, pcmar, mdrz, mdrm, tr, tsp, tpc, tmdr, tisr;
+output funsel, lsp, lpc, lmdr, lmar, lisr, ly, wrr, mrw, rsel, spmar, pcmar, mdrz, mdrm, tr, tsp, tpc, tmdr, tisr, sflag, cc;
 wire [2:0] funsel, rsel;
-wire lsp, lpc, lmdr, lmar, lisr, ly, wrr, mrw, spmar, pcmar, mdrz, mdrm, tr, tsp, tpc, tmdr, tisr, cc;
+wire lsp, lpc, lmdr, lmar, lisr, ly, wrr, mrw, spmar, pcmar, mdrz, mdrm, tr, tsp, tpc, tmdr, tisr, sflag, cc;
 
-reg [22:0] control;
+reg [24:0] control;
 reg [4:0] state;
 
 assign funsel[0] = control[0];
@@ -52,8 +51,8 @@ assign tsp = control[19];
 assign tpc = control[20];
 assign tmdr = control[21];
 assign tisr = control[22];
-
-ccgen ccgen0(cc, isr[15:12], sreg);
+assign sflag = control[23];
+assign cc = control[24];
 
 always @(negedge clk)
 begin
@@ -131,16 +130,9 @@ state <= 16;
 end
 else
 begin
-if(cc)
-begin
 control[22] <= 1;
 control[8] <= 1;
 state <= 13;
-end
-else
-begin
-state <= 0;
-end
 end
 end
 end
@@ -250,6 +242,7 @@ control[4] <= 1;
 control[0] <= 0;
 control[1] <= 1;
 control[2] <= 0;
+control[24] <= 1;
 state <= 0;
 end
 
@@ -272,6 +265,7 @@ control[12] <= isr[10];
 control[0] <= isr[11];
 control[1] <= isr[12];
 control[2] <= isr[13];
+control[23] <= 1;
 state <= 11;
 end
 end
@@ -287,6 +281,7 @@ control[12] <= isr[10];
 control[0] <= isr[11];
 control[1] <= isr[12];
 control[2] <= isr[13];
+control[23] <= 1;
 state <= 11;
 end
 
@@ -313,16 +308,5 @@ end
 
 end
 end
-
-endmodule
-
-
-module ccgen(cc, isr, sreg);
-input [3:0] isr;
-input [3:0] sreg;
-output cc;
-wire cc;
-
-assign cc = (isr==0)?(1):((isr==1)?(sreg[0]):((isr==2)?(~sreg[0]):((isr==3)?(sreg[1]):((isr==4)?(~sreg[1]):((isr==5)?(sreg[2]):((isr==6)?(~sreg[2]):((isr==7)?(sreg[3]):((isr==8)?(~sreg[3]):(0)))))))));
 
 endmodule

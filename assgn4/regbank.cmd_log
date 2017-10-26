@@ -1,0 +1,34 @@
+xst -intstyle ise -ifn "C:/Users/student/Desktop/1/assgn4/regbank.xst" -ofn "C:/Users/student/Desktop/1/assgn4/regbank.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s400-pq208-4 regbank.ngc regbank.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o regbank_map.ncd regbank.ngd regbank.pcf 
+xst -intstyle ise -ifn "C:/Users/student/Desktop/1/assgn4/regbank.xst" -ofn "C:/Users/student/Desktop/1/assgn4/regbank.syr" 
+xst -intstyle ise -ifn "C:/Users/student/Desktop/1/assgn4/regbank.xst" -ofn "C:/Users/student/Desktop/1/assgn4/regbank.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s400-pq208-4 regbank.ngc regbank.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o regbank_map.ncd regbank.ngd regbank.pcf 
+par -w -intstyle ise -ol high -t 1 regbank_map.ncd regbank.ncd regbank.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml regbank.twx regbank.ncd -o regbank.twr regbank.pcf 
+xst -intstyle ise -ifn "C:/Users/student/Desktop/1/assgn4/regbank.xst" -ofn "C:/Users/student/Desktop/1/assgn4/regbank.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s400-pq208-4 regbank.ngc regbank.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o regbank_map.ncd regbank.ngd regbank.pcf 
+par -w -intstyle ise -ol high -t 1 regbank_map.ncd regbank.ncd regbank.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml regbank.twx regbank.ncd -o regbank.twr regbank.pcf 
+xst -intstyle ise -ifn "C:/Users/student/Desktop/1/assgn4/regbank.xst" -ofn "C:/Users/student/Desktop/1/assgn4/regbank.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s400-pq208-4 regbank.ngc regbank.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o regbank_map.ncd regbank.ngd regbank.pcf 
+par -w -intstyle ise -ol high -t 1 regbank_map.ncd regbank.ncd regbank.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml regbank.twx regbank.ncd -o regbank.twr regbank.pcf 
+xst -intstyle ise -ifn "C:/Users/student/Desktop/1/assgn4/regbank.xst" -ofn "C:/Users/student/Desktop/1/assgn4/regbank.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s400-pq208-4 regbank.ngc regbank.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o regbank_map.ncd regbank.ngd regbank.pcf 
+par -w -intstyle ise -ol high -t 1 regbank_map.ncd regbank.ncd regbank.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml regbank.twx regbank.ncd -o regbank.twr regbank.pcf 
+xst -intstyle ise -ifn "C:/Users/student/Desktop/1/assgn4/regbank.xst" -ofn "C:/Users/student/Desktop/1/assgn4/regbank.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s400-pq208-4 regbank.ngc regbank.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o regbank_map.ncd regbank.ngd regbank.pcf 
+par -w -intstyle ise -ol high -t 1 regbank_map.ncd regbank.ncd regbank.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml regbank.twx regbank.ncd -o regbank.twr regbank.pcf 
+xst -intstyle ise -ifn "C:/Users/student/Desktop/1/assgn4/regbank.xst" -ofn "C:/Users/student/Desktop/1/assgn4/regbank.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s400-pq208-4 regbank.ngc regbank.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o regbank_map.ncd regbank.ngd regbank.pcf 
+par -w -intstyle ise -ol high -t 1 regbank_map.ncd regbank.ncd regbank.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml regbank.twx regbank.ncd -o regbank.twr regbank.pcf 

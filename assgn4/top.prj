@@ -1,0 +1,4 @@
+verilog work "regbank.v"
+verilog work "datapath.v"
+verilog work "controller.v"
+verilog work "top.v"

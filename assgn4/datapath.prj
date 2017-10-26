@@ -1,0 +1,2 @@
+verilog work "regbank.v"
+verilog work "datapath.v"

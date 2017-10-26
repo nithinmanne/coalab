@@ -1,0 +1,174 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
+-n 3 -fastpaths -xml regbank.twx regbank.ncd -o regbank.twr regbank.pcf
+
+Design file:              regbank.ncd
+Physical constraint file: regbank.pcf
+Device,package,speed:     xc3s400,pq208,-4 (PRODUCTION 1.39 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+------------+------------+------------+------------------+--------+
+            |Max Setup to|Max Hold to |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+in<0>       |    2.620(R)|    0.521(R)|clk_BUFGP         |   0.000|
+in<1>       |    2.071(R)|    1.150(R)|clk_BUFGP         |   0.000|
+in<2>       |    2.688(R)|    0.164(R)|clk_BUFGP         |   0.000|
+in<3>       |    2.550(R)|    0.867(R)|clk_BUFGP         |   0.000|
+in<4>       |    1.540(R)|    0.886(R)|clk_BUFGP         |   0.000|
+in<5>       |    1.608(R)|    1.150(R)|clk_BUFGP         |   0.000|
+in<6>       |    2.024(R)|    0.882(R)|clk_BUFGP         |   0.000|
+in<7>       |    1.828(R)|    0.842(R)|clk_BUFGP         |   0.000|
+in<8>       |    3.238(R)|    0.413(R)|clk_BUFGP         |   0.000|
+in<9>       |    2.370(R)|    0.426(R)|clk_BUFGP         |   0.000|
+in<10>      |    1.678(R)|    0.668(R)|clk_BUFGP         |   0.000|
+in<11>      |    0.763(R)|    1.154(R)|clk_BUFGP         |   0.000|
+in<12>      |    2.145(R)|    0.307(R)|clk_BUFGP         |   0.000|
+in<13>      |    2.340(R)|    0.855(R)|clk_BUFGP         |   0.000|
+in<14>      |    2.599(R)|    0.341(R)|clk_BUFGP         |   0.000|
+in<15>      |    2.183(R)|    0.581(R)|clk_BUFGP         |   0.000|
+reset       |    3.722(R)|   -0.868(R)|clk_BUFGP         |   0.000|
+rsel<0>     |    5.804(R)|   -0.577(R)|clk_BUFGP         |   0.000|
+rsel<1>     |    7.007(R)|   -1.292(R)|clk_BUFGP         |   0.000|
+rsel<2>     |    6.708(R)|   -1.175(R)|clk_BUFGP         |   0.000|
+wrr         |    5.336(R)|   -0.367(R)|clk_BUFGP         |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+bus<0>      |   12.630(R)|clk_BUFGP         |   0.000|
+bus<1>      |   12.838(R)|clk_BUFGP         |   0.000|
+bus<2>      |   12.875(R)|clk_BUFGP         |   0.000|
+bus<3>      |   12.811(R)|clk_BUFGP         |   0.000|
+bus<4>      |   12.472(R)|clk_BUFGP         |   0.000|
+bus<5>      |   12.522(R)|clk_BUFGP         |   0.000|
+bus<6>      |   12.747(R)|clk_BUFGP         |   0.000|
+bus<7>      |   12.929(R)|clk_BUFGP         |   0.000|
+bus<8>      |   12.677(R)|clk_BUFGP         |   0.000|
+bus<9>      |   12.581(R)|clk_BUFGP         |   0.000|
+bus<10>     |   12.657(R)|clk_BUFGP         |   0.000|
+bus<11>     |   11.353(R)|clk_BUFGP         |   0.000|
+bus<12>     |   12.287(R)|clk_BUFGP         |   0.000|
+bus<13>     |   13.498(R)|clk_BUFGP         |   0.000|
+bus<14>     |   11.725(R)|clk_BUFGP         |   0.000|
+bus<15>     |   11.450(R)|clk_BUFGP         |   0.000|
+------------+------------+------------------+--------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+rsel<0>        |bus<0>         |   10.392|
+rsel<0>        |bus<1>         |   10.461|
+rsel<0>        |bus<2>         |   10.370|
+rsel<0>        |bus<3>         |   10.187|
+rsel<0>        |bus<4>         |    9.688|
+rsel<0>        |bus<5>         |   10.248|
+rsel<0>        |bus<6>         |   10.049|
+rsel<0>        |bus<7>         |    9.884|
+rsel<0>        |bus<8>         |    9.940|
+rsel<0>        |bus<9>         |    9.347|
+rsel<0>        |bus<10>        |   10.188|
+rsel<0>        |bus<11>        |    8.386|
+rsel<0>        |bus<12>        |   10.233|
+rsel<0>        |bus<13>        |    8.872|
+rsel<0>        |bus<14>        |    9.283|
+rsel<0>        |bus<15>        |    8.789|
+rsel<1>        |bus<0>         |   14.106|
+rsel<1>        |bus<1>         |   13.637|
+rsel<1>        |bus<2>         |   13.178|
+rsel<1>        |bus<3>         |   13.212|
+rsel<1>        |bus<4>         |   12.859|
+rsel<1>        |bus<5>         |   13.098|
+rsel<1>        |bus<6>         |   12.879|
+rsel<1>        |bus<7>         |   13.743|
+rsel<1>        |bus<8>         |   13.238|
+rsel<1>        |bus<9>         |   13.355|
+rsel<1>        |bus<10>        |   12.795|
+rsel<1>        |bus<11>        |   10.892|
+rsel<1>        |bus<12>        |   12.395|
+rsel<1>        |bus<13>        |   13.211|
+rsel<1>        |bus<14>        |   12.119|
+rsel<1>        |bus<15>        |   10.377|
+rsel<2>        |bus<0>         |   13.124|
+rsel<2>        |bus<1>         |   14.637|
+rsel<2>        |bus<2>         |   14.037|
+rsel<2>        |bus<3>         |   13.512|
+rsel<2>        |bus<4>         |   13.710|
+rsel<2>        |bus<5>         |   13.855|
+rsel<2>        |bus<6>         |   13.166|
+rsel<2>        |bus<7>         |   12.762|
+rsel<2>        |bus<8>         |   12.783|
+rsel<2>        |bus<9>         |   12.600|
+rsel<2>        |bus<10>        |   12.147|
+rsel<2>        |bus<11>        |   11.622|
+rsel<2>        |bus<12>        |   11.881|
+rsel<2>        |bus<13>        |   12.573|
+rsel<2>        |bus<14>        |   12.442|
+rsel<2>        |bus<15>        |   10.927|
+tr             |bus<0>         |    8.881|
+tr             |bus<1>         |    8.523|
+tr             |bus<2>         |    9.222|
+tr             |bus<3>         |    7.946|
+tr             |bus<4>         |    8.522|
+tr             |bus<5>         |    8.504|
+tr             |bus<6>         |    7.799|
+tr             |bus<7>         |    8.494|
+tr             |bus<8>         |    7.953|
+tr             |bus<9>         |    7.798|
+tr             |bus<10>        |    7.945|
+tr             |bus<11>        |    8.290|
+tr             |bus<12>        |    7.956|
+tr             |bus<13>        |    8.637|
+tr             |bus<14>        |    8.304|
+tr             |bus<15>        |    8.643|
+---------------+---------------+---------+
+
+
+Analysis completed Thu Oct 26 15:49:08 2017 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 145 MB
+
+
+

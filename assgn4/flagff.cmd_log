@@ -1,0 +1,14 @@
+xst -intstyle ise -ifn "C:/Users/student/Desktop/1/assgn4/flagff.xst" -ofn "C:/Users/student/Desktop/1/assgn4/flagff.syr" 
+xst -intstyle ise -ifn "C:/Users/student/Desktop/1/assgn4/flagff.xst" -ofn "C:/Users/student/Desktop/1/assgn4/flagff.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s400-pq208-4 flagff.ngc flagff.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o flagff_map.ncd flagff.ngd flagff.pcf 
+par -w -intstyle ise -ol high -t 1 flagff_map.ncd flagff.ncd flagff.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml flagff.twx flagff.ncd -o flagff.twr flagff.pcf 
+xst -intstyle ise -ifn "C:/Users/student/Desktop/1/assgn4/flagff.xst" -ofn "C:/Users/student/Desktop/1/assgn4/flagff.syr" 
+xst -intstyle ise -ifn "C:/Users/student/Desktop/1/assgn4/flagff.xst" -ofn "C:/Users/student/Desktop/1/assgn4/flagff.syr" 
+xst -intstyle ise -ifn "C:/Users/student/Desktop/1/assgn4/flagff.xst" -ofn "C:/Users/student/Desktop/1/assgn4/flagff.syr" 
+xst -intstyle ise -ifn "C:/Users/student/Desktop/1/assgn4/flagff.xst" -ofn "C:/Users/student/Desktop/1/assgn4/flagff.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s400-pq208-4 flagff.ngc flagff.ngd  
+map -intstyle ise -p xc3s400-pq208-4 -cm area -ir off -pr off -c 100 -o flagff_map.ncd flagff.ngd flagff.pcf 
+par -w -intstyle ise -ol high -t 1 flagff_map.ncd flagff.ncd flagff.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml flagff.twx flagff.ncd -o flagff.twr flagff.pcf 

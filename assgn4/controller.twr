@@ -45,19 +45,15 @@ Setup/Hold to clock clk
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-isr<8>      |    1.030(F)|    0.651(F)|clk_BUFGP         |   0.000|
-isr<9>      |    0.773(F)|    0.857(F)|clk_BUFGP         |   0.000|
-isr<10>     |    0.548(F)|    1.037(F)|clk_BUFGP         |   0.000|
-isr<11>     |    5.475(F)|    0.049(F)|clk_BUFGP         |   0.000|
-isr<12>     |    6.404(F)|   -0.907(F)|clk_BUFGP         |   0.000|
-isr<13>     |    6.446(F)|   -1.010(F)|clk_BUFGP         |   0.000|
-isr<14>     |    7.298(F)|   -0.825(F)|clk_BUFGP         |   0.000|
-isr<15>     |    5.588(F)|   -0.249(F)|clk_BUFGP         |   0.000|
-reset       |    4.085(F)|    0.096(F)|clk_BUFGP         |   0.000|
-sreg<0>     |    4.537(F)|   -0.888(F)|clk_BUFGP         |   0.000|
-sreg<1>     |    4.949(F)|   -0.817(F)|clk_BUFGP         |   0.000|
-sreg<2>     |    5.139(F)|   -0.810(F)|clk_BUFGP         |   0.000|
-sreg<3>     |    5.816(F)|   -0.710(F)|clk_BUFGP         |   0.000|
+isr<8>      |    0.522(F)|    1.057(F)|clk_BUFGP         |   0.000|
+isr<9>      |    0.680(F)|    0.931(F)|clk_BUFGP         |   0.000|
+isr<10>     |    1.824(F)|    0.017(F)|clk_BUFGP         |   0.000|
+isr<11>     |    4.444(F)|    0.005(F)|clk_BUFGP         |   0.000|
+isr<12>     |    6.391(F)|    0.170(F)|clk_BUFGP         |   0.000|
+isr<13>     |    6.718(F)|   -0.415(F)|clk_BUFGP         |   0.000|
+isr<14>     |    6.382(F)|   -0.092(F)|clk_BUFGP         |   0.000|
+isr<15>     |    4.887(F)|   -0.101(F)|clk_BUFGP         |   0.000|
+reset       |    4.575(F)|   -0.029(F)|clk_BUFGP         |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock clk to Pad
@@ -65,29 +61,31 @@ Clock clk to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-funsel<0>   |    8.785(F)|clk_BUFGP         |   0.000|
-funsel<1>   |    9.850(F)|clk_BUFGP         |   0.000|
-funsel<2>   |    9.739(F)|clk_BUFGP         |   0.000|
-lisr        |    8.748(F)|clk_BUFGP         |   0.000|
-lmar        |   10.754(F)|clk_BUFGP         |   0.000|
-lmdr        |    8.765(F)|clk_BUFGP         |   0.000|
-lpc         |    9.573(F)|clk_BUFGP         |   0.000|
-lsp         |   11.173(F)|clk_BUFGP         |   0.000|
-ly          |   10.102(F)|clk_BUFGP         |   0.000|
-mdrm        |    9.630(F)|clk_BUFGP         |   0.000|
-mdrz        |    8.413(F)|clk_BUFGP         |   0.000|
-mrw         |    9.794(F)|clk_BUFGP         |   0.000|
-pcmar       |    9.484(F)|clk_BUFGP         |   0.000|
-rsel<0>     |    9.478(F)|clk_BUFGP         |   0.000|
-rsel<1>     |    8.454(F)|clk_BUFGP         |   0.000|
-rsel<2>     |    9.479(F)|clk_BUFGP         |   0.000|
-spmar       |   10.116(F)|clk_BUFGP         |   0.000|
-tisr        |   11.310(F)|clk_BUFGP         |   0.000|
-tmdr        |    9.508(F)|clk_BUFGP         |   0.000|
-tpc         |    9.087(F)|clk_BUFGP         |   0.000|
-tr          |    9.485(F)|clk_BUFGP         |   0.000|
-tsp         |   10.397(F)|clk_BUFGP         |   0.000|
-wrr         |    9.945(F)|clk_BUFGP         |   0.000|
+cc          |    9.895(F)|clk_BUFGP         |   0.000|
+funsel<0>   |   10.320(F)|clk_BUFGP         |   0.000|
+funsel<1>   |   10.404(F)|clk_BUFGP         |   0.000|
+funsel<2>   |   10.067(F)|clk_BUFGP         |   0.000|
+lisr        |   10.687(F)|clk_BUFGP         |   0.000|
+lmar        |    9.623(F)|clk_BUFGP         |   0.000|
+lmdr        |    9.282(F)|clk_BUFGP         |   0.000|
+lpc         |    9.954(F)|clk_BUFGP         |   0.000|
+lsp         |   10.352(F)|clk_BUFGP         |   0.000|
+ly          |    9.639(F)|clk_BUFGP         |   0.000|
+mdrm        |    9.305(F)|clk_BUFGP         |   0.000|
+mdrz        |    9.602(F)|clk_BUFGP         |   0.000|
+mrw         |   10.405(F)|clk_BUFGP         |   0.000|
+pcmar       |    9.925(F)|clk_BUFGP         |   0.000|
+rsel<0>     |    9.176(F)|clk_BUFGP         |   0.000|
+rsel<1>     |    9.167(F)|clk_BUFGP         |   0.000|
+rsel<2>     |    9.632(F)|clk_BUFGP         |   0.000|
+sflag       |    9.933(F)|clk_BUFGP         |   0.000|
+spmar       |    9.472(F)|clk_BUFGP         |   0.000|
+tisr        |   10.051(F)|clk_BUFGP         |   0.000|
+tmdr        |    9.611(F)|clk_BUFGP         |   0.000|
+tpc         |   10.253(F)|clk_BUFGP         |   0.000|
+tr          |   10.295(F)|clk_BUFGP         |   0.000|
+tsp         |   10.734(F)|clk_BUFGP         |   0.000|
+wrr         |    9.933(F)|clk_BUFGP         |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
@@ -95,11 +93,11 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |         |    5.419|
+clk            |         |         |         |    5.511|
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Fri Oct 20 16:02:11 2017 
+Analysis completed Thu Oct 26 14:47:10 2017 
 --------------------------------------------------------------------------------
 
 Trace Settings:

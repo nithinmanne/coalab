@@ -1,0 +1,415 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Reading design: regbank.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "regbank.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "regbank"
+Output Format                      : NGC
+Target Device                      : xc3s400-4-pq208
+
+---- Source Options
+Top Module Name                    : regbank
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "regbank.v" in library work
+Module <regbank> compiled
+Module <regfile> compiled
+Module <specreg> compiled
+Module <flagff> compiled
+Module <rgtr8> compiled
+Module <dff> compiled
+Module <buffer16> compiled
+Module <dec> compiled
+No errors in compilation
+Analysis of file <"regbank.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <regbank> in library <work>.
+
+Analyzing hierarchy for module <dec> in library <work>.
+
+Analyzing hierarchy for module <regfile> in library <work>.
+
+Analyzing hierarchy for module <rgtr8> in library <work>.
+
+Analyzing hierarchy for module <buffer16> in library <work>.
+
+Analyzing hierarchy for module <dff> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <regbank>.
+Module <regbank> is correct for synthesis.
+ 
+Analyzing module <dec> in library <work>.
+Module <dec> is correct for synthesis.
+ 
+Analyzing module <regfile> in library <work>.
+Module <regfile> is correct for synthesis.
+ 
+Analyzing module <rgtr8> in library <work>.
+Module <rgtr8> is correct for synthesis.
+ 
+Analyzing module <dff> in library <work>.
+Module <dff> is correct for synthesis.
+ 
+Analyzing module <buffer16> in library <work>.
+Module <buffer16> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <dec>.
+    Related source file is "regbank.v".
+Unit <dec> synthesized.
+
+
+Synthesizing Unit <buffer16>.
+    Related source file is "regbank.v".
+    Found 16-bit tristate buffer for signal <dout>.
+    Summary:
+	inferred  16 Tristate(s).
+Unit <buffer16> synthesized.
+
+
+Synthesizing Unit <dff>.
+    Related source file is "regbank.v".
+    Found 1-bit register for signal <q>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <dff> synthesized.
+
+
+Synthesizing Unit <rgtr8>.
+    Related source file is "regbank.v".
+Unit <rgtr8> synthesized.
+
+
+Synthesizing Unit <regfile>.
+    Related source file is "regbank.v".
+Unit <regfile> synthesized.
+
+
+Synthesizing Unit <regbank>.
+    Related source file is "regbank.v".
+Unit <regbank> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 128
+ 1-bit register                                        : 128
+# Tristates                                            : 144
+ 1-bit tristate buffer                                 : 144
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 128
+ Flip-Flops                                            : 128
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2040 - Unit regbank: 16 multi-source signals are replaced by logic (pull-up yes): rf/outw<0>, rf/outw<10>, rf/outw<11>, rf/outw<12>, rf/outw<13>, rf/outw<14>, rf/outw<15>, rf/outw<1>, rf/outw<2>, rf/outw<3>, rf/outw<4>, rf/outw<5>, rf/outw<6>, rf/outw<7>, rf/outw<8>, rf/outw<9>.
+
+Optimizing unit <regbank> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block regbank, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 128
+ Flip-Flops                                            : 128
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : regbank.ngr
+Top Level Output File Name         : regbank
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 39
+
+Cell Usage :
+# BELS                             : 105
+#      INV                         : 1
+#      LUT3                        : 32
+#      LUT4                        : 56
+#      MUXF5                       : 16
+# FlipFlops/Latches                : 128
+#      FDRE                        : 128
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 38
+#      IBUF                        : 22
+#      OBUFT                       : 16
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s400pq208-4 
+
+ Number of Slices:                       90  out of   3584     2%  
+ Number of Slice Flip Flops:            128  out of   7168     1%  
+ Number of 4 input LUTs:                 89  out of   7168     1%  
+ Number of IOs:                          39
+ Number of bonded IOBs:                  39  out of    141    27%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 128   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: 5.632ns
+   Maximum output required time after clock: 10.492ns
+   Maximum combinational path delay: 12.018ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 768 / 384
+-------------------------------------------------------------------------
+Offset:              5.632ns (Levels of Logic = 2)
+  Source:            rsel<2> (PAD)
+  Destination:       rf/r0/d15/q (FF)
+  Destination Clock: clk rising
+
+  Data Path: rsel<2> to rf/r0/d15/q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            72   0.821   2.421  rsel_2_IBUF (rsel_2_IBUF)
+     LUT4:I0->O           16   0.551   1.237  rf/r7/_and00001 (rf/r7/_and0000)
+     FDRE:CE                   0.602          rf/r7/d15/q
+    ----------------------------------------
+    Total                      5.632ns (1.974ns logic, 3.658ns route)
+                                       (35.0% logic, 65.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 128 / 16
+-------------------------------------------------------------------------
+Offset:              10.492ns (Levels of Logic = 4)
+  Source:            rf/r0/d15/q (FF)
+  Destination:       bus<15> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: rf/r0/d15/q to bus<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             1   0.720   0.996  rf/r0/d15/q (rf/r0/d15/q)
+     LUT3:I1->O            1   0.551   0.000  rf/outw<15>LogicTrst84_F (N32)
+     MUXF5:I0->O           1   0.360   0.869  rf/outw<15>LogicTrst84 (rf/outw<15>LogicTrst84)
+     LUT4:I2->O            1   0.551   0.801  rf/outw<15>LogicTrst112 (rf/outw<15>)
+     OBUFT:I->O                5.644          bus_15_OBUFT (bus<15>)
+    ----------------------------------------
+    Total                     10.492ns (7.826ns logic, 2.666ns route)
+                                       (74.6% logic, 25.4% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 144 / 16
+-------------------------------------------------------------------------
+Delay:               12.018ns (Levels of Logic = 5)
+  Source:            rsel<2> (PAD)
+  Destination:       bus<15> (PAD)
+
+  Data Path: rsel<2> to bus<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            72   0.821   2.421  rsel_2_IBUF (rsel_2_IBUF)
+     LUT3:I0->O            1   0.551   0.000  rf/outw<9>LogicTrst84_F (N14)
+     MUXF5:I0->O           1   0.360   0.869  rf/outw<9>LogicTrst84 (rf/outw<9>LogicTrst84)
+     LUT4:I2->O            1   0.551   0.801  rf/outw<9>LogicTrst112 (rf/outw<9>)
+     OBUFT:I->O                5.644          bus_9_OBUFT (bus<9>)
+    ----------------------------------------
+    Total                     12.018ns (7.927ns logic, 4.091ns route)
+                                       (66.0% logic, 34.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 3.76 secs
+ 
+--> 
+
+Total memory usage is 260576 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
