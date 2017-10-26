@@ -1,0 +1,4 @@
+[submodule "coa-assembler"]
+	path = coa-assembler
+	url = https://github.com/nithinmanne/coa-assembler.git
+	branch = master
