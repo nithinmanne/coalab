@@ -9,1265 +9,156 @@ Target Device  : xc3s400
 Target Package : pq208
 Target Speed   : -4
 Mapper Version : spartan3 -- $Revision: 1.55 $
-Mapped Date    : Thu Oct 26 16:56:52 2017
+Mapped Date    : Fri Oct 27 14:24:11 2017
 
 Design Summary
 --------------
-Number of errors   :   1
-Number of warnings :   2
+Number of errors:      0
+Number of warnings:    0
+Logic Utilization:
+  Number of Slice Flip Flops:           274 out of   7,168    3%
+  Number of 4 input LUTs:               438 out of   7,168    6%
+Logic Distribution:
+  Number of occupied Slices:            360 out of   3,584   10%
+    Number of Slices containing only related logic:     360 out of     360 100%
+    Number of Slices containing unrelated logic:          0 out of     360   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:         438 out of   7,168    6%
+  Number of bonded IOBs:                 18 out of     141   12%
+  Number of RAMB16s:                      4 out of      16   25%
+  Number of BUFGMUXs:                     1 out of       8   12%
+
+Average Fanout of Non-Clock Nets:                3.76
+
+Peak Memory Usage:  300 MB
+Total REAL time to MAP completion:  1 secs 
+Total CPU time to MAP completion:   1 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
 
 Section 1 - Errors
 ------------------
-ERROR:Pack:198 - NCD was not produced.  All logic was removed from the design. 
-   This is usually due to having no input or output PAD connections in the
-   design and no nets or symbols marked as 'SAVE'.  You can either add PADs or
-   'SAVE' attributes to the design, or run 'map -u' to disable logic trimming in
-   the mapper.  For more information on trimming issues search the Xilinx
-   Answers database for "ERROR:Pack:198" and read the Master Answer Record for
-   MAP Trimming Issues.
 
 Section 2 - Warnings
 --------------------
-WARNING:MapLib:701 - Signal reset connected to top level port reset has been
-   removed.
-WARNING:MapLib:701 - Signal clk connected to top level port clk has been
-   removed.
 
 Section 3 - Informational
 -------------------------
 INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
- 597 block(s) removed
- 609 signal(s) removed
+   2 block(s) optimized away
 
 Section 5 - Removed Logic
 -------------------------
 
-The trimmed logic report below shows the logic removed from your design due to
-sourceless or loadless signals, and VCC or ground connections.  If the removal
-of a signal or symbol results in the subsequent removal of an additional signal
-or symbol, the message explaining that second removal will be indented.  This
-indentation will be repeated as a chain of related logic is removed.
-
-To quickly locate the original cause for the removal of a chain of logic, look
-above the place where that logic is listed in the trimming report, then locate
-the lines that are least indented (begin at the leftmost edge).
-
-The signal "clk_BUFGP/IBUFG" is sourceless and has been removed.
- Sourceless block "clk_BUFGP/BUFG" (CKBUF) removed.
-  The signal "clk_BUFGP" is sourceless and has been removed.
-   Sourceless block "dat/sp/value_0" (SFF) removed.
-    The signal "dat/sp/value<0>" is sourceless and has been removed.
-     Sourceless block "dat/marin<0>LogicTrst1" (ROM) removed.
-      The signal "dat/marin<0>" is sourceless and has been removed.
-       Sourceless block "dat/mar/value_0" (SFF) removed.
-        The signal "marval<0>" is sourceless and has been removed.
-         Sourceless block "dat/marin<0>_01" (ROM) removed.
-          The signal "dat/marin<0>_0_0" is sourceless and has been removed.
-     Sourceless block "dat/x<0>LogicTrst4" (ROM) removed.
-      The signal "dat/x<0>LogicTrst4" is sourceless and has been removed.
-       Sourceless block "dat/x<0>LogicTrst39" (ROM) removed.
-        The signal "dat/x<0>LogicTrst39" is sourceless and has been removed.
-         Sourceless block "dat/x<0>LogicTrst188" (ROM) removed.
-          The signal "dat/x<0>" is sourceless and has been removed.
-           Sourceless block "dat/alu0/Madd_z_cy<0>" (MUX) removed.
-            The signal "dat/alu0/Madd_z_cy<0>" is sourceless and has been removed.
-             Sourceless block "dat/alu0/Madd_z_cy<1>" (MUX) removed.
-              The signal "dat/alu0/Madd_z_cy<1>" is sourceless and has been removed.
-               Sourceless block "dat/alu0/Madd_z_cy<2>" (MUX) removed.
-                The signal "dat/alu0/Madd_z_cy<2>" is sourceless and has been removed.
-                 Sourceless block "dat/alu0/Madd_z_cy<3>" (MUX) removed.
-                  The signal "dat/alu0/Madd_z_cy<3>" is sourceless and has been removed.
-                   Sourceless block "dat/alu0/Madd_z_cy<4>" (MUX) removed.
-                    The signal "dat/alu0/Madd_z_cy<4>" is sourceless and has been removed.
-                     Sourceless block "dat/alu0/Madd_z_cy<5>" (MUX) removed.
-                      The signal "dat/alu0/Madd_z_cy<5>" is sourceless and has been removed.
-                       Sourceless block "dat/alu0/Madd_z_cy<6>" (MUX) removed.
-                        The signal "dat/alu0/Madd_z_cy<6>" is sourceless and has been removed.
-                         Sourceless block "dat/alu0/Madd_z_cy<7>" (MUX) removed.
-                          The signal "dat/alu0/Madd_z_cy<7>" is sourceless and has been removed.
-                           Sourceless block "dat/alu0/Madd_z_cy<8>" (MUX) removed.
-                            The signal "dat/alu0/Madd_z_cy<8>" is sourceless and has been removed.
-                             Sourceless block "dat/alu0/Madd_z_cy<9>" (MUX) removed.
-                              The signal "dat/alu0/Madd_z_cy<9>" is sourceless and has been removed.
-                               Sourceless block "dat/alu0/Madd_z_cy<10>" (MUX) removed.
-                                The signal "dat/alu0/Madd_z_cy<10>" is sourceless and has been removed.
-                                 Sourceless block "dat/alu0/Madd_z_cy<11>" (MUX) removed.
-                                  The signal "dat/alu0/Madd_z_cy<11>" is sourceless and has been removed.
-                                   Sourceless block "dat/alu0/Madd_z_cy<12>" (MUX) removed.
-                                    The signal "dat/alu0/Madd_z_cy<12>" is sourceless and has been removed.
-                                     Sourceless block "dat/alu0/Madd_z_cy<13>" (MUX) removed.
-                                      The signal "dat/alu0/Madd_z_cy<13>" is sourceless and has been removed.
-                                       Sourceless block "dat/alu0/Madd_z_cy<14>" (MUX) removed.
-                                        The signal "dat/alu0/Madd_z_cy<14>" is sourceless and has been removed.
-                                         Sourceless block "dat/alu0/Madd_z_xor<15>" (XOR) removed.
-                                          The signal "dat/z<15>" is sourceless and has been removed.
-                                           Sourceless block "dat/sp/value_15" (SFF) removed.
-                                            The signal "dat/sp/value<15>" is sourceless and has been removed.
-                                             Sourceless block "dat/x<15>LogicTrst4" (ROM) removed.
-                                              The signal "dat/x<15>LogicTrst4" is sourceless and has been removed.
-                                               Sourceless block "dat/x<15>LogicTrst12" (ROM) removed.
-                                                The signal "dat/x<15>LogicTrst12/O" is sourceless and has been removed.
-                                           Sourceless block "dat/pc/value_15" (SFF) removed.
-                                            The signal "dat/pc/value<15>" is sourceless and has been removed.
-                                           Sourceless block "dat/flagff0/rs" (SFF) removed.
-                                            The signal "dat/flagff0/rs" is sourceless and has been removed.
-                                             Sourceless block "dat/_and000066" (ROM) removed.
-                                              The signal "dat/_and000066" is sourceless and has been removed.
-                                               Sourceless block "dat/_and0000144" (ROM) removed.
-                                                The signal "dat/_and0000144" is sourceless and has been removed.
-                                                 Sourceless block "dat/_and0000167" (ROM) removed.
-*The signal "dat/_and0000" is sourceless and has been removed.
-* Sourceless block "dat/pc/value_0" (SFF) removed.
-*  The signal "dat/pc/value<0>" is sourceless and has been removed.
-* Sourceless block "dat/pc/value_1" (SFF) removed.
-*  The signal "dat/pc/value<1>" is sourceless and has been removed.
-*   Sourceless block "dat/marin<1>LogicTrst1" (ROM) removed.
-*    The signal "dat/marin<1>" is sourceless and has been removed.
-*     Sourceless block "dat/mar/value_1" (SFF) removed.
-*      The signal "marval<1>" is sourceless and has been removed.
-*       Sourceless block "dat/marin<1>_01" (ROM) removed.
-*        The signal "dat/marin<1>_0_0" is sourceless and has been removed.
-*   Sourceless block "dat/x<1>LogicTrst4" (ROM) removed.
-*    The signal "dat/x<1>LogicTrst4" is sourceless and has been removed.
-*     Sourceless block "dat/x<1>LogicTrst39" (ROM) removed.
-*      The signal "dat/x<1>LogicTrst39/O" is sourceless and has been removed.
-* Sourceless block "dat/pc/value_2" (SFF) removed.
-*  The signal "dat/pc/value<2>" is sourceless and has been removed.
-*   Sourceless block "dat/marin<2>LogicTrst1" (ROM) removed.
-*    The signal "dat/marin<2>" is sourceless and has been removed.
-*     Sourceless block "dat/mar/value_2" (SFF) removed.
-*      The signal "marval<2>" is sourceless and has been removed.
-*       Sourceless block "dat/marin<2>_01" (ROM) removed.
-*        The signal "dat/marin<2>_0_0" is sourceless and has been removed.
-*   Sourceless block "dat/x<2>LogicTrst4" (ROM) removed.
-*    The signal "dat/x<2>LogicTrst4" is sourceless and has been removed.
-*     Sourceless block "dat/x<2>LogicTrst39" (ROM) removed.
-*      The signal "dat/x<2>LogicTrst39/O" is sourceless and has been removed.
-* Sourceless block "dat/pc/value_3" (SFF) removed.
-*  The signal "dat/pc/value<3>" is sourceless and has been removed.
-*   Sourceless block "dat/marin<3>LogicTrst1" (ROM) removed.
-*    The signal "dat/marin<3>" is sourceless and has been removed.
-*     Sourceless block "dat/mar/value_3" (SFF) removed.
-*      The signal "marval<3>" is sourceless and has been removed.
-*       Sourceless block "dat/marin<3>_01" (ROM) removed.
-*        The signal "dat/marin<3>_0_0" is sourceless and has been removed.
-*   Sourceless block "dat/x<3>LogicTrst4" (ROM) removed.
-*    The signal "dat/x<3>LogicTrst4" is sourceless and has been removed.
-*     Sourceless block "dat/x<3>LogicTrst39" (ROM) removed.
-*      The signal "dat/x<3>LogicTrst39/O" is sourceless and has been removed.
-* Sourceless block "dat/pc/value_4" (SFF) removed.
-*  The signal "dat/pc/value<4>" is sourceless and has been removed.
-*   Sourceless block "dat/marin<4>LogicTrst1" (ROM) removed.
-*    The signal "dat/marin<4>" is sourceless and has been removed.
-*     Sourceless block "dat/mar/value_4" (SFF) removed.
-*      The signal "marval<4>" is sourceless and has been removed.
-*       Sourceless block "dat/marin<4>_01" (ROM) removed.
-*        The signal "dat/marin<4>_0_0" is sourceless and has been removed.
-*   Sourceless block "dat/x<4>LogicTrst4" (ROM) removed.
-*    The signal "dat/x<4>LogicTrst4" is sourceless and has been removed.
-*     Sourceless block "dat/x<4>LogicTrst39" (ROM) removed.
-*      The signal "dat/x<4>LogicTrst39/O" is sourceless and has been removed.
-* Sourceless block "dat/pc/value_5" (SFF) removed.
-*  The signal "dat/pc/value<5>" is sourceless and has been removed.
-*   Sourceless block "dat/marin<5>LogicTrst1" (ROM) removed.
-*    The signal "dat/marin<5>" is sourceless and has been removed.
-*     Sourceless block "dat/mar/value_5" (SFF) removed.
-*      The signal "marval<5>" is sourceless and has been removed.
-*       Sourceless block "dat/marin<5>_01" (ROM) removed.
-*        The signal "dat/marin<5>_0_0" is sourceless and has been removed.
-*   Sourceless block "dat/x<5>LogicTrst4" (ROM) removed.
-*    The signal "dat/x<5>LogicTrst4" is sourceless and has been removed.
-*     Sourceless block "dat/x<5>LogicTrst39" (ROM) removed.
-*      The signal "dat/x<5>LogicTrst39/O" is sourceless and has been removed.
-* Sourceless block "dat/pc/value_6" (SFF) removed.
-*  The signal "dat/pc/value<6>" is sourceless and has been removed.
-*   Sourceless block "dat/marin<6>LogicTrst1" (ROM) removed.
-*    The signal "dat/marin<6>" is sourceless and has been removed.
-*     Sourceless block "dat/mar/value_6" (SFF) removed.
-*      The signal "marval<6>" is sourceless and has been removed.
-*       Sourceless block "dat/marin<6>_01" (ROM) removed.
-*        The signal "dat/marin<6>_0_0" is sourceless and has been removed.
-*   Sourceless block "dat/x<6>LogicTrst4" (ROM) removed.
-*    The signal "dat/x<6>LogicTrst4" is sourceless and has been removed.
-*     Sourceless block "dat/x<6>LogicTrst39" (ROM) removed.
-*      The signal "dat/x<6>LogicTrst39/O" is sourceless and has been removed.
-* Sourceless block "dat/pc/value_7" (SFF) removed.
-*  The signal "dat/pc/value<7>" is sourceless and has been removed.
-*   Sourceless block "dat/marin<7>LogicTrst1" (ROM) removed.
-*    The signal "dat/marin<7>" is sourceless and has been removed.
-*     Sourceless block "dat/mar/value_7" (SFF) removed.
-*      The signal "marval<7>" is sourceless and has been removed.
-*       Sourceless block "dat/marin<7>_01" (ROM) removed.
-*        The signal "dat/marin<7>_0_0" is sourceless and has been removed.
-*   Sourceless block "dat/x<7>LogicTrst4" (ROM) removed.
-*    The signal "dat/x<7>LogicTrst4" is sourceless and has been removed.
-*     Sourceless block "dat/x<7>LogicTrst39" (ROM) removed.
-*      The signal "dat/x<7>LogicTrst39/O" is sourceless and has been removed.
-* Sourceless block "dat/pc/value_8" (SFF) removed.
-*  The signal "dat/pc/value<8>" is sourceless and has been removed.
-*   Sourceless block "dat/marin<8>LogicTrst1" (ROM) removed.
-*    The signal "dat/marin<8>" is sourceless and has been removed.
-*     Sourceless block "dat/mar/value_8" (SFF) removed.
-*      The signal "marval<8>" is sourceless and has been removed.
-*       Sourceless block "dat/marin<8>_01" (ROM) removed.
-*        The signal "dat/marin<8>_0_0" is sourceless and has been removed.
-*   Sourceless block "dat/x<8>LogicTrst4" (ROM) removed.
-*    The signal "dat/x<8>LogicTrst4" is sourceless and has been removed.
-*     Sourceless block "dat/x<8>LogicTrst39" (ROM) removed.
-*      The signal "dat/x<8>LogicTrst39/O" is sourceless and has been removed.
-* Sourceless block "dat/pc/value_9" (SFF) removed.
-*  The signal "dat/pc/value<9>" is sourceless and has been removed.
-*   Sourceless block "dat/marin<9>LogicTrst1" (ROM) removed.
-*    The signal "dat/marin<9>" is sourceless and has been removed.
-*     Sourceless block "dat/mar/value_9" (SFF) removed.
-*      The signal "marval<9>" is sourceless and has been removed.
-*       Sourceless block "dat/marin<9>_01" (ROM) removed.
-*        The signal "dat/marin<9>_0_0" is sourceless and has been removed.
-*   Sourceless block "dat/x<9>LogicTrst4" (ROM) removed.
-*    The signal "dat/x<9>LogicTrst4" is sourceless and has been removed.
-*     Sourceless block "dat/x<9>LogicTrst39" (ROM) removed.
-*      The signal "dat/x<9>LogicTrst39/O" is sourceless and has been removed.
-* Sourceless block "dat/pc/value_10" (SFF) removed.
-*  The signal "dat/pc/value<10>" is sourceless and has been removed.
-*   Sourceless block "dat/marin<10>LogicTrst1" (ROM) removed.
-*    The signal "dat/marin<10>" is sourceless and has been removed.
-*     Sourceless block "dat/mar/value_10" (SFF) removed.
-*      The signal "marval<10>" is sourceless and has been removed.
-*       Sourceless block "dat/marin<10>_01" (ROM) removed.
-*        The signal "dat/marin<10>_0_0" is sourceless and has been removed.
-*   Sourceless block "dat/x<10>LogicTrst4" (ROM) removed.
-*    The signal "dat/x<10>LogicTrst4" is sourceless and has been removed.
-*     Sourceless block "dat/x<10>LogicTrst39" (ROM) removed.
-*      The signal "dat/x<10>LogicTrst39/O" is sourceless and has been removed.
-* Sourceless block "dat/pc/value_11" (SFF) removed.
-*  The signal "dat/pc/value<11>" is sourceless and has been removed.
-*   Sourceless block "dat/marin<11>LogicTrst1" (ROM) removed.
-*    The signal "dat/marin<11>" is sourceless and has been removed.
-*     Sourceless block "dat/mar/value_11" (SFF) removed.
-*      The signal "marval<11>" is sourceless and has been removed.
-*       Sourceless block "dat/marin<11>_01" (ROM) removed.
-*        The signal "dat/marin<11>_0_0" is sourceless and has been removed.
-*   Sourceless block "dat/x<11>LogicTrst12" (ROM) removed.
-*    The signal "dat/x<11>LogicTrst12" is sourceless and has been removed.
-*     Sourceless block "dat/alu0/Madd_z_lut<11>" (ROM) removed.
-*      The signal "dat/alu0/Madd_z_lut<11>" is sourceless and has been removed.
-*       Sourceless block "dat/alu0/Madd_z_xor<11>" (XOR) removed.
-*        The signal "dat/z<11>" is sourceless and has been removed.
-*         Sourceless block "dat/sp/value_11" (SFF) removed.
-*          The signal "dat/sp/value<11>" is sourceless and has been removed.
-*           Sourceless block "dat/x<11>LogicTrst4" (ROM) removed.
-*            The signal "dat/x<11>LogicTrst4" is sourceless and has been removed.
-*         Sourceless block "dat/regbank0/rf/r7/d11/q" (SFF) removed.
-*          The signal "dat/regbank0/rf/r7/d11/q" is sourceless and has been removed.
-*           Sourceless block "dat/x<11>LogicTrst61_G" (ROM) removed.
-*            The signal "N71" is sourceless and has been removed.
-*             Sourceless block "dat/x<11>LogicTrst61" (MUX) removed.
-*              The signal "dat/x<11>LogicTrst61" is sourceless and has been removed.
-*               Sourceless block "dat/x<11>LogicTrst155" (ROM) removed.
-*                The signal "dat/x<11>" is sourceless and has been removed.
-*                 Sourceless block "dat/ygenmod0/y_11" (SFF) removed.
-*                  The signal "dat/ygenmod0/y<11>" is sourceless and has been removed.
-*               Sourceless block "dat/x<11>LogicTrst155_SW0" (ROM) removed.
-*                The signal "N20" is sourceless and has been removed.
-*         Sourceless block "dat/regbank0/rf/r6/d11/q" (SFF) removed.
-*          The signal "dat/regbank0/rf/r6/d11/q" is sourceless and has been removed.
-*           Sourceless block "dat/x<11>LogicTrst116_G" (ROM) removed.
-*            The signal "N101" is sourceless and has been removed.
-*             Sourceless block "dat/x<11>LogicTrst116" (MUX) removed.
-*              The signal "dat/x<11>LogicTrst116" is sourceless and has been removed.
-*         Sourceless block "dat/regbank0/rf/r5/d11/q" (SFF) removed.
-*          The signal "dat/regbank0/rf/r5/d11/q" is sourceless and has been removed.
-*           Sourceless block "dat/x<11>LogicTrst61_F" (ROM) removed.
-*            The signal "N70" is sourceless and has been removed.
-*         Sourceless block "dat/regbank0/rf/r4/d11/q" (SFF) removed.
-*          The signal "dat/regbank0/rf/r4/d11/q" is sourceless and has been removed.
-*           Sourceless block "dat/x<11>LogicTrst116_F" (ROM) removed.
-*            The signal "N100" is sourceless and has been removed.
-*         Sourceless block "dat/regbank0/rf/r3/d11/q" (SFF) removed.
-*          The signal "dat/regbank0/rf/r3/d11/q" is sourceless and has been removed.
-*         Sourceless block "dat/regbank0/rf/r2/d11/q" (SFF) removed.
-*          The signal "dat/regbank0/rf/r2/d11/q" is sourceless and has been removed.
-*         Sourceless block "dat/regbank0/rf/r1/d11/q" (SFF) removed.
-*          The signal "dat/regbank0/rf/r1/d11/q" is sourceless and has been removed.
-*         Sourceless block "dat/regbank0/rf/r0/d11/q" (SFF) removed.
-*          The signal "dat/regbank0/rf/r0/d11/q" is sourceless and has been removed.
-*         Sourceless block "dat/mdrin<11>LogicTrst1" (ROM) removed.
-*          The signal "dat/mdrin<11>" is sourceless and has been removed.
-*           Sourceless block "dat/mdr/value_11" (SFF) removed.
-*            The signal "mdrval<11>" is sourceless and has been removed.
-*             Sourceless block "dat/isrr/value_11" (SFF) removed.
-*              The signal "dat/isrr/value<11>" is sourceless and has been removed.
-*               Sourceless block "con/state_FSM_FFd2-In1" (ROM) removed.
-*                The signal "con/state_FSM_FFd2-In" is sourceless and has been removed.
-*                 Sourceless block "con/state_FSM_FFd2" (SFF) removed.
-*                  The signal "con/state_FSM_FFd2" is sourceless and has been removed.
-*                   Sourceless block "con/control_24_or00003" (ROM) removed.
-*                    The signal "con/control_24_or00003" is sourceless and has been removed.
-*                     Sourceless block "con/control_24_or000017" (ROM) removed.
-*                      The signal "con/control_24_or000017" is sourceless and has been removed.
-*                       Sourceless block "con/control_6_mux0000_SW0" (ROM) removed.
-*                        The signal "N10" is sourceless and has been removed.
-*                         Sourceless block "con/control_6_mux00001" (ROM) removed.
-*                          The signal "con/control_6_mux00001" is sourceless and has been removed.
-*                           Sourceless block "con/control_6" (SFF) removed.
-*                            The signal "con/control<6>" is sourceless and has been removed.
-*                       Sourceless block "con/control_13_mux000011" (ROM) removed.
-*                        The signal "con/control_13_mux00001" is sourceless and has been removed.
-*                         Sourceless block "con/control_13" (SFF) removed.
-*                          The signal "mrw" is sourceless and has been removed.
-*                       Sourceless block "con/control_18_mux000011" (ROM) removed.
-*                        The signal "con/control_18_mux00001" is sourceless and has been removed.
-*                         Sourceless block "con/control_18" (SFF) removed.
-*                          The signal "con/control<18>" is sourceless and has been removed.
-*                           Sourceless block "dat/x<15>LogicTrst155" (ROM) removed.
-*                            The signal "dat/x<15>" is sourceless and has been removed.
-*                             Sourceless block "dat/flagff0/rc" (SFF) removed.
-*                              The signal "dat/flagff0/rc" is sourceless and has been removed.
-*                               Sourceless block "dat/_and0000117_F" (ROM) removed.
-*                                The signal "N46" is sourceless and has been removed.
-*                                 Sourceless block "dat/_and0000117" (MUX) removed.
-*                                  The signal "dat/_and0000117" is sourceless and has been removed.
-*                               Sourceless block "dat/_and0000342" (ROM) removed.
-*                                The signal "dat/_and0000342" is sourceless and has been removed.
-*                                 Sourceless block "dat/_and000034_f5" (MUX) removed.
-*                                  The signal "dat/_and000034" is sourceless and has been removed.
-*                             Sourceless block "dat/ygenmod0/y_15" (SFF) removed.
-*                              The signal "dat/ygenmod0/y<15>" is sourceless and has been removed.
-*                               Sourceless block "dat/alu0/Madd_z_lut<15>" (ROM) removed.
-*                                The signal "dat/alu0/Madd_z_lut<15>" is sourceless and has been removed.
-*                             Sourceless block "dat/flagff0/Mxor_rv_xor0000_Result1" (ROM) removed.
-*                              The signal "dat/flagff0/rv_xor0000" is sourceless and has been removed.
-*                               Sourceless block "dat/flagff0/rv" (SFF) removed.
-*                                The signal "dat/flagff0/rv" is sourceless and has been removed.
-*                                 Sourceless block "dat/_and000053" (ROM) removed.
-*                                  The signal "dat/_and000053" is sourceless and has been removed.
-*                                 Sourceless block "dat/_and0000117_G" (ROM) removed.
-*                                  The signal "N47" is sourceless and has been removed.
-*                           Sourceless block "dat/x<14>LogicTrst155" (ROM) removed.
-*                            The signal "dat/x<14>" is sourceless and has been removed.
-*                             Sourceless block "dat/ygenmod0/y_14" (SFF) removed.
-*                              The signal "dat/ygenmod0/y<14>" is sourceless and has been removed.
-*                               Sourceless block "dat/alu0/Madd_z_lut<14>" (ROM) removed.
-*                                The signal "dat/alu0/Madd_z_lut<14>" is sourceless and has been removed.
-*                                 Sourceless block "dat/alu0/Madd_z_xor<14>" (XOR) removed.
-*                                  The signal "dat/z<14>" is sourceless and has been removed.
-*                                   Sourceless block "dat/sp/value_14" (SFF) removed.
-*                                    The signal "dat/sp/value<14>" is sourceless and has been removed.
-*                                     Sourceless block "dat/x<14>LogicTrst4" (ROM) removed.
-*                                      The signal "dat/x<14>LogicTrst4" is sourceless and has been removed.
-*                                       Sourceless block "dat/x<14>LogicTrst12" (ROM) removed.
-*                                        The signal "dat/x<14>LogicTrst12" is sourceless and has been removed.
-*                                   Sourceless block "dat/pc/value_14" (SFF) removed.
-*                                    The signal "dat/pc/value<14>" is sourceless and has been removed.
-*                                   Sourceless block "dat/regbank0/rf/r7/d14/q" (SFF) removed.
-*                                    The signal "dat/regbank0/rf/r7/d14/q" is sourceless and has been removed.
-*                                     Sourceless block "dat/x<14>LogicTrst61_G" (ROM) removed.
-*                                      The signal "N77" is sourceless and has been removed.
-*                                       Sourceless block "dat/x<14>LogicTrst61" (MUX) removed.
-*                                        The signal "dat/x<14>LogicTrst61" is sourceless and has been removed.
-*                                         Sourceless block "dat/x<14>LogicTrst155_SW0" (ROM) removed.
-*                                          The signal "N26" is sourceless and has been removed.
-*                                   Sourceless block "dat/regbank0/rf/r6/d14/q" (SFF) removed.
-*                                    The signal "dat/regbank0/rf/r6/d14/q" is sourceless and has been removed.
-*                                     Sourceless block "dat/x<14>LogicTrst116_G" (ROM) removed.
-*                                      The signal "N107" is sourceless and has been removed.
-*                                       Sourceless block "dat/x<14>LogicTrst116" (MUX) removed.
-*                                        The signal "dat/x<14>LogicTrst116" is sourceless and has been removed.
-*                                   Sourceless block "dat/regbank0/rf/r5/d14/q" (SFF) removed.
-*                                    The signal "dat/regbank0/rf/r5/d14/q" is sourceless and has been removed.
-*                                     Sourceless block "dat/x<14>LogicTrst61_F" (ROM) removed.
-*                                      The signal "N76" is sourceless and has been removed.
-*                                   Sourceless block "dat/regbank0/rf/r4/d14/q" (SFF) removed.
-*                                    The signal "dat/regbank0/rf/r4/d14/q" is sourceless and has been removed.
-*                                     Sourceless block "dat/x<14>LogicTrst116_F" (ROM) removed.
-*                                      The signal "N106" is sourceless and has been removed.
-*                                   Sourceless block "dat/regbank0/rf/r3/d14/q" (SFF) removed.
-*                                    The signal "dat/regbank0/rf/r3/d14/q" is sourceless and has been removed.
-*                                   Sourceless block "dat/regbank0/rf/r2/d14/q" (SFF) removed.
-*                                    The signal "dat/regbank0/rf/r2/d14/q" is sourceless and has been removed.
-*                                   Sourceless block "dat/regbank0/rf/r1/d14/q" (SFF) removed.
-*                                    The signal "dat/regbank0/rf/r1/d14/q" is sourceless and has been removed.
-*                                   Sourceless block "dat/regbank0/rf/r0/d14/q" (SFF) removed.
-*                                    The signal "dat/regbank0/rf/r0/d14/q" is sourceless and has been removed.
-*                                   Sourceless block "dat/mdrin<14>LogicTrst1" (ROM) removed.
-*                                    The signal "dat/mdrin<14>" is sourceless and has been removed.
-*                                     Sourceless block "dat/mdr/value_14" (SFF) removed.
-*                                      The signal "mdrval<14>" is sourceless and has been removed.
-*                                       Sourceless block "dat/isrr/value_14" (SFF) removed.
-*                                        The signal "dat/isrr/value<14>" is sourceless and has been removed.
-*                                         Sourceless block "con/control_6_mux000011" (ROM) removed.
-*                                          The signal "con/N3" is sourceless and has been removed.
-*                                           Sourceless block "con/control_14_mux00001" (ROM) removed.
-*                                            The signal "con/control_14_mux00001" is sourceless and has been removed.
-*                                             Sourceless block "con/control_14" (SFF) removed.
-*                                              The signal "con/control<14>" is sourceless and has been removed.
-*                                               Sourceless block "con/control_14_mux0000_SW0" (ROM) removed.
-*                                                The signal "N12" is sourceless and has been removed.
-*                                         Sourceless block "con/state_FSM_FFd12-In1" (ROM) removed.
-*                                          The signal "con/state_FSM_FFd12-In" is sourceless and has been removed.
-*                                           Sourceless block "con/state_FSM_FFd12" (SFF) removed.
-*                                            The signal "con/state_FSM_FFd12" is sourceless and has been removed.
-*                                             Sourceless block "con/state_FSM_FFd4" (SFF) removed.
-*                                              The signal "con/state_FSM_FFd4" is sourceless and has been removed.
-*                                               Sourceless block "con/control_24_or00008" (ROM) removed.
-*                                                The signal "con/control_24_or00008" is sourceless and has been removed.
-*                                               Sourceless block "con/state_FSM_FFd3" (SFF) removed.
-*                                                The signal "con/state_FSM_FFd3" is sourceless and has been removed.
-*                                                 Sourceless block "con/state_FSM_FFd18-In1" (ROM) removed.
-**The signal "con/state_FSM_FFd18-In" is sourceless and has been removed.
-** Sourceless block "con/state_FSM_FFd18" (SFF) removed.
-**  The signal "con/state_FSM_FFd18" is sourceless and has been removed.
-**   Sourceless block "con/state_FSM_FFd17" (SFF) removed.
-**    The signal "con/state_FSM_FFd17" is sourceless and has been removed.
-**     Sourceless block "con/state_FSM_FFd16" (SFF) removed.
-**      The signal "con/state_FSM_FFd16" is sourceless and has been removed.
-**       Sourceless block "con/control_0_mux0000111" (ROM) removed.
-**        The signal "con/N13" is sourceless and has been removed.
-**         Sourceless block "con/state_FSM_FFd11-In1" (ROM) removed.
-**          The signal "con/state_FSM_FFd11-In" is sourceless and has been removed.
-**           Sourceless block "con/state_FSM_FFd11" (SFF) removed.
-**            The signal "con/state_FSM_FFd11" is sourceless and has been removed.
-**             Sourceless block "con/state_FSM_FFd1" (SFF) removed.
-**              The signal "con/state_FSM_FFd1" is sourceless and has been removed.
-**               Sourceless block "con/control_0_mux000031" (ROM) removed.
-**                The signal "con/N7" is sourceless and has been removed.
-**                 Sourceless block "con/control_24_or000021" (ROM) removed.
-**                  The signal "con/N10" is sourceless and has been removed.
-**                   Sourceless block "con/control_5" (SFF) removed.
-**                    The signal "con/control<5>" is sourceless and has been removed.
-**                     Sourceless block "dat/mdr/value_0" (SFF) removed.
-**                      The signal "mdrval<0>" is sourceless and has been removed.
-**                       Sourceless block "dat/isrr/value_0" (SFF) removed.
-**                        The signal "dat/isrr/value<0>" is sourceless and has been removed.
-**                         Sourceless block "dat/x<0>LogicTrst9" (ROM) removed.
-**                          The signal "dat/x<0>LogicTrst9" is sourceless and has been removed.
-**                     Sourceless block "dat/mdr/value_1" (SFF) removed.
-**                      The signal "mdrval<1>" is sourceless and has been removed.
-**                       Sourceless block "dat/isrr/value_1" (SFF) removed.
-**                        The signal "dat/isrr/value<1>" is sourceless and has been removed.
-**                         Sourceless block "dat/x<1>LogicTrst9" (ROM) removed.
-**                          The signal "dat/x<1>LogicTrst9" is sourceless and has been removed.
-**                     Sourceless block "dat/mdr/value_2" (SFF) removed.
-**                      The signal "mdrval<2>" is sourceless and has been removed.
-**                       Sourceless block "dat/isrr/value_2" (SFF) removed.
-**                        The signal "dat/isrr/value<2>" is sourceless and has been removed.
-**                         Sourceless block "dat/x<2>LogicTrst9" (ROM) removed.
-**                          The signal "dat/x<2>LogicTrst9" is sourceless and has been removed.
-**                     Sourceless block "dat/mdr/value_3" (SFF) removed.
-**                      The signal "mdrval<3>" is sourceless and has been removed.
-**                       Sourceless block "dat/isrr/value_3" (SFF) removed.
-**                        The signal "dat/isrr/value<3>" is sourceless and has been removed.
-**                         Sourceless block "dat/x<3>LogicTrst9" (ROM) removed.
-**                          The signal "dat/x<3>LogicTrst9" is sourceless and has been removed.
-**                     Sourceless block "dat/mdr/value_4" (SFF) removed.
-**                      The signal "mdrval<4>" is sourceless and has been removed.
-**                       Sourceless block "dat/isrr/value_4" (SFF) removed.
-**                        The signal "dat/isrr/value<4>" is sourceless and has been removed.
-**                         Sourceless block "dat/x<4>LogicTrst9" (ROM) removed.
-**                          The signal "dat/x<4>LogicTrst9" is sourceless and has been removed.
-**                     Sourceless block "dat/mdr/value_5" (SFF) removed.
-**                      The signal "mdrval<5>" is sourceless and has been removed.
-**                       Sourceless block "dat/isrr/value_5" (SFF) removed.
-**                        The signal "dat/isrr/value<5>" is sourceless and has been removed.
-**                         Sourceless block "dat/x<5>LogicTrst9" (ROM) removed.
-**                          The signal "dat/x<5>LogicTrst9" is sourceless and has been removed.
-**                     Sourceless block "dat/mdr/value_6" (SFF) removed.
-**                      The signal "mdrval<6>" is sourceless and has been removed.
-**                       Sourceless block "dat/isrr/value_6" (SFF) removed.
-**                        The signal "dat/isrr/value<6>" is sourceless and has been removed.
-**                         Sourceless block "dat/x<6>LogicTrst9" (ROM) removed.
-**                          The signal "dat/x<6>LogicTrst9" is sourceless and has been removed.
-**                     Sourceless block "dat/mdr/value_7" (SFF) removed.
-**                      The signal "mdrval<7>" is sourceless and has been removed.
-**                       Sourceless block "dat/isrr/value_7" (SFF) removed.
-**                        The signal "dat/isrr/value<7>" is sourceless and has been removed.
-**                         Sourceless block "dat/x<7>LogicTrst9" (ROM) removed.
-**                          The signal "dat/x<7>LogicTrst9" is sourceless and has been removed.
-**                     Sourceless block "dat/mdr/value_8" (SFF) removed.
-**                      The signal "mdrval<8>" is sourceless and has been removed.
-**                       Sourceless block "dat/isrr/value_8" (SFF) removed.
-**                        The signal "dat/isrr/value<8>" is sourceless and has been removed.
-**                         Sourceless block "con/control_10_mux00001" (ROM) removed.
-**                          The signal "con/control_10_mux0000" is sourceless and has been removed.
-**                           Sourceless block "con/control_10" (SFF) removed.
-**                            The signal "con/control<10>" is sourceless and has been removed.
-**                             Sourceless block "dat/regbank0/rf/r7/_and00001" (ROM) removed.
-**                              The signal "dat/regbank0/rf/r7/_and0000" is sourceless and has been removed.
-**                               Sourceless block "dat/regbank0/rf/r7/d15/q" (SFF) removed.
-**                                The signal "dat/regbank0/rf/r7/d15/q" is sourceless and has been removed.
-**                                 Sourceless block "dat/x<15>LogicTrst61_G" (ROM) removed.
-**                                  The signal "N43" is sourceless and has been removed.
-**                                   Sourceless block "dat/x<15>LogicTrst61" (MUX) removed.
-**                                    The signal "dat/x<15>LogicTrst61" is sourceless and has been removed.
-**                               Sourceless block "dat/regbank0/rf/r7/d13/q" (SFF) removed.
-**                                The signal "dat/regbank0/rf/r7/d13/q" is sourceless and has been removed.
-**                                 Sourceless block "dat/x<13>LogicTrst61_G" (ROM) removed.
-**                                  The signal "N75" is sourceless and has been removed.
-**                                   Sourceless block "dat/x<13>LogicTrst61" (MUX) removed.
-**                                    The signal "dat/x<13>LogicTrst61" is sourceless and has been removed.
-**                                     Sourceless block "dat/x<13>LogicTrst155" (ROM) removed.
-**                                      The signal "dat/x<13>" is sourceless and has been removed.
-**                                       Sourceless block "dat/ygenmod0/y_13" (SFF) removed.
-**                                        The signal "dat/ygenmod0/y<13>" is sourceless and has been removed.
-**                                         Sourceless block "dat/alu0/Madd_z_lut<13>" (ROM) removed.
-**                                          The signal "dat/alu0/Madd_z_lut<13>" is sourceless and has been removed.
-**                                           Sourceless block "dat/alu0/Madd_z_xor<13>" (XOR) removed.
-**                                            The signal "dat/z<13>" is sourceless and has been removed.
-**                                             Sourceless block "dat/sp/value_13" (SFF) removed.
-**                                              The signal "dat/sp/value<13>" is sourceless and has been removed.
-**                                               Sourceless block "dat/x<13>LogicTrst4" (ROM) removed.
-**                                                The signal "dat/x<13>LogicTrst4" is sourceless and has been removed.
-**                                                 Sourceless block "dat/x<13>LogicTrst12" (ROM) removed.
-***The signal "dat/x<13>LogicTrst12" is sourceless and has been removed.
-**                                             Sourceless block "dat/pc/value_13" (SFF) removed.
-**                                              The signal "dat/pc/value<13>" is sourceless and has been removed.
-**                                             Sourceless block "dat/regbank0/rf/r6/d13/q" (SFF) removed.
-**                                              The signal "dat/regbank0/rf/r6/d13/q" is sourceless and has been removed.
-**                                               Sourceless block "dat/x<13>LogicTrst116_G" (ROM) removed.
-**                                                The signal "N105" is sourceless and has been removed.
-**                                                 Sourceless block "dat/x<13>LogicTrst116" (MUX) removed.
-***The signal "dat/x<13>LogicTrst116" is sourceless and has been removed.
-*** Sourceless block "dat/x<13>LogicTrst155_SW0" (ROM) removed.
-***  The signal "N24" is sourceless and has been removed.
-**                                             Sourceless block "dat/regbank0/rf/r5/d13/q" (SFF) removed.
-**                                              The signal "dat/regbank0/rf/r5/d13/q" is sourceless and has been removed.
-**                                               Sourceless block "dat/x<13>LogicTrst61_F" (ROM) removed.
-**                                                The signal "N74" is sourceless and has been removed.
-**                                             Sourceless block "dat/regbank0/rf/r4/d13/q" (SFF) removed.
-**                                              The signal "dat/regbank0/rf/r4/d13/q" is sourceless and has been removed.
-**                                               Sourceless block "dat/x<13>LogicTrst116_F" (ROM) removed.
-**                                                The signal "N104" is sourceless and has been removed.
-**                                             Sourceless block "dat/regbank0/rf/r3/d13/q" (SFF) removed.
-**                                              The signal "dat/regbank0/rf/r3/d13/q" is sourceless and has been removed.
-**                                             Sourceless block "dat/regbank0/rf/r2/d13/q" (SFF) removed.
-**                                              The signal "dat/regbank0/rf/r2/d13/q" is sourceless and has been removed.
-**                                             Sourceless block "dat/regbank0/rf/r1/d13/q" (SFF) removed.
-**                                              The signal "dat/regbank0/rf/r1/d13/q" is sourceless and has been removed.
-**                                             Sourceless block "dat/regbank0/rf/r0/d13/q" (SFF) removed.
-**                                              The signal "dat/regbank0/rf/r0/d13/q" is sourceless and has been removed.
-**                                             Sourceless block "dat/mdrin<13>LogicTrst1" (ROM) removed.
-**                                              The signal "dat/mdrin<13>" is sourceless and has been removed.
-**                                               Sourceless block "dat/mdr/value_13" (SFF) removed.
-**                                                The signal "mdrval<13>" is sourceless and has been removed.
-**                                                 Sourceless block "dat/isrr/value_13" (SFF) removed.
-***The signal "dat/isrr/value<13>" is sourceless and has been removed.
-*** Sourceless block "con/state_FSM_FFd10-In_SW0" (ROM) removed.
-***  The signal "N16" is sourceless and has been removed.
-***   Sourceless block "con/state_FSM_FFd10-In" (ROM) removed.
-***    The signal "con/state_FSM_FFd10-In" is sourceless and has been removed.
-***     Sourceless block "con/state_FSM_FFd10" (SFF) removed.
-***      The signal "con/state_FSM_FFd10" is sourceless and has been removed.
-***       Sourceless block "con/control_4" (SFF) removed.
-***        The signal "con/control<4>" is sourceless and has been removed.
-***         Sourceless block "con/control_4_mux00001" (ROM) removed.
-***          The signal "con/control_4_mux00001" is sourceless and has been removed.
-***       Sourceless block "con/control_20" (SFF) removed.
-***        The signal "con/control<20>" is sourceless and has been removed.
-***         Sourceless block "con/control_20_mux00001" (ROM) removed.
-***          The signal "con/control_20_mux00001" is sourceless and has been removed.
-***           Sourceless block "con/control_20_1" (SFF) removed.
-***            The signal "con/control_20_1" is sourceless and has been removed.
-***             Sourceless block "dat/x<10>LogicTrst25" (ROM) removed.
-***              The signal "dat/x<0>LogicTrst25" is sourceless and has been removed.
-***             Sourceless block "dat/x<1>LogicTrst39_SW0" (ROM) removed.
-***              The signal "N28" is sourceless and has been removed.
-***         Sourceless block "dat/x<11>LogicTrst11" (ROM) removed.
-***          The signal "dat/x<11>LogicTrst1" is sourceless and has been removed.
-***           Sourceless block "dat/x<11>LogicTrst1_f5" (MUX) removed.
-***            The signal "N3" is sourceless and has been removed.
-***             Sourceless block "dat/x<12>LogicTrst12" (ROM) removed.
-***              The signal "dat/x<12>LogicTrst12" is sourceless and has been removed.
-***               Sourceless block "dat/alu0/Madd_z_lut<12>" (ROM) removed.
-***                The signal "dat/alu0/Madd_z_lut<12>" is sourceless and has been removed.
-***                 Sourceless block "dat/alu0/Madd_z_xor<12>" (XOR) removed.
-***                  The signal "dat/z<12>" is sourceless and has been removed.
-***                   Sourceless block "dat/sp/value_12" (SFF) removed.
-***                    The signal "dat/sp/value<12>" is sourceless and has been removed.
-***                     Sourceless block "dat/x<12>LogicTrst4" (ROM) removed.
-***                      The signal "dat/x<12>LogicTrst4" is sourceless and has been removed.
-***                   Sourceless block "dat/pc/value_12" (SFF) removed.
-***                    The signal "dat/pc/value<12>" is sourceless and has been removed.
-***                   Sourceless block "dat/regbank0/rf/r7/d12/q" (SFF) removed.
-***                    The signal "dat/regbank0/rf/r7/d12/q" is sourceless and has been removed.
-***                     Sourceless block "dat/x<12>LogicTrst61_G" (ROM) removed.
-***                      The signal "N73" is sourceless and has been removed.
-***                       Sourceless block "dat/x<12>LogicTrst61" (MUX) removed.
-***                        The signal "dat/x<12>LogicTrst61" is sourceless and has been removed.
-***                         Sourceless block "dat/x<12>LogicTrst155" (ROM) removed.
-***                          The signal "dat/x<12>" is sourceless and has been removed.
-***                           Sourceless block "dat/ygenmod0/y_12" (SFF) removed.
-***                            The signal "dat/ygenmod0/y<12>" is sourceless and has been removed.
-***                         Sourceless block "dat/x<12>LogicTrst155_SW0" (ROM) removed.
-***                          The signal "N22" is sourceless and has been removed.
-***                   Sourceless block "dat/regbank0/rf/r6/d12/q" (SFF) removed.
-***                    The signal "dat/regbank0/rf/r6/d12/q" is sourceless and has been removed.
-***                     Sourceless block "dat/x<12>LogicTrst116_G" (ROM) removed.
-***                      The signal "N103" is sourceless and has been removed.
-***                       Sourceless block "dat/x<12>LogicTrst116" (MUX) removed.
-***                        The signal "dat/x<12>LogicTrst116" is sourceless and has been removed.
-***                   Sourceless block "dat/regbank0/rf/r5/d12/q" (SFF) removed.
-***                    The signal "dat/regbank0/rf/r5/d12/q" is sourceless and has been removed.
-***                     Sourceless block "dat/x<12>LogicTrst61_F" (ROM) removed.
-***                      The signal "N72" is sourceless and has been removed.
-***                   Sourceless block "dat/regbank0/rf/r4/d12/q" (SFF) removed.
-***                    The signal "dat/regbank0/rf/r4/d12/q" is sourceless and has been removed.
-***                     Sourceless block "dat/x<12>LogicTrst116_F" (ROM) removed.
-***                      The signal "N102" is sourceless and has been removed.
-***                   Sourceless block "dat/regbank0/rf/r3/d12/q" (SFF) removed.
-***                    The signal "dat/regbank0/rf/r3/d12/q" is sourceless and has been removed.
-***                   Sourceless block "dat/regbank0/rf/r2/d12/q" (SFF) removed.
-***                    The signal "dat/regbank0/rf/r2/d12/q" is sourceless and has been removed.
-***                   Sourceless block "dat/regbank0/rf/r1/d12/q" (SFF) removed.
-***                    The signal "dat/regbank0/rf/r1/d12/q" is sourceless and has been removed.
-***                   Sourceless block "dat/regbank0/rf/r0/d12/q" (SFF) removed.
-***                    The signal "dat/regbank0/rf/r0/d12/q" is sourceless and has been removed.
-***                   Sourceless block "dat/mdrin<12>LogicTrst1" (ROM) removed.
-***                    The signal "dat/mdrin<12>" is sourceless and has been removed.
-***                     Sourceless block "dat/mdr/value_12" (SFF) removed.
-***                      The signal "mdrval<12>" is sourceless and has been removed.
-***                       Sourceless block "dat/isrr/value_12" (SFF) removed.
-***                        The signal "dat/isrr/value<12>" is sourceless and has been removed.
-***                         Sourceless block "con/state_FSM_FFd13-In1" (ROM) removed.
-***                          The signal "con/state_FSM_FFd13-In" is sourceless and has been removed.
-***                           Sourceless block "con/state_FSM_FFd13" (SFF) removed.
-***                            The signal "con/state_FSM_FFd13" is sourceless and has been removed.
-***                             Sourceless block "con/state_FSM_FFd6" (SFF) removed.
-***                              The signal "con/state_FSM_FFd6" is sourceless and has been removed.
-***                               Sourceless block "con/state_FSM_FFd5" (SFF) removed.
-***                                The signal "con/state_FSM_FFd5" is sourceless and has been removed.
-***                         Sourceless block "con/state_FSM_FFd15-In" (ROM) removed.
-***                          The signal "con/state_FSM_FFd15-In" is sourceless and has been removed.
-***                           Sourceless block "con/state_FSM_FFd15" (SFF) removed.
-***                            The signal "con/state_FSM_FFd15" is sourceless and has been removed.
-***                             Sourceless block "con/state_FSM_FFd9" (SFF) removed.
-***                              The signal "con/state_FSM_FFd9" is sourceless and has been removed.
-***                               Sourceless block "con/state_FSM_FFd8" (SFF) removed.
-***                                The signal "con/state_FSM_FFd8" is sourceless and has been removed.
-***                               Sourceless block "con/control_10_mux000011" (ROM) removed.
-***                                The signal "con/N01" is sourceless and has been removed.
-***                                 Sourceless block "con/control_12_mux00001" (ROM) removed.
-***                                  The signal "con/control_12_mux0000" is sourceless and has been removed.
-***                                   Sourceless block "con/control_12" (SFF) removed.
-***                                    The signal "con/control<12>" is sourceless and has been removed.
-***                                     Sourceless block "dat/regbank0/rf/r6/_and00001" (ROM) removed.
-***                                      The signal "dat/regbank0/rf/r6/_and0000" is sourceless and has been removed.
-***                                       Sourceless block "dat/regbank0/rf/r6/d15/q" (SFF) removed.
-***                                        The signal "dat/regbank0/rf/r6/d15/q" is sourceless and has been removed.
-***                                         Sourceless block "dat/x<15>LogicTrst116_G" (ROM) removed.
-***                                          The signal "N45" is sourceless and has been removed.
-***                                           Sourceless block "dat/x<15>LogicTrst116" (MUX) removed.
-***                                            The signal "dat/x<15>LogicTrst116" is sourceless and has been removed.
-***                                       Sourceless block "dat/regbank0/rf/r6/d10/q" (SFF) removed.
-***                                        The signal "dat/regbank0/rf/r6/d10/q" is sourceless and has been removed.
-***                                         Sourceless block "dat/x<10>LogicTrst149_G" (ROM) removed.
-***                                          The signal "N99" is sourceless and has been removed.
-***                                           Sourceless block "dat/x<10>LogicTrst149" (MUX) removed.
-***                                            The signal "dat/x<10>LogicTrst149" is sourceless and has been removed.
-***                                             Sourceless block "dat/x<10>LogicTrst188" (ROM) removed.
-***                                              The signal "dat/x<10>" is sourceless and has been removed.
-***                                               Sourceless block "dat/ygenmod0/y_10" (SFF) removed.
-***                                                The signal "dat/ygenmod0/y<10>" is sourceless and has been removed.
-***                                                 Sourceless block "dat/alu0/Madd_z_lut<10>" (ROM) removed.
-****The signal "dat/alu0/Madd_z_lut<10>" is sourceless and has been removed.
-**** Sourceless block "dat/alu0/Madd_z_xor<10>" (XOR) removed.
-****  The signal "dat/z<10>" is sourceless and has been removed.
-****   Sourceless block "dat/sp/value_10" (SFF) removed.
-****    The signal "dat/sp/value<10>" is sourceless and has been removed.
-****   Sourceless block "dat/regbank0/rf/r7/d10/q" (SFF) removed.
-****    The signal "dat/regbank0/rf/r7/d10/q" is sourceless and has been removed.
-****     Sourceless block "dat/x<10>LogicTrst94_G" (ROM) removed.
-****      The signal "N69" is sourceless and has been removed.
-****       Sourceless block "dat/x<10>LogicTrst94" (MUX) removed.
-****        The signal "dat/x<10>LogicTrst94" is sourceless and has been removed.
-****   Sourceless block "dat/regbank0/rf/r5/d10/q" (SFF) removed.
-****    The signal "dat/regbank0/rf/r5/d10/q" is sourceless and has been removed.
-****     Sourceless block "dat/x<10>LogicTrst94_F" (ROM) removed.
-****      The signal "N68" is sourceless and has been removed.
-****   Sourceless block "dat/regbank0/rf/r4/d10/q" (SFF) removed.
-****    The signal "dat/regbank0/rf/r4/d10/q" is sourceless and has been removed.
-****     Sourceless block "dat/x<10>LogicTrst149_F" (ROM) removed.
-****      The signal "N98" is sourceless and has been removed.
-****   Sourceless block "dat/regbank0/rf/r3/d10/q" (SFF) removed.
-****    The signal "dat/regbank0/rf/r3/d10/q" is sourceless and has been removed.
-****   Sourceless block "dat/regbank0/rf/r2/d10/q" (SFF) removed.
-****    The signal "dat/regbank0/rf/r2/d10/q" is sourceless and has been removed.
-****   Sourceless block "dat/regbank0/rf/r1/d10/q" (SFF) removed.
-****    The signal "dat/regbank0/rf/r1/d10/q" is sourceless and has been removed.
-****   Sourceless block "dat/regbank0/rf/r0/d10/q" (SFF) removed.
-****    The signal "dat/regbank0/rf/r0/d10/q" is sourceless and has been removed.
-****   Sourceless block "dat/mdrin<10>LogicTrst1" (ROM) removed.
-****    The signal "dat/mdrin<10>" is sourceless and has been removed.
-****     Sourceless block "dat/mdr/value_10" (SFF) removed.
-****      The signal "mdrval<10>" is sourceless and has been removed.
-****       Sourceless block "dat/isrr/value_10" (SFF) removed.
-****        The signal "dat/isrr/value<10>" is sourceless and has been removed.
-****         Sourceless block "dat/x<10>LogicTrst9" (ROM) removed.
-****          The signal "dat/x<10>LogicTrst9" is sourceless and has been removed.
-****   Sourceless block "dat/flagff0/zd0/cz_cmp_eq000017" (ROM) removed.
-****    The signal "dat/flagff0/zd0/cz_cmp_eq000017" is sourceless and has been removed.
-****     Sourceless block "dat/flagff0/zd0/cz_cmp_eq000088" (ROM) removed.
-****      The signal "dat/flagff0/cz" is sourceless and has been removed.
-****       Sourceless block "dat/flagff0/rz" (SFF) removed.
-****        The signal "dat/flagff0/rz" is sourceless and has been removed.
-***                                       Sourceless block "dat/regbank0/rf/r6/d9/q" (SFF) removed.
-***                                        The signal "dat/regbank0/rf/r6/d9/q" is sourceless and has been removed.
-***                                         Sourceless block "dat/x<9>LogicTrst149_G" (ROM) removed.
-***                                          The signal "N97" is sourceless and has been removed.
-***                                           Sourceless block "dat/x<9>LogicTrst149" (MUX) removed.
-***                                            The signal "dat/x<9>LogicTrst149" is sourceless and has been removed.
-***                                             Sourceless block "dat/x<9>LogicTrst188" (ROM) removed.
-***                                              The signal "dat/x<9>" is sourceless and has been removed.
-***                                               Sourceless block "dat/ygenmod0/y_9" (SFF) removed.
-***                                                The signal "dat/ygenmod0/y<9>" is sourceless and has been removed.
-***                                                 Sourceless block "dat/alu0/Madd_z_lut<9>" (ROM) removed.
-****The signal "dat/alu0/Madd_z_lut<9>" is sourceless and has been removed.
-**** Sourceless block "dat/alu0/Madd_z_xor<9>" (XOR) removed.
-****  The signal "dat/z<9>" is sourceless and has been removed.
-****   Sourceless block "dat/sp/value_9" (SFF) removed.
-****    The signal "dat/sp/value<9>" is sourceless and has been removed.
-****   Sourceless block "dat/regbank0/rf/r7/d9/q" (SFF) removed.
-****    The signal "dat/regbank0/rf/r7/d9/q" is sourceless and has been removed.
-****     Sourceless block "dat/x<9>LogicTrst94_G" (ROM) removed.
-****      The signal "N67" is sourceless and has been removed.
-****       Sourceless block "dat/x<9>LogicTrst94" (MUX) removed.
-****        The signal "dat/x<9>LogicTrst94" is sourceless and has been removed.
-****   Sourceless block "dat/regbank0/rf/r5/d9/q" (SFF) removed.
-****    The signal "dat/regbank0/rf/r5/d9/q" is sourceless and has been removed.
-****     Sourceless block "dat/x<9>LogicTrst94_F" (ROM) removed.
-****      The signal "N66" is sourceless and has been removed.
-****   Sourceless block "dat/regbank0/rf/r4/d9/q" (SFF) removed.
-****    The signal "dat/regbank0/rf/r4/d9/q" is sourceless and has been removed.
-****     Sourceless block "dat/x<9>LogicTrst149_F" (ROM) removed.
-****      The signal "N96" is sourceless and has been removed.
-****   Sourceless block "dat/regbank0/rf/r3/d9/q" (SFF) removed.
-****    The signal "dat/regbank0/rf/r3/d9/q" is sourceless and has been removed.
-****   Sourceless block "dat/regbank0/rf/r2/d9/q" (SFF) removed.
-****    The signal "dat/regbank0/rf/r2/d9/q" is sourceless and has been removed.
-****   Sourceless block "dat/regbank0/rf/r1/d9/q" (SFF) removed.
-****    The signal "dat/regbank0/rf/r1/d9/q" is sourceless and has been removed.
-****   Sourceless block "dat/regbank0/rf/r0/d9/q" (SFF) removed.
-****    The signal "dat/regbank0/rf/r0/d9/q" is sourceless and has been removed.
-****   Sourceless block "dat/mdrin<9>LogicTrst1" (ROM) removed.
-****    The signal "dat/mdrin<9>" is sourceless and has been removed.
-****     Sourceless block "dat/mdr/value_9" (SFF) removed.
-****      The signal "mdrval<9>" is sourceless and has been removed.
-****       Sourceless block "dat/isrr/value_9" (SFF) removed.
-****        The signal "dat/isrr/value<9>" is sourceless and has been removed.
-****         Sourceless block "con/control_11_mux00001" (ROM) removed.
-****          The signal "con/control_11_mux0000" is sourceless and has been removed.
-****           Sourceless block "con/control_11" (SFF) removed.
-****            The signal "con/control<11>" is sourceless and has been removed.
-****             Sourceless block "dat/regbank0/rf/r5/_and00001" (ROM) removed.
-****              The signal "dat/regbank0/rf/r5/_and0000" is sourceless and has been removed.
-****               Sourceless block "dat/regbank0/rf/r5/d15/q" (SFF) removed.
-****                The signal "dat/regbank0/rf/r5/d15/q" is sourceless and has been removed.
-****                 Sourceless block "dat/x<15>LogicTrst61_F" (ROM) removed.
-****                  The signal "N42" is sourceless and has been removed.
-****               Sourceless block "dat/regbank0/rf/r5/d8/q" (SFF) removed.
-****                The signal "dat/regbank0/rf/r5/d8/q" is sourceless and has been removed.
-****                 Sourceless block "dat/x<8>LogicTrst94_F" (ROM) removed.
-****                  The signal "N64" is sourceless and has been removed.
-****                   Sourceless block "dat/x<8>LogicTrst94" (MUX) removed.
-****                    The signal "dat/x<8>LogicTrst94" is sourceless and has been removed.
-****                     Sourceless block "dat/x<8>LogicTrst188" (ROM) removed.
-****                      The signal "dat/x<8>" is sourceless and has been removed.
-****                       Sourceless block "dat/ygenmod0/y_8" (SFF) removed.
-****                        The signal "dat/ygenmod0/y<8>" is sourceless and has been removed.
-****                         Sourceless block "dat/alu0/Madd_z_lut<8>" (ROM) removed.
-****                          The signal "dat/alu0/Madd_z_lut<8>" is sourceless and has been removed.
-****                           Sourceless block "dat/alu0/Madd_z_xor<8>" (XOR) removed.
-****                            The signal "dat/z<8>" is sourceless and has been removed.
-****                             Sourceless block "dat/sp/value_8" (SFF) removed.
-****                              The signal "dat/sp/value<8>" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r7/d8/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r7/d8/q" is sourceless and has been removed.
-****                               Sourceless block "dat/x<8>LogicTrst94_G" (ROM) removed.
-****                                The signal "N65" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r6/d8/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r6/d8/q" is sourceless and has been removed.
-****                               Sourceless block "dat/x<8>LogicTrst149_G" (ROM) removed.
-****                                The signal "N95" is sourceless and has been removed.
-****                                 Sourceless block "dat/x<8>LogicTrst149" (MUX) removed.
-****                                  The signal "dat/x<8>LogicTrst149" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r4/d8/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r4/d8/q" is sourceless and has been removed.
-****                               Sourceless block "dat/x<8>LogicTrst149_F" (ROM) removed.
-****                                The signal "N94" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r3/d8/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r3/d8/q" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r2/d8/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r2/d8/q" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r1/d8/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r1/d8/q" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r0/d8/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r0/d8/q" is sourceless and has been removed.
-****                             Sourceless block "dat/mdrin<8>LogicTrst1" (ROM) removed.
-****                              The signal "dat/mdrin<8>" is sourceless and has been removed.
-****                             Sourceless block "dat/flagff0/zd0/cz_cmp_eq000065" (ROM) removed.
-****                              The signal "dat/flagff0/zd0/cz_cmp_eq000065" is sourceless and has been removed.
-****               Sourceless block "dat/regbank0/rf/r5/d7/q" (SFF) removed.
-****                The signal "dat/regbank0/rf/r5/d7/q" is sourceless and has been removed.
-****                 Sourceless block "dat/x<7>LogicTrst94_F" (ROM) removed.
-****                  The signal "N62" is sourceless and has been removed.
-****                   Sourceless block "dat/x<7>LogicTrst94" (MUX) removed.
-****                    The signal "dat/x<7>LogicTrst94" is sourceless and has been removed.
-****                     Sourceless block "dat/x<7>LogicTrst188" (ROM) removed.
-****                      The signal "dat/x<7>" is sourceless and has been removed.
-****                       Sourceless block "dat/ygenmod0/y_7" (SFF) removed.
-****                        The signal "dat/ygenmod0/y<7>" is sourceless and has been removed.
-****                         Sourceless block "dat/alu0/Madd_z_lut<7>" (ROM) removed.
-****                          The signal "dat/alu0/Madd_z_lut<7>" is sourceless and has been removed.
-****                           Sourceless block "dat/alu0/Madd_z_xor<7>" (XOR) removed.
-****                            The signal "dat/z<7>" is sourceless and has been removed.
-****                             Sourceless block "dat/sp/value_7" (SFF) removed.
-****                              The signal "dat/sp/value<7>" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r7/d7/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r7/d7/q" is sourceless and has been removed.
-****                               Sourceless block "dat/x<7>LogicTrst94_G" (ROM) removed.
-****                                The signal "N63" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r6/d7/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r6/d7/q" is sourceless and has been removed.
-****                               Sourceless block "dat/x<7>LogicTrst149_G" (ROM) removed.
-****                                The signal "N93" is sourceless and has been removed.
-****                                 Sourceless block "dat/x<7>LogicTrst149" (MUX) removed.
-****                                  The signal "dat/x<7>LogicTrst149" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r4/d7/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r4/d7/q" is sourceless and has been removed.
-****                               Sourceless block "dat/x<7>LogicTrst149_F" (ROM) removed.
-****                                The signal "N92" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r3/d7/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r3/d7/q" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r2/d7/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r2/d7/q" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r1/d7/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r1/d7/q" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r0/d7/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r0/d7/q" is sourceless and has been removed.
-****                             Sourceless block "dat/mdrin<7>LogicTrst1" (ROM) removed.
-****                              The signal "dat/mdrin<7>" is sourceless and has been removed.
-****                             Sourceless block "dat/flagff0/zd0/cz_cmp_eq000074" (ROM) removed.
-****                              The signal "dat/flagff0/zd0/cz_cmp_eq000074" is sourceless and has been removed.
-****               Sourceless block "dat/regbank0/rf/r5/d6/q" (SFF) removed.
-****                The signal "dat/regbank0/rf/r5/d6/q" is sourceless and has been removed.
-****                 Sourceless block "dat/x<6>LogicTrst94_F" (ROM) removed.
-****                  The signal "N60" is sourceless and has been removed.
-****                   Sourceless block "dat/x<6>LogicTrst94" (MUX) removed.
-****                    The signal "dat/x<6>LogicTrst94" is sourceless and has been removed.
-****                     Sourceless block "dat/x<6>LogicTrst188" (ROM) removed.
-****                      The signal "dat/x<6>" is sourceless and has been removed.
-****                       Sourceless block "dat/ygenmod0/y_6" (SFF) removed.
-****                        The signal "dat/ygenmod0/y<6>" is sourceless and has been removed.
-****                         Sourceless block "dat/alu0/Madd_z_lut<6>" (ROM) removed.
-****                          The signal "dat/alu0/Madd_z_lut<6>" is sourceless and has been removed.
-****                           Sourceless block "dat/alu0/Madd_z_xor<6>" (XOR) removed.
-****                            The signal "dat/z<6>" is sourceless and has been removed.
-****                             Sourceless block "dat/sp/value_6" (SFF) removed.
-****                              The signal "dat/sp/value<6>" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r7/d6/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r7/d6/q" is sourceless and has been removed.
-****                               Sourceless block "dat/x<6>LogicTrst94_G" (ROM) removed.
-****                                The signal "N61" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r6/d6/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r6/d6/q" is sourceless and has been removed.
-****                               Sourceless block "dat/x<6>LogicTrst149_G" (ROM) removed.
-****                                The signal "N91" is sourceless and has been removed.
-****                                 Sourceless block "dat/x<6>LogicTrst149" (MUX) removed.
-****                                  The signal "dat/x<6>LogicTrst149" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r4/d6/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r4/d6/q" is sourceless and has been removed.
-****                               Sourceless block "dat/x<6>LogicTrst149_F" (ROM) removed.
-****                                The signal "N90" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r3/d6/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r3/d6/q" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r2/d6/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r2/d6/q" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r1/d6/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r1/d6/q" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r0/d6/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r0/d6/q" is sourceless and has been removed.
-****                             Sourceless block "dat/mdrin<6>LogicTrst1" (ROM) removed.
-****                              The signal "dat/mdrin<6>" is sourceless and has been removed.
-****               Sourceless block "dat/regbank0/rf/r5/d5/q" (SFF) removed.
-****                The signal "dat/regbank0/rf/r5/d5/q" is sourceless and has been removed.
-****                 Sourceless block "dat/x<5>LogicTrst94_F" (ROM) removed.
-****                  The signal "N58" is sourceless and has been removed.
-****                   Sourceless block "dat/x<5>LogicTrst94" (MUX) removed.
-****                    The signal "dat/x<5>LogicTrst94" is sourceless and has been removed.
-****                     Sourceless block "dat/x<5>LogicTrst188" (ROM) removed.
-****                      The signal "dat/x<5>" is sourceless and has been removed.
-****                       Sourceless block "dat/ygenmod0/y_5" (SFF) removed.
-****                        The signal "dat/ygenmod0/y<5>" is sourceless and has been removed.
-****                         Sourceless block "dat/alu0/Madd_z_lut<5>" (ROM) removed.
-****                          The signal "dat/alu0/Madd_z_lut<5>" is sourceless and has been removed.
-****                           Sourceless block "dat/alu0/Madd_z_xor<5>" (XOR) removed.
-****                            The signal "dat/z<5>" is sourceless and has been removed.
-****                             Sourceless block "dat/sp/value_5" (SFF) removed.
-****                              The signal "dat/sp/value<5>" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r7/d5/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r7/d5/q" is sourceless and has been removed.
-****                               Sourceless block "dat/x<5>LogicTrst94_G" (ROM) removed.
-****                                The signal "N59" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r6/d5/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r6/d5/q" is sourceless and has been removed.
-****                               Sourceless block "dat/x<5>LogicTrst149_G" (ROM) removed.
-****                                The signal "N89" is sourceless and has been removed.
-****                                 Sourceless block "dat/x<5>LogicTrst149" (MUX) removed.
-****                                  The signal "dat/x<5>LogicTrst149" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r4/d5/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r4/d5/q" is sourceless and has been removed.
-****                               Sourceless block "dat/x<5>LogicTrst149_F" (ROM) removed.
-****                                The signal "N88" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r3/d5/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r3/d5/q" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r2/d5/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r2/d5/q" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r1/d5/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r1/d5/q" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r0/d5/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r0/d5/q" is sourceless and has been removed.
-****                             Sourceless block "dat/mdrin<5>LogicTrst1" (ROM) removed.
-****                              The signal "dat/mdrin<5>" is sourceless and has been removed.
-****                             Sourceless block "dat/flagff0/zd0/cz_cmp_eq00003" (ROM) removed.
-****                              The signal "dat/flagff0/zd0/cz_cmp_eq00003/O" is sourceless and has been
-removed.
-****               Sourceless block "dat/regbank0/rf/r5/d4/q" (SFF) removed.
-****                The signal "dat/regbank0/rf/r5/d4/q" is sourceless and has been removed.
-****                 Sourceless block "dat/x<4>LogicTrst94_F" (ROM) removed.
-****                  The signal "N56" is sourceless and has been removed.
-****                   Sourceless block "dat/x<4>LogicTrst94" (MUX) removed.
-****                    The signal "dat/x<4>LogicTrst94" is sourceless and has been removed.
-****                     Sourceless block "dat/x<4>LogicTrst188" (ROM) removed.
-****                      The signal "dat/x<4>" is sourceless and has been removed.
-****                       Sourceless block "dat/ygenmod0/y_4" (SFF) removed.
-****                        The signal "dat/ygenmod0/y<4>" is sourceless and has been removed.
-****                         Sourceless block "dat/alu0/Madd_z_lut<4>" (ROM) removed.
-****                          The signal "dat/alu0/Madd_z_lut<4>" is sourceless and has been removed.
-****                           Sourceless block "dat/alu0/Madd_z_xor<4>" (XOR) removed.
-****                            The signal "dat/z<4>" is sourceless and has been removed.
-****                             Sourceless block "dat/sp/value_4" (SFF) removed.
-****                              The signal "dat/sp/value<4>" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r7/d4/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r7/d4/q" is sourceless and has been removed.
-****                               Sourceless block "dat/x<4>LogicTrst94_G" (ROM) removed.
-****                                The signal "N57" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r6/d4/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r6/d4/q" is sourceless and has been removed.
-****                               Sourceless block "dat/x<4>LogicTrst149_G" (ROM) removed.
-****                                The signal "N87" is sourceless and has been removed.
-****                                 Sourceless block "dat/x<4>LogicTrst149" (MUX) removed.
-****                                  The signal "dat/x<4>LogicTrst149" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r4/d4/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r4/d4/q" is sourceless and has been removed.
-****                               Sourceless block "dat/x<4>LogicTrst149_F" (ROM) removed.
-****                                The signal "N86" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r3/d4/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r3/d4/q" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r2/d4/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r2/d4/q" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r1/d4/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r1/d4/q" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r0/d4/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r0/d4/q" is sourceless and has been removed.
-****                             Sourceless block "dat/mdrin<4>LogicTrst1" (ROM) removed.
-****                              The signal "dat/mdrin<4>" is sourceless and has been removed.
-****               Sourceless block "dat/regbank0/rf/r5/d3/q" (SFF) removed.
-****                The signal "dat/regbank0/rf/r5/d3/q" is sourceless and has been removed.
-****                 Sourceless block "dat/x<3>LogicTrst94_F" (ROM) removed.
-****                  The signal "N54" is sourceless and has been removed.
-****                   Sourceless block "dat/x<3>LogicTrst94" (MUX) removed.
-****                    The signal "dat/x<3>LogicTrst94" is sourceless and has been removed.
-****                     Sourceless block "dat/x<3>LogicTrst188" (ROM) removed.
-****                      The signal "dat/x<3>" is sourceless and has been removed.
-****                       Sourceless block "dat/ygenmod0/y_3" (SFF) removed.
-****                        The signal "dat/ygenmod0/y<3>" is sourceless and has been removed.
-****                         Sourceless block "dat/alu0/Madd_z_lut<3>" (ROM) removed.
-****                          The signal "dat/alu0/Madd_z_lut<3>" is sourceless and has been removed.
-****                           Sourceless block "dat/alu0/Madd_z_xor<3>" (XOR) removed.
-****                            The signal "dat/z<3>" is sourceless and has been removed.
-****                             Sourceless block "dat/sp/value_3" (SFF) removed.
-****                              The signal "dat/sp/value<3>" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r7/d3/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r7/d3/q" is sourceless and has been removed.
-****                               Sourceless block "dat/x<3>LogicTrst94_G" (ROM) removed.
-****                                The signal "N55" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r6/d3/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r6/d3/q" is sourceless and has been removed.
-****                               Sourceless block "dat/x<3>LogicTrst149_G" (ROM) removed.
-****                                The signal "N85" is sourceless and has been removed.
-****                                 Sourceless block "dat/x<3>LogicTrst149" (MUX) removed.
-****                                  The signal "dat/x<3>LogicTrst149" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r4/d3/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r4/d3/q" is sourceless and has been removed.
-****                               Sourceless block "dat/x<3>LogicTrst149_F" (ROM) removed.
-****                                The signal "N84" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r3/d3/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r3/d3/q" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r2/d3/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r2/d3/q" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r1/d3/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r1/d3/q" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r0/d3/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r0/d3/q" is sourceless and has been removed.
-****                             Sourceless block "dat/mdrin<3>LogicTrst1" (ROM) removed.
-****                              The signal "dat/mdrin<3>" is sourceless and has been removed.
-****                             Sourceless block "dat/flagff0/zd0/cz_cmp_eq000035" (ROM) removed.
-****                              The signal "dat/flagff0/zd0/cz_cmp_eq000035" is sourceless and has been removed.
-****               Sourceless block "dat/regbank0/rf/r5/d2/q" (SFF) removed.
-****                The signal "dat/regbank0/rf/r5/d2/q" is sourceless and has been removed.
-****                 Sourceless block "dat/x<2>LogicTrst94_F" (ROM) removed.
-****                  The signal "N52" is sourceless and has been removed.
-****                   Sourceless block "dat/x<2>LogicTrst94" (MUX) removed.
-****                    The signal "dat/x<2>LogicTrst94" is sourceless and has been removed.
-****                     Sourceless block "dat/x<2>LogicTrst188" (ROM) removed.
-****                      The signal "dat/x<2>" is sourceless and has been removed.
-****                       Sourceless block "dat/ygenmod0/y_2" (SFF) removed.
-****                        The signal "dat/ygenmod0/y<2>" is sourceless and has been removed.
-****                         Sourceless block "dat/alu0/Madd_z_lut<2>" (ROM) removed.
-****                          The signal "dat/alu0/Madd_z_lut<2>" is sourceless and has been removed.
-****                           Sourceless block "dat/alu0/Madd_z_xor<2>" (XOR) removed.
-****                            The signal "dat/z<2>" is sourceless and has been removed.
-****                             Sourceless block "dat/sp/value_2" (SFF) removed.
-****                              The signal "dat/sp/value<2>" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r7/d2/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r7/d2/q" is sourceless and has been removed.
-****                               Sourceless block "dat/x<2>LogicTrst94_G" (ROM) removed.
-****                                The signal "N53" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r6/d2/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r6/d2/q" is sourceless and has been removed.
-****                               Sourceless block "dat/x<2>LogicTrst149_G" (ROM) removed.
-****                                The signal "N83" is sourceless and has been removed.
-****                                 Sourceless block "dat/x<2>LogicTrst149" (MUX) removed.
-****                                  The signal "dat/x<2>LogicTrst149" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r4/d2/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r4/d2/q" is sourceless and has been removed.
-****                               Sourceless block "dat/x<2>LogicTrst149_F" (ROM) removed.
-****                                The signal "N82" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r3/d2/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r3/d2/q" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r2/d2/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r2/d2/q" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r1/d2/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r1/d2/q" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r0/d2/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r0/d2/q" is sourceless and has been removed.
-****                             Sourceless block "dat/mdrin<2>LogicTrst1" (ROM) removed.
-****                              The signal "dat/mdrin<2>" is sourceless and has been removed.
-****               Sourceless block "dat/regbank0/rf/r5/d1/q" (SFF) removed.
-****                The signal "dat/regbank0/rf/r5/d1/q" is sourceless and has been removed.
-****                 Sourceless block "dat/x<1>LogicTrst94_F" (ROM) removed.
-****                  The signal "N50" is sourceless and has been removed.
-****                   Sourceless block "dat/x<1>LogicTrst94" (MUX) removed.
-****                    The signal "dat/x<1>LogicTrst94" is sourceless and has been removed.
-****                     Sourceless block "dat/x<1>LogicTrst188" (ROM) removed.
-****                      The signal "dat/x<1>" is sourceless and has been removed.
-****                       Sourceless block "dat/ygenmod0/y_1" (SFF) removed.
-****                        The signal "dat/ygenmod0/y<1>" is sourceless and has been removed.
-****                         Sourceless block "dat/alu0/Madd_z_lut<1>" (ROM) removed.
-****                          The signal "dat/alu0/Madd_z_lut<1>" is sourceless and has been removed.
-****                           Sourceless block "dat/alu0/Madd_z_xor<1>" (XOR) removed.
-****                            The signal "dat/z<1>" is sourceless and has been removed.
-****                             Sourceless block "dat/sp/value_1" (SFF) removed.
-****                              The signal "dat/sp/value<1>" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r7/d1/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r7/d1/q" is sourceless and has been removed.
-****                               Sourceless block "dat/x<1>LogicTrst94_G" (ROM) removed.
-****                                The signal "N51" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r6/d1/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r6/d1/q" is sourceless and has been removed.
-****                               Sourceless block "dat/x<1>LogicTrst149_G" (ROM) removed.
-****                                The signal "N81" is sourceless and has been removed.
-****                                 Sourceless block "dat/x<1>LogicTrst149" (MUX) removed.
-****                                  The signal "dat/x<1>LogicTrst149" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r4/d1/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r4/d1/q" is sourceless and has been removed.
-****                               Sourceless block "dat/x<1>LogicTrst149_F" (ROM) removed.
-****                                The signal "N80" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r3/d1/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r3/d1/q" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r2/d1/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r2/d1/q" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r1/d1/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r1/d1/q" is sourceless and has been removed.
-****                             Sourceless block "dat/regbank0/rf/r0/d1/q" (SFF) removed.
-****                              The signal "dat/regbank0/rf/r0/d1/q" is sourceless and has been removed.
-****                             Sourceless block "dat/mdrin<1>LogicTrst1" (ROM) removed.
-****                              The signal "dat/mdrin<1>" is sourceless and has been removed.
-****               Sourceless block "dat/regbank0/rf/r5/d0/q" (SFF) removed.
-****                The signal "dat/regbank0/rf/r5/d0/q" is sourceless and has been removed.
-****                 Sourceless block "dat/x<0>LogicTrst94_F" (ROM) removed.
-****                  The signal "N48" is sourceless and has been removed.
-****                   Sourceless block "dat/x<0>LogicTrst94" (MUX) removed.
-****                    The signal "dat/x<0>LogicTrst94" is sourceless and has been removed.
-****             Sourceless block "dat/regbank0/rf/r4/_and00001" (ROM) removed.
-****              The signal "dat/regbank0/rf/r4/_and0000" is sourceless and has been removed.
-****               Sourceless block "dat/regbank0/rf/r4/d15/q" (SFF) removed.
-****                The signal "dat/regbank0/rf/r4/d15/q" is sourceless and has been removed.
-****                 Sourceless block "dat/x<15>LogicTrst116_F" (ROM) removed.
-****                  The signal "N44" is sourceless and has been removed.
-****               Sourceless block "dat/regbank0/rf/r4/d0/q" (SFF) removed.
-****                The signal "dat/regbank0/rf/r4/d0/q" is sourceless and has been removed.
-****                 Sourceless block "dat/x<0>LogicTrst149_F" (ROM) removed.
-****                  The signal "N78" is sourceless and has been removed.
-****                   Sourceless block "dat/x<0>LogicTrst149" (MUX) removed.
-****                    The signal "dat/x<0>LogicTrst149" is sourceless and has been removed.
-****             Sourceless block "dat/regbank0/rf/r3/_and00001" (ROM) removed.
-****              The signal "dat/regbank0/rf/r3/_and0000" is sourceless and has been removed.
-****               Sourceless block "dat/regbank0/rf/r3/d15/q" (SFF) removed.
-****                The signal "dat/regbank0/rf/r3/d15/q" is sourceless and has been removed.
-****               Sourceless block "dat/regbank0/rf/r3/d0/q" (SFF) removed.
-****                The signal "dat/regbank0/rf/r3/d0/q" is sourceless and has been removed.
-****                 Sourceless block "dat/x<0>LogicTrst94_G" (ROM) removed.
-****                  The signal "N49" is sourceless and has been removed.
-****             Sourceless block "dat/regbank0/rf/r2/_and00001" (ROM) removed.
-****              The signal "dat/regbank0/rf/r2/_and0000" is sourceless and has been removed.
-****               Sourceless block "dat/regbank0/rf/r2/d15/q" (SFF) removed.
-****                The signal "dat/regbank0/rf/r2/d15/q" is sourceless and has been removed.
-****               Sourceless block "dat/regbank0/rf/r2/d0/q" (SFF) removed.
-****                The signal "dat/regbank0/rf/r2/d0/q" is sourceless and has been removed.
-****                 Sourceless block "dat/x<0>LogicTrst149_G" (ROM) removed.
-****                  The signal "N79" is sourceless and has been removed.
-****             Sourceless block "dat/regbank0/rf/r1/_and00001" (ROM) removed.
-****              The signal "dat/regbank0/rf/r1/_and0000" is sourceless and has been removed.
-****               Sourceless block "dat/regbank0/rf/r1/d15/q" (SFF) removed.
-****                The signal "dat/regbank0/rf/r1/d15/q" is sourceless and has been removed.
-****               Sourceless block "dat/regbank0/rf/r1/d0/q" (SFF) removed.
-****                The signal "dat/regbank0/rf/r1/d0/q" is sourceless and has been removed.
-****             Sourceless block "dat/regbank0/rf/r0/_and00001" (ROM) removed.
-****              The signal "dat/regbank0/rf/r0/_and0000" is sourceless and has been removed.
-****               Sourceless block "dat/regbank0/rf/r0/d15/q" (SFF) removed.
-****                The signal "dat/regbank0/rf/r0/d15/q" is sourceless and has been removed.
-****               Sourceless block "dat/regbank0/rf/r0/d0/q" (SFF) removed.
-****                The signal "dat/regbank0/rf/r0/d0/q" is sourceless and has been removed.
-****         Sourceless block "dat/x<9>LogicTrst9" (ROM) removed.
-****          The signal "dat/x<9>LogicTrst9" is sourceless and has been removed.
-***                                       Sourceless block "dat/regbank0/rf/r6/d0/q" (SFF) removed.
-***                                        The signal "dat/regbank0/rf/r6/d0/q" is sourceless and has been removed.
-***                                   Sourceless block "con/control_12_1" (SFF) removed.
-***                                    The signal "con/control_12_1" is sourceless and has been removed.
-***                             Sourceless block "con/control_24_or000011" (ROM) removed.
-***                              The signal "con/N9" is sourceless and has been removed.
-***                         Sourceless block "con/state_FSM_FFd14-In_SW1" (ROM) removed.
-***                          The signal "N40" is sourceless and has been removed.
-***                           Sourceless block "con/state_FSM_FFd14-In" (ROM) removed.
-***                            The signal "con/state_FSM_FFd14-In" is sourceless and has been removed.
-***                             Sourceless block "con/state_FSM_FFd14" (SFF) removed.
-***                              The signal "con/state_FSM_FFd14" is sourceless and has been removed.
-***                               Sourceless block "con/state_FSM_FFd7" (SFF) removed.
-***                                The signal "con/state_FSM_FFd7" is sourceless and has been removed.
-***                                 Sourceless block "con/control_2_mux000011" (ROM) removed.
-***                                  The signal "con/N4" is sourceless and has been removed.
-***                                   Sourceless block "con/control_23" (SFF) removed.
-***                                    The signal "con/control<23>" is sourceless and has been removed.
-***                                 Sourceless block "con/control_8_mux00001" (ROM) removed.
-***                                  The signal "con/control_8_mux00001" is sourceless and has been removed.
-***                                   Sourceless block "con/control_8" (SFF) removed.
-***                                    The signal "con/control<8>" is sourceless and has been removed.
-***                                     Sourceless block "dat/ygenmod0/y_0" (SFF) removed.
-***                                      The signal "dat/ygenmod0/y<0>" is sourceless and has been removed.
-***                                       Sourceless block "dat/alu0/Madd_z_lut<0>" (ROM) removed.
-***                                        The signal "dat/alu0/Madd_z_lut<0>" is sourceless and has been removed.
-***                                         Sourceless block "dat/alu0/Madd_z_xor<0>" (XOR) removed.
-***                                          The signal "dat/z<0>" is sourceless and has been removed.
-***                                           Sourceless block "dat/regbank0/rf/r7/d0/q" (SFF) removed.
-***                                            The signal "dat/regbank0/rf/r7/d0/q" is sourceless and has been removed.
-***                                           Sourceless block "dat/mdrin<0>LogicTrst1" (ROM) removed.
-***                                            The signal "dat/mdrin<0>" is sourceless and has been removed.
-***                                     Sourceless block "con/control_8_mux0000_SW0" (ROM) removed.
-***                                      The signal "N14" is sourceless and has been removed.
-***                                 Sourceless block "con/control_21" (SFF) removed.
-***                                  The signal "con/control<21>" is sourceless and has been removed.
-***                                   Sourceless block "con/control_21_mux000011" (ROM) removed.
-***                                    The signal "con/control_21_mux00001" is sourceless and has been removed.
-***                                     Sourceless block "con/control_21_1" (SFF) removed.
-***                                      The signal "con/control_21_1" is sourceless and has been removed.
-***                                   Sourceless block "dat/x<8>LogicTrst9" (ROM) removed.
-***                                    The signal "dat/x<8>LogicTrst9" is sourceless and has been removed.
-***                               Sourceless block "con/control_17_mux00001" (ROM) removed.
-***                                The signal "con/control_17_mux00001" is sourceless and has been removed.
-***                                 Sourceless block "con/control_17" (SFF) removed.
-***                                  The signal "con/control<17>" is sourceless and has been removed.
-***                                   Sourceless block "dat/mdrin<15>LogicTrst1" (ROM) removed.
-***                                    The signal "dat/mdrin<15>" is sourceless and has been removed.
-***                                     Sourceless block "dat/mdr/value_15" (SFF) removed.
-***                                      The signal "mdrval<15>" is sourceless and has been removed.
-***                                       Sourceless block "dat/isrr/value_15" (SFF) removed.
-***                                        The signal "dat/isrr/value<15>" is sourceless and has been removed.
-***                                         Sourceless block "con/state_FSM_FFd15-In_SW1" (ROM) removed.
-***                                          The signal "N38" is sourceless and has been removed.
-***                                         Sourceless block "con/control_0_mux000011" (ROM) removed.
-***                                          The signal "con/N5" is sourceless and has been removed.
-***                                           Sourceless block "con/control_19_mux000011" (ROM) removed.
-***                                            The signal "con/control_19_mux00001" is sourceless and has been removed.
-***                                             Sourceless block "con/control_19" (SFF) removed.
-***                                              The signal "con/control<19>" is sourceless and has been removed.
-***                                             Sourceless block "con/control_19_1" (SFF) removed.
-***                                              The signal "con/control_191" is sourceless and has been removed.
-***                                             Sourceless block "con/control_19_2" (SFF) removed.
-***                                              The signal "con/control_19_2" is sourceless and has been removed.
-***                                             Sourceless block "con/control_19_3" (SFF) removed.
-***                                              The signal "con/control_19_3" is sourceless and has been removed.
-***                               Sourceless block "con/control_24_or000023" (ROM) removed.
-***                                The signal "con/control_24_or0000" is sourceless and has been removed.
-***                                 Sourceless block "con/control_7" (SFF) removed.
-***                                  The signal "con/control<7>" is sourceless and has been removed.
-***                                 Sourceless block "con/control_15" (SFF) removed.
-***                                  The signal "con/control<15>" is sourceless and has been removed.
-***                                 Sourceless block "con/control_16" (SFF) removed.
-***                                  The signal "con/control<16>" is sourceless and has been removed.
-***                                 Sourceless block "con/control_24" (SFF) removed.
-***                                  The signal "con/control<24>" is sourceless and has been removed.
-***                                   Sourceless block "dat/_and0000341" (ROM) removed.
-***                                    The signal "dat/_and0000341" is sourceless and has been removed.
-***     Sourceless block "con/control_22_mux000011" (ROM) removed.
-***      The signal "con/control_22_mux00001" is sourceless and has been removed.
-***       Sourceless block "con/control_22" (SFF) removed.
-***        The signal "con/control<22>" is sourceless and has been removed.
-***         Sourceless block "dat/x<10>LogicTrst29" (ROM) removed.
-***          The signal "dat/x<0>LogicTrst29" is sourceless and has been removed.
-**                           Sourceless block "con/control_10_1" (SFF) removed.
-**                            The signal "con/control_10_1" is sourceless and has been removed.
-*                         Sourceless block "con/control_18_1" (SFF) removed.
-*                          The signal "con/control_18_1" is sourceless and has been removed.
-
-The trimmed logic reported below is either:
-   1. part of a cycle
-   2. part of disabled logic
-   3. a side-effect of other trimmed logic
-
-The signal "N0" is unused and has been removed.
- Unused block "XST_GND" (ZERO) removed.
-The signal "N1" is unused and has been removed.
- Unused block "XST_VCC" (ONE) removed.
-The signal "clk" is unused and has been removed.
- Unused block "clk" (PAD) removed.
-The signal "memout<0>" is unused and has been removed.
-The signal "memout<10>" is unused and has been removed.
-The signal "memout<11>" is unused and has been removed.
-The signal "memout<12>" is unused and has been removed.
-The signal "memout<13>" is unused and has been removed.
-The signal "memout<14>" is unused and has been removed.
-The signal "memout<15>" is unused and has been removed.
-The signal "memout<1>" is unused and has been removed.
-The signal "memout<2>" is unused and has been removed.
-The signal "memout<3>" is unused and has been removed.
-The signal "memout<4>" is unused and has been removed.
-The signal "memout<5>" is unused and has been removed.
-The signal "memout<6>" is unused and has been removed.
-The signal "memout<7>" is unused and has been removed.
-The signal "memout<8>" is unused and has been removed.
-The signal "memout<9>" is unused and has been removed.
-The signal "reset" is unused and has been removed.
- Unused block "reset" (PAD) removed.
-The signal "reset_IBUF" is unused and has been removed.
- Unused block "reset_IBUF" (BUF) removed.
-Unused block "mem/Mram_mem1" (RAMB16_S4_S4) removed.
-Unused block "mem/Mram_mem2" (RAMB16_S4_S4) removed.
-Unused block "mem/Mram_mem3" (RAMB16_S4_S4) removed.
-Unused block "mem/Mram_mem4" (RAMB16_S4_S4) removed.
-Unused block "clk_BUFGP/IBUFG" (CKBUF) removed.
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
 
 To enable printing of redundant blocks removed and signals merged, set the
 detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| clk                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| memout<0>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| memout<1>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| memout<2>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| memout<3>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| memout<4>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| memout<5>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| memout<6>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| memout<7>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| memout<8>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| memout<9>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| memout<10>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| memout<11>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| memout<12>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| memout<13>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| memout<14>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| memout<15>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| reset                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+No control set information for this architecture.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

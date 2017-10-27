@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/student/Desktop/1/assgn4/specregtst_isim_beh.exe" -prj "C:/Users/student/Desktop/1/assgn4/specregtst_beh.prj" "work.specregtst" "work.glbl" 
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/student/Desktop/1/assgn4/top_isim_beh.exe" -prj "C:/Users/student/Desktop/1/assgn4/top_beh.prj" "work.top" "work.glbl" 
