@@ -55,7 +55,7 @@ benchmdr = 0;
 benchmrw = 1;
 //Code Start
 
-benchmdr = 16'b1011000000010000;
+benchmdr = 16'b1011000000001100;
 #10;
 benchmar = benchmar + 1;
 benchmdr = 16'b1110101000000000;
@@ -112,13 +112,45 @@ benchmar = benchmar + 1;
 benchmdr = 16'b0100111111110011;
 #10;
 benchmar = benchmar + 1;
+benchmdr = 16'b1001000000000010;
+#10;
+benchmar = benchmar + 1;
+benchmdr = 16'b1100000000000000;
+#10;
+benchmar = benchmar + 1;
 benchmdr = 16'b0000111111111111;
 #10;
 benchmar = benchmar + 1;
-
-
-
-
+benchmdr = 16'b1011000000001010;
+#10;
+benchmar = benchmar + 1;
+benchmdr = 16'b1011000000010100;
+#10;
+benchmar = benchmar + 1;
+benchmdr = 16'b1011000000001111;
+#10;
+benchmar = benchmar + 1;
+benchmdr = 16'b1101100000000000;
+#10;
+benchmar = benchmar + 1;
+benchmdr = 16'b1101000000000000;
+#10;
+benchmar = benchmar + 1;
+benchmdr = 16'b1100000000000000;
+#10;
+benchmar = benchmar + 1;
+benchmdr = 16'b1101100000000000;
+#10;
+benchmar = benchmar + 1;
+benchmdr = 16'b1101000000000000;
+#10;
+benchmar = benchmar + 1;
+benchmdr = 16'b1010000000000000;
+#10;
+benchmar = benchmar + 1;
+benchmdr = 16'b0000111111111111;
+#10;
+benchmar = benchmar + 1;
 
 
 

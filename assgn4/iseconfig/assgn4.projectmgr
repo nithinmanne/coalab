@@ -37,7 +37,7 @@
       <SelectedItems>
          <SelectedItem>regbank0 - regbank (C:/Users/student/Desktop/1/assgn4/regbank.v)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >5</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000112000000020000000000000000000000000200000064ffffffff000000810000000300000002000001120000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
@@ -49,13 +49,13 @@
          <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000c9000000010000000100000000000000000000000064ffffffff000000810000000000000001000000c90000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem/>
    </ItemView>
    <ItemView guiview="File" >
       <ClosedNodes>
@@ -101,7 +101,7 @@
       <CurrentItem></CurrentItem>
    </ItemView>
    <SourceProcessView>000000ff00000000000000020000011b0000011b01000000050100000002</SourceProcessView>
-   <CurrentView>Implementation</CurrentView>
+   <CurrentView>Behavioral Simulation</CurrentView>
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
@@ -113,14 +113,21 @@
          <ClosedNode>/specreg C:|Users|student|Desktop|1|assgn4|regbank.v</ClosedNode>
          <ClosedNode>/specregtst C:|Users|student|Desktop|1|assgn4|specregtst.v</ClosedNode>
          <ClosedNode>/specregtst C:|Users|student|Desktop|1|assgn4|specregtst.v/uut - specreg</ClosedNode>
-         <ClosedNode>/top C:|Users|student|Desktop|1|assgn4|top.v</ClosedNode>
+         <ClosedNode>/top C:|Users|student|Desktop|1|assgn4|top.v/dat - datapath/flagff0 - flagff</ClosedNode>
+         <ClosedNode>/top C:|Users|student|Desktop|1|assgn4|top.v/dat - datapath/isrbuf - signxtenbuf</ClosedNode>
+         <ClosedNode>/top C:|Users|student|Desktop|1|assgn4|top.v/dat - datapath/isrr - specreg</ClosedNode>
+         <ClosedNode>/top C:|Users|student|Desktop|1|assgn4|top.v/dat - datapath/mar - specreg</ClosedNode>
+         <ClosedNode>/top C:|Users|student|Desktop|1|assgn4|top.v/dat - datapath/mdr - specreg</ClosedNode>
+         <ClosedNode>/top C:|Users|student|Desktop|1|assgn4|top.v/dat - datapath/pc - specreg</ClosedNode>
+         <ClosedNode>/top C:|Users|student|Desktop|1|assgn4|top.v/dat - datapath/regbank0 - regbank</ClosedNode>
+         <ClosedNode>/top C:|Users|student|Desktop|1|assgn4|top.v/dat - datapath/sp - specreg</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
          <SelectedItem>top (C:/Users/student/Desktop/1/assgn4/top.v)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000000e4000000020000000000000000000000000200000064ffffffff000000810000000300000002000000e40000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000126000000020000000000000000000000000200000064ffffffff000000810000000300000002000001260000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
       <CurrentItem>top (C:/Users/student/Desktop/1/assgn4/top.v)</CurrentItem>
    </ItemView>
@@ -130,6 +137,19 @@
          <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000c9000000010000000100000000000000000000000064ffffffff000000810000000000000001000000c90000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="DESUT_VERILOG" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
          <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
@@ -137,18 +157,5 @@
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000c9000000010000000100000000000000000000000064ffffffff000000810000000000000001000000c90000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem></CurrentItem>
-   </ItemView>
-   <ItemView engineview="BehavioralSim" sourcetype="DESUT_VERILOG" guiview="Process" >
-      <ClosedNodes>
-         <ClosedNodesVersion>1</ClosedNodesVersion>
-      </ClosedNodes>
-      <SelectedItems>
-         <SelectedItem>Simulate Behavioral Model</SelectedItem>
-      </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
-      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000c9000000010000000100000000000000000000000064ffffffff000000810000000000000001000000c90000000100000000</ViewHeaderState>
-      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Simulate Behavioral Model</CurrentItem>
    </ItemView>
 </Project>

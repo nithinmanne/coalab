@@ -5,65 +5,29 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompilers" num="259" delta="old" ><arg fmt="%s" index="1">&quot;datapath.v&quot; line 36 </arg>Connection to input port &apos;<arg fmt="%s" index="2">resval</arg>&apos; does not match port size
+<msg type="warning" file="Xst" num="905" delta="new" >&quot;<arg fmt="%s" index="1">datapath.v</arg>&quot; line <arg fmt="%d" index="2">69</arg>: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<arg fmt="%s" index="3">&lt;addo&gt;, &lt;addc&gt;, &lt;addc14&gt;, &lt;inco&gt;, &lt;incc&gt;, &lt;incc14&gt;</arg>
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="old" ><arg fmt="%s" index="1">&quot;datapath.v&quot; line 37 </arg>Connection to input port &apos;<arg fmt="%s" index="2">resval</arg>&apos; does not match port size
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">y14</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="old" ><arg fmt="%s" index="1">&quot;datapath.v&quot; line 38 </arg>Connection to input port &apos;<arg fmt="%s" index="2">t</arg>&apos; does not match port size
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">x14</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="old" ><arg fmt="%s" index="1">&quot;datapath.v&quot; line 38 </arg>Connection to input port &apos;<arg fmt="%s" index="2">resval</arg>&apos; does not match port size
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">inco14</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="old" ><arg fmt="%s" index="1">&quot;datapath.v&quot; line 39 </arg>Connection to input port &apos;<arg fmt="%s" index="2">t</arg>&apos; does not match port size
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">addo14</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="HDLCompilers" num="259" delta="old" ><arg fmt="%s" index="1">&quot;datapath.v&quot; line 39 </arg>Connection to input port &apos;<arg fmt="%s" index="2">resval</arg>&apos; does not match port size
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">isr&lt;15:12&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="905" delta="new" >&quot;<arg fmt="%s" index="1">datapath.v</arg>&quot; line <arg fmt="%d" index="2">59</arg>: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-<arg fmt="%s" index="3">&lt;funsel&gt;, &lt;x&gt;, &lt;y&gt;</arg>
+<msg type="info" file="Xst" num="1767" delta="old" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
 </msg>
 
-<msg type="info" file="Xst" num="1433" delta="new" >Contents of array &lt;<arg fmt="%s" index="1">mem</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-</msg>
-
-<msg type="info" file="Xst" num="1433" delta="new" >Contents of array &lt;<arg fmt="%s" index="1">mem</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">isr&lt;7:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">marval&lt;15:12&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">isr&lt;15:12&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="info" file="Xst" num="1767" delta="new" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
-</msg>
-
-<msg type="info" file="Xst" num="3225" delta="new" >The RAM &lt;<arg fmt="%s" index="1">mem/Mram_mem</arg>&gt; will be implemented as BLOCK RAM
-</msg>
-
-<msg type="warning" file="Xst" num="2042" delta="new" >Unit <arg fmt="%s" index="1">buffer16</arg>: <arg fmt="%d" index="2">16</arg> internal tristates are replaced by logic (pull-up <arg fmt="%s" index="3">yes</arg>): </msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dat/mar/value_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dat/mar/value_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dat/mar/value_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">dat/mar/value_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top</arg>&gt;.
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">dat/flagff0/rv</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">top</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;dat/flagff0/rc&gt; </arg>
-</msg>
+<msg type="warning" file="Xst" num="2042" delta="old" >Unit <arg fmt="%s" index="1">buffer16</arg>: <arg fmt="%d" index="2">16</arg> internal tristates are replaced by logic (pull-up <arg fmt="%s" index="3">yes</arg>): </msg>
 
 </messages>
 

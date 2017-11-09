@@ -29,7 +29,8 @@ Compiling module memory
 Compiling module top
 Compiling module glbl
 Time Resolution for simulation is 1ps.
+Waiting for 7 sub-compilation(s) to finish...
 Compiled 18 Verilog Units
 Built simulation executable C:/Users/student/Desktop/1/assgn4/top_isim_beh.exe
-Fuse Memory Usage: 28956 KB
-Fuse CPU Usage: 483 ms
+Fuse Memory Usage: 28904 KB
+Fuse CPU Usage: 420 ms

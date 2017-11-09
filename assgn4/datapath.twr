@@ -44,44 +44,63 @@ Setup/Hold to clock clk
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-cc          |    6.632(R)|   -2.060(R)|clk_BUFGP         |   0.000|
-lisr        |    3.497(R)|   -0.466(R)|clk_BUFGP         |   0.000|
-lmar        |    5.426(R)|   -1.058(R)|clk_BUFGP         |   0.000|
-lmdr        |    5.085(R)|   -1.365(R)|clk_BUFGP         |   0.000|
-lpc         |    5.170(R)|   -0.964(R)|clk_BUFGP         |   0.000|
-lsp         |    3.464(R)|   -0.156(R)|clk_BUFGP         |   0.000|
-ly          |    4.906(R)|   -0.245(R)|clk_BUFGP         |   0.000|
-mdrm        |    3.547(R)|   -0.104(R)|clk_BUFGP         |   0.000|
-mdrz        |    4.897(R)|   -1.221(R)|clk_BUFGP         |   0.000|
-memout<0>   |    1.782(R)|    0.050(R)|clk_BUFGP         |   0.000|
-memout<1>   |    1.201(R)|    0.515(R)|clk_BUFGP         |   0.000|
-memout<2>   |    0.959(R)|    0.708(R)|clk_BUFGP         |   0.000|
-memout<3>   |    2.377(R)|   -0.427(R)|clk_BUFGP         |   0.000|
-memout<4>   |    1.978(R)|   -0.107(R)|clk_BUFGP         |   0.000|
-memout<5>   |    1.965(R)|   -0.096(R)|clk_BUFGP         |   0.000|
-memout<6>   |    1.695(R)|    0.119(R)|clk_BUFGP         |   0.000|
-memout<7>   |    2.673(R)|   -0.664(R)|clk_BUFGP         |   0.000|
-memout<8>   |    1.741(R)|    0.082(R)|clk_BUFGP         |   0.000|
-memout<9>   |    2.500(R)|   -0.524(R)|clk_BUFGP         |   0.000|
-memout<10>  |    1.976(R)|   -0.105(R)|clk_BUFGP         |   0.000|
-memout<11>  |    1.720(R)|    0.099(R)|clk_BUFGP         |   0.000|
-memout<12>  |    1.762(R)|    0.065(R)|clk_BUFGP         |   0.000|
-memout<13>  |    1.694(R)|    0.119(R)|clk_BUFGP         |   0.000|
-memout<14>  |    1.357(R)|    0.390(R)|clk_BUFGP         |   0.000|
-memout<15>  |    2.547(R)|   -0.562(R)|clk_BUFGP         |   0.000|
-pcmar       |    4.016(R)|   -0.684(R)|clk_BUFGP         |   0.000|
-reset       |    3.707(R)|   -0.681(R)|clk_BUFGP         |   0.000|
-rsel<0>     |   13.381(R)|   -2.478(R)|clk_BUFGP         |   0.000|
-rsel<1>     |   13.109(R)|   -2.313(R)|clk_BUFGP         |   0.000|
-rsel<2>     |   11.779(R)|   -0.963(R)|clk_BUFGP         |   0.000|
-sflag       |    3.226(R)|   -0.197(R)|clk_BUFGP         |   0.000|
-spmar       |    5.664(R)|   -1.269(R)|clk_BUFGP         |   0.000|
-tisr        |   11.579(R)|   -1.710(R)|clk_BUFGP         |   0.000|
-tmdr        |   11.671(R)|   -0.816(R)|clk_BUFGP         |   0.000|
-tpc         |   13.218(R)|   -2.849(R)|clk_BUFGP         |   0.000|
-tr          |   13.007(R)|   -0.457(R)|clk_BUFGP         |   0.000|
-tsp         |   12.571(R)|   -2.014(R)|clk_BUFGP         |   0.000|
-wrr         |    7.220(R)|   -1.082(R)|clk_BUFGP         |   0.000|
+cc          |    8.771(R)|   -3.235(R)|clk_BUFGP         |   0.000|
+funsel<0>   |   14.625(R)|   -0.801(R)|clk_BUFGP         |   0.000|
+funsel<1>   |   14.060(R)|   -1.161(R)|clk_BUFGP         |   0.000|
+funsel<2>   |   14.173(R)|   -0.414(R)|clk_BUFGP         |   0.000|
+lisr        |    5.411(R)|   -1.236(R)|clk_BUFGP         |   0.000|
+lmar        |    3.701(R)|   -0.636(R)|clk_BUFGP         |   0.000|
+lmdr        |    7.739(R)|   -1.684(R)|clk_BUFGP         |   0.000|
+lpc         |    6.391(R)|   -1.465(R)|clk_BUFGP         |   0.000|
+lsp         |    4.240(R)|   -0.843(R)|clk_BUFGP         |   0.000|
+ly          |    3.389(R)|   -0.754(R)|clk_BUFGP         |   0.000|
+maxmem<0>   |    2.217(R)|   -0.305(R)|clk_BUFGP         |   0.000|
+maxmem<1>   |    2.423(R)|   -0.469(R)|clk_BUFGP         |   0.000|
+maxmem<2>   |    2.213(R)|   -0.301(R)|clk_BUFGP         |   0.000|
+maxmem<3>   |    1.892(R)|   -0.044(R)|clk_BUFGP         |   0.000|
+maxmem<4>   |    2.022(R)|   -0.149(R)|clk_BUFGP         |   0.000|
+maxmem<5>   |    2.215(R)|   -0.303(R)|clk_BUFGP         |   0.000|
+maxmem<6>   |    2.708(R)|   -0.698(R)|clk_BUFGP         |   0.000|
+maxmem<7>   |    2.131(R)|   -0.236(R)|clk_BUFGP         |   0.000|
+maxmem<8>   |    2.363(R)|   -0.421(R)|clk_BUFGP         |   0.000|
+maxmem<9>   |    3.175(R)|   -1.071(R)|clk_BUFGP         |   0.000|
+maxmem<10>  |    2.645(R)|   -0.646(R)|clk_BUFGP         |   0.000|
+maxmem<11>  |    3.141(R)|   -1.044(R)|clk_BUFGP         |   0.000|
+maxmem<12>  |    2.309(R)|   -0.378(R)|clk_BUFGP         |   0.000|
+maxmem<13>  |    3.127(R)|   -1.032(R)|clk_BUFGP         |   0.000|
+maxmem<14>  |    3.188(R)|   -1.081(R)|clk_BUFGP         |   0.000|
+maxmem<15>  |    2.204(R)|   -0.294(R)|clk_BUFGP         |   0.000|
+mdrm        |    4.342(R)|    0.049(R)|clk_BUFGP         |   0.000|
+mdrz        |    4.939(R)|   -0.476(R)|clk_BUFGP         |   0.000|
+memout<0>   |    2.418(R)|   -0.381(R)|clk_BUFGP         |   0.000|
+memout<1>   |    2.082(R)|   -0.112(R)|clk_BUFGP         |   0.000|
+memout<2>   |    1.514(R)|    0.343(R)|clk_BUFGP         |   0.000|
+memout<3>   |    1.904(R)|   -0.035(R)|clk_BUFGP         |   0.000|
+memout<4>   |    1.398(R)|    0.404(R)|clk_BUFGP         |   0.000|
+memout<5>   |    0.929(R)|    0.779(R)|clk_BUFGP         |   0.000|
+memout<6>   |    1.979(R)|   -0.029(R)|clk_BUFGP         |   0.000|
+memout<7>   |    1.729(R)|    0.139(R)|clk_BUFGP         |   0.000|
+memout<8>   |    3.083(R)|   -0.945(R)|clk_BUFGP         |   0.000|
+memout<9>   |    1.849(R)|    0.038(R)|clk_BUFGP         |   0.000|
+memout<10>  |    1.614(R)|    0.269(R)|clk_BUFGP         |   0.000|
+memout<11>  |    1.200(R)|    0.625(R)|clk_BUFGP         |   0.000|
+memout<12>  |    2.089(R)|   -0.117(R)|clk_BUFGP         |   0.000|
+memout<13>  |    1.161(R)|    0.552(R)|clk_BUFGP         |   0.000|
+memout<14>  |    0.887(R)|    0.779(R)|clk_BUFGP         |   0.000|
+memout<15>  |    1.835(R)|    0.018(R)|clk_BUFGP         |   0.000|
+pcmar       |    4.115(R)|   -0.389(R)|clk_BUFGP         |   0.000|
+reset       |    9.922(R)|   -0.408(R)|clk_BUFGP         |   0.000|
+rsel<0>     |   15.558(R)|   -1.162(R)|clk_BUFGP         |   0.000|
+rsel<1>     |   16.467(R)|   -2.324(R)|clk_BUFGP         |   0.000|
+rsel<2>     |   16.249(R)|   -1.975(R)|clk_BUFGP         |   0.000|
+sflag       |    3.843(R)|    0.208(R)|clk_BUFGP         |   0.000|
+spmar       |    4.600(R)|   -0.948(R)|clk_BUFGP         |   0.000|
+tisr        |   17.159(R)|   -2.610(R)|clk_BUFGP         |   0.000|
+tmdr        |   18.012(R)|   -1.714(R)|clk_BUFGP         |   0.000|
+tpc         |   18.545(R)|   -3.214(R)|clk_BUFGP         |   0.000|
+tr          |   17.768(R)|   -1.862(R)|clk_BUFGP         |   0.000|
+tsp         |   17.999(R)|   -2.182(R)|clk_BUFGP         |   0.000|
+wrr         |    6.962(R)|   -1.201(R)|clk_BUFGP         |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock clk to Pad
@@ -89,54 +108,54 @@ Clock clk to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-isr<0>      |   10.488(R)|clk_BUFGP         |   0.000|
-isr<1>      |    9.125(R)|clk_BUFGP         |   0.000|
-isr<2>      |   10.256(R)|clk_BUFGP         |   0.000|
-isr<3>      |    9.449(R)|clk_BUFGP         |   0.000|
-isr<4>      |   10.719(R)|clk_BUFGP         |   0.000|
-isr<5>      |    9.115(R)|clk_BUFGP         |   0.000|
-isr<6>      |    9.782(R)|clk_BUFGP         |   0.000|
-isr<7>      |    9.462(R)|clk_BUFGP         |   0.000|
-isr<8>      |    9.884(R)|clk_BUFGP         |   0.000|
-isr<9>      |   10.121(R)|clk_BUFGP         |   0.000|
-isr<10>     |    9.880(R)|clk_BUFGP         |   0.000|
-isr<11>     |   10.530(R)|clk_BUFGP         |   0.000|
-isr<12>     |   11.342(R)|clk_BUFGP         |   0.000|
-isr<13>     |   10.299(R)|clk_BUFGP         |   0.000|
-isr<14>     |   10.406(R)|clk_BUFGP         |   0.000|
-isr<15>     |   10.598(R)|clk_BUFGP         |   0.000|
-marval<0>   |   10.224(R)|clk_BUFGP         |   0.000|
-marval<1>   |    9.592(R)|clk_BUFGP         |   0.000|
-marval<2>   |   10.048(R)|clk_BUFGP         |   0.000|
-marval<3>   |   10.954(R)|clk_BUFGP         |   0.000|
-marval<4>   |   10.049(R)|clk_BUFGP         |   0.000|
-marval<5>   |   10.943(R)|clk_BUFGP         |   0.000|
-marval<6>   |   10.460(R)|clk_BUFGP         |   0.000|
-marval<7>   |   11.265(R)|clk_BUFGP         |   0.000|
-marval<8>   |   10.930(R)|clk_BUFGP         |   0.000|
-marval<9>   |   10.948(R)|clk_BUFGP         |   0.000|
-marval<10>  |   10.841(R)|clk_BUFGP         |   0.000|
-marval<11>  |   10.954(R)|clk_BUFGP         |   0.000|
-marval<12>  |   10.274(R)|clk_BUFGP         |   0.000|
-marval<13>  |   11.114(R)|clk_BUFGP         |   0.000|
-marval<14>  |   10.623(R)|clk_BUFGP         |   0.000|
-marval<15>  |   10.976(R)|clk_BUFGP         |   0.000|
-mdrval<0>   |    9.530(R)|clk_BUFGP         |   0.000|
-mdrval<1>   |    8.778(R)|clk_BUFGP         |   0.000|
-mdrval<2>   |    9.561(R)|clk_BUFGP         |   0.000|
-mdrval<3>   |    9.136(R)|clk_BUFGP         |   0.000|
-mdrval<4>   |    9.269(R)|clk_BUFGP         |   0.000|
-mdrval<5>   |    9.116(R)|clk_BUFGP         |   0.000|
-mdrval<6>   |    9.643(R)|clk_BUFGP         |   0.000|
-mdrval<7>   |    9.307(R)|clk_BUFGP         |   0.000|
-mdrval<8>   |   11.041(R)|clk_BUFGP         |   0.000|
-mdrval<9>   |    9.647(R)|clk_BUFGP         |   0.000|
-mdrval<10>  |    9.664(R)|clk_BUFGP         |   0.000|
-mdrval<11>  |    9.967(R)|clk_BUFGP         |   0.000|
-mdrval<12>  |    9.972(R)|clk_BUFGP         |   0.000|
-mdrval<13>  |    9.730(R)|clk_BUFGP         |   0.000|
-mdrval<14>  |   11.292(R)|clk_BUFGP         |   0.000|
-mdrval<15>  |   10.682(R)|clk_BUFGP         |   0.000|
+isr<0>      |   13.502(R)|clk_BUFGP         |   0.000|
+isr<1>      |    9.927(R)|clk_BUFGP         |   0.000|
+isr<2>      |   11.705(R)|clk_BUFGP         |   0.000|
+isr<3>      |    9.864(R)|clk_BUFGP         |   0.000|
+isr<4>      |   11.197(R)|clk_BUFGP         |   0.000|
+isr<5>      |   10.784(R)|clk_BUFGP         |   0.000|
+isr<6>      |   10.712(R)|clk_BUFGP         |   0.000|
+isr<7>      |   10.815(R)|clk_BUFGP         |   0.000|
+isr<8>      |   10.761(R)|clk_BUFGP         |   0.000|
+isr<9>      |    9.558(R)|clk_BUFGP         |   0.000|
+isr<10>     |    9.903(R)|clk_BUFGP         |   0.000|
+isr<11>     |   10.013(R)|clk_BUFGP         |   0.000|
+isr<12>     |   11.075(R)|clk_BUFGP         |   0.000|
+isr<13>     |    9.946(R)|clk_BUFGP         |   0.000|
+isr<14>     |   11.040(R)|clk_BUFGP         |   0.000|
+isr<15>     |   10.098(R)|clk_BUFGP         |   0.000|
+marval<0>   |   10.560(R)|clk_BUFGP         |   0.000|
+marval<1>   |   10.318(R)|clk_BUFGP         |   0.000|
+marval<2>   |   10.906(R)|clk_BUFGP         |   0.000|
+marval<3>   |   10.454(R)|clk_BUFGP         |   0.000|
+marval<4>   |   10.924(R)|clk_BUFGP         |   0.000|
+marval<5>   |    9.517(R)|clk_BUFGP         |   0.000|
+marval<6>   |    9.613(R)|clk_BUFGP         |   0.000|
+marval<7>   |   10.807(R)|clk_BUFGP         |   0.000|
+marval<8>   |   10.065(R)|clk_BUFGP         |   0.000|
+marval<9>   |    9.867(R)|clk_BUFGP         |   0.000|
+marval<10>  |   10.228(R)|clk_BUFGP         |   0.000|
+marval<11>  |   10.235(R)|clk_BUFGP         |   0.000|
+marval<12>  |   10.706(R)|clk_BUFGP         |   0.000|
+marval<13>  |   10.206(R)|clk_BUFGP         |   0.000|
+marval<14>  |   10.304(R)|clk_BUFGP         |   0.000|
+marval<15>  |   10.598(R)|clk_BUFGP         |   0.000|
+mdrval<0>   |    9.292(R)|clk_BUFGP         |   0.000|
+mdrval<1>   |    9.718(R)|clk_BUFGP         |   0.000|
+mdrval<2>   |    8.821(R)|clk_BUFGP         |   0.000|
+mdrval<3>   |   10.143(R)|clk_BUFGP         |   0.000|
+mdrval<4>   |    9.499(R)|clk_BUFGP         |   0.000|
+mdrval<5>   |    9.646(R)|clk_BUFGP         |   0.000|
+mdrval<6>   |    9.592(R)|clk_BUFGP         |   0.000|
+mdrval<7>   |    9.238(R)|clk_BUFGP         |   0.000|
+mdrval<8>   |   10.196(R)|clk_BUFGP         |   0.000|
+mdrval<9>   |    9.450(R)|clk_BUFGP         |   0.000|
+mdrval<10>  |    9.256(R)|clk_BUFGP         |   0.000|
+mdrval<11>  |    8.404(R)|clk_BUFGP         |   0.000|
+mdrval<12>  |    9.727(R)|clk_BUFGP         |   0.000|
+mdrval<13>  |    8.435(R)|clk_BUFGP         |   0.000|
+mdrval<14>  |    9.154(R)|clk_BUFGP         |   0.000|
+mdrval<15>  |    9.661(R)|clk_BUFGP         |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
@@ -144,18 +163,18 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |   10.458|         |         |         |
+clk            |   14.223|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Thu Oct 26 16:46:55 2017 
+Analysis completed Thu Nov 02 15:10:28 2017 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 150 MB
+Peak Memory Usage: 153 MB
 
 
 
