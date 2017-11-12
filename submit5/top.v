@@ -31,7 +31,7 @@ wire [1:0] spi, memin;
 controller controller0(isr, regw, memw, memin, sflag, spi, pcin, pci);
 datapath datapath0(clk, reset, isr, pcout, regw, memw, memin, sflag, spi, pcin, pci);
 
-memory mem(clk, amar, benchmdr, isr, benchmrw, maxmem);
+isrmemory mem(clk, amar, benchmdr, isr, benchmrw, maxmem);
 
 assign amar = (membench==0)?pcout:benchmar;
 
@@ -129,4 +129,24 @@ reset = 0;
 
 
 end
+endmodule
+
+module isrmemory(clk, marval, mdrval, memout, mrw, maxmem);
+parameter MAXMEMORY = 4095;
+input clk, mrw;
+input [15:0] marval, mdrval;
+output memout, maxmem;
+wire [15:0] memout, maxmem;
+
+reg [15:0] mem[0:MAXMEMORY];
+
+assign memout = mem[marval];
+assign maxmem = MAXMEMORY;
+
+always @(posedge clk)
+begin
+if(mrw == 1)
+mem[marval] = mdrval;
+end
+
 endmodule

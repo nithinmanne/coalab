@@ -55,7 +55,7 @@ wire [15:0] memout, maxmem;
 
 reg [15:0] mem[0:MAXMEMORY];
 
-assign memout = mem[marval];
+assign memout = mem[marval+1];
 assign maxmem = MAXMEMORY;
 
 always @(posedge clk)

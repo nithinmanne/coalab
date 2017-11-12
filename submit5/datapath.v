@@ -55,7 +55,7 @@ wire [15:0] memout, maxmem;
 
 reg [15:0] mem[0:MAXMEMORY];
 
-assign memout = mem[marval];
+assign memout = mem[marval+1];
 assign maxmem = MAXMEMORY;
 
 always @(posedge clk)
@@ -89,7 +89,7 @@ begin
 
 if(funsel == 1)
 begin
-z <= x;
+z <= y;
 c <= 0;
 c2 <= 0;
 end
@@ -101,7 +101,7 @@ c2 <= addc14;
 end
 else if(funsel == 3)
 begin
-z <= -x;
+z <= -y;
 c <= 0;
 c2 <= 0;
 end
@@ -113,7 +113,7 @@ c2 <= 0;
 end
 else if(funsel == 5)
 begin
-z <= ~x;
+z <= ~y;
 c <= 0;
 c2 <= 0;
 end
@@ -131,7 +131,7 @@ c2 <= 0;
 end
 else
 begin
-z <= 0;
+z <= y;
 c <= 0;
 c2 <= 0;
 end

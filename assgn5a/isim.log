@@ -1,10 +1,7 @@
 ISim log file
-Running: C:\Users\student\Desktop\1\assgn5a\top_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/student/Desktop/1/assgn5a/top_isim_beh.wdb 
-ISim P.20131013 (signature 0x7708f090)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
+Running: C:\Users\Naganithin Manne\Documents\coalab\assgn5a\top_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Naganithin Manne/Documents/coalab/assgn5a/top_isim_beh.wdb 
+ISim P.49d (signature 0x7708f090)
+This is a Full version of ISim.
 WARNING:  For instance datapath0/regbank0/, width 1 of formal port tr is not equal to width 32 of actual constant.
 WARNING:  For instance datapath0/sp/, width 1 of formal port l is not equal to width 32 of actual constant.
 WARNING:  For instance datapath0/sp/, width 1 of formal port t is not equal to width 32 of actual constant.
@@ -18,11 +15,8 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-ISim P.20131013 (signature 0x7708f090)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
+ISim P.49d (signature 0x7708f090)
+This is a Full version of ISim.
 WARNING:  For instance datapath0/regbank0/, width 1 of formal port tr is not equal to width 32 of actual constant.
 WARNING:  For instance datapath0/sp/, width 1 of formal port l is not equal to width 32 of actual constant.
 WARNING:  For instance datapath0/sp/, width 1 of formal port t is not equal to width 32 of actual constant.
@@ -33,11 +27,9 @@ WARNING:  For instance datapath0/isrbuf/, width 1 of formal port tisr is not equ
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-ISim P.20131013 (signature 0x7708f090)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
+# run 25.00us
+ISim P.49d (signature 0x7708f090)
+This is a Full version of ISim.
 WARNING:  For instance datapath0/regbank0/, width 1 of formal port tr is not equal to width 32 of actual constant.
 WARNING:  For instance datapath0/sp/, width 1 of formal port l is not equal to width 32 of actual constant.
 WARNING:  For instance datapath0/sp/, width 1 of formal port t is not equal to width 32 of actual constant.
@@ -48,11 +40,8 @@ WARNING:  For instance datapath0/isrbuf/, width 1 of formal port tisr is not equ
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-ISim P.20131013 (signature 0x7708f090)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
+ISim P.49d (signature 0x7708f090)
+This is a Full version of ISim.
 WARNING:  For instance datapath0/regbank0/, width 1 of formal port tr is not equal to width 32 of actual constant.
 WARNING:  For instance datapath0/sp/, width 1 of formal port l is not equal to width 32 of actual constant.
 WARNING:  For instance datapath0/sp/, width 1 of formal port t is not equal to width 32 of actual constant.
@@ -63,6 +52,16 @@ WARNING:  For instance datapath0/isrbuf/, width 1 of formal port tisr is not equ
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# run 10.00us
-# run 10.00us
-# run 100.00us
+ISim P.49d (signature 0x7708f090)
+This is a Full version of ISim.
+WARNING:  For instance datapath0/regbank0/, width 1 of formal port tr is not equal to width 32 of actual constant.
+WARNING:  For instance datapath0/sp/, width 1 of formal port l is not equal to width 32 of actual constant.
+WARNING:  For instance datapath0/sp/, width 1 of formal port t is not equal to width 32 of actual constant.
+WARNING:  For instance datapath0/pc/, width 1 of formal port l is not equal to width 32 of actual constant.
+WARNING:  For instance datapath0/pc/, width 1 of formal port t is not equal to width 32 of actual constant.
+WARNING:  For instance datapath0/pc/, width 16 of formal port resval is not equal to width 32 of actual constant.
+WARNING:  For instance datapath0/isrbuf/, width 1 of formal port tisr is not equal to width 32 of actual constant.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 2.00us
