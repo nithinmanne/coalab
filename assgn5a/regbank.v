@@ -18,26 +18,26 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module regbank(clk, reset, in, bus, rsel, wrr, tr);
+module regbank(clk, reset, in, bus, rsel, wrr, tr, out);
 input clk, reset, wrr, tr;
 input [2:0] rsel;
 input [15:0] in;
-output bus;
-wire [15:0] bus;
+output bus, out;
+wire [15:0] bus, out;
 wire[7:0] a8;
 
 dec decode(rsel,a8);
-regfile rf(wrr,tr,in,bus,clk,reset,a8);
+regfile rf(wrr,tr,in,bus,clk,reset,a8,out);
 
 endmodule
 
-module regfile(wen,ren,din,dout,clk,reset,a8);
+module regfile(wen,ren,din,dout,clk,reset,a8,out);
 input wen,ren,clk,reset;
 input[7:0] a8;
 input[15:0] din;
-output dout;
+output dout, out;
 wire[15:0] dout;
-wire[15:0] outw;
+wire[15:0] outw, out;
 rgtr8 r0(din,outw,clk,wen,reset,a8[0]);
 rgtr8 r1(din,outw,clk,wen,reset,a8[1]);
 rgtr8 r2(din,outw,clk,wen,reset,a8[2]);
@@ -45,7 +45,7 @@ rgtr8 r3(din,outw,clk,wen,reset,a8[3]);
 rgtr8 r4(din,outw,clk,wen,reset,a8[4]);
 rgtr8 r5(din,outw,clk,wen,reset,a8[5]);
 rgtr8 r6(din,outw,clk,wen,reset,a8[6]);
-rgtr8 r7(din,outw,clk,wen,reset,a8[7]);
+rgtr8o r7(din,outw,clk,wen,reset,a8[7], out);
 buffer16 b0(outw, dout, ren);
 endmodule
 
@@ -122,6 +122,29 @@ input[15:0] din;
 input clk,wren,reset,en;
 output wire[15:0] dout;
 wire[15:0] tdout;
+dff d0(wren&en,reset,din[0],clk,tdout[0]);
+dff d1(wren&en,reset,din[1],clk,tdout[1]);
+dff d2(wren&en,reset,din[2],clk,tdout[2]);
+dff d3(wren&en,reset,din[3],clk,tdout[3]);
+dff d4(wren&en,reset,din[4],clk,tdout[4]);
+dff d5(wren&en,reset,din[5],clk,tdout[5]);
+dff d6(wren&en,reset,din[6],clk,tdout[6]);
+dff d7(wren&en,reset,din[7],clk,tdout[7]);
+dff d8(wren&en,reset,din[8],clk,tdout[8]);
+dff d9(wren&en,reset,din[9],clk,tdout[9]);
+dff d10(wren&en,reset,din[10],clk,tdout[10]);
+dff d11(wren&en,reset,din[11],clk,tdout[11]);
+dff d12(wren&en,reset,din[12],clk,tdout[12]);
+dff d13(wren&en,reset,din[13],clk,tdout[13]);
+dff d14(wren&en,reset,din[14],clk,tdout[14]);
+dff d15(wren&en,reset,din[15],clk,tdout[15]);
+buffer16 b1(tdout,dout,en);
+endmodule
+
+module rgtr8o(din,dout,clk,wren,reset,en,tdout);
+input[15:0] din;
+input clk,wren,reset,en;
+output wire[15:0] dout, tdout;
 dff d0(wren&en,reset,din[0],clk,tdout[0]);
 dff d1(wren&en,reset,din[1],clk,tdout[1]);
 dff d2(wren&en,reset,din[2],clk,tdout[2]);

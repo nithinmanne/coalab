@@ -18,16 +18,16 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module datapath(clk, reset, isr, pcout, regw, memw, memin, sflag, spi, pcin, pci);
+module datapath(clk, reset, isr, pcout, regw, memw, memin, sflag, spi, pcin, pci, out);
 input clk, reset, regw, memw, pcin, sflag, pci;
 input [1:0] spi, memin;
 input [15:0] isr;
-output pcout;
-wire [15:0] isr, xisr, x, y, z, maxmem, meminp, spout, spval, pcout, pcval, pcinp, spincout, pcincout;
+output pcout, out;
+wire [15:0] isr, xisr, x, y, z, maxmem, meminp, spout, spval, pcout, pcval, pcinp, spincout, pcincout, out;
 wire c, c2;
 wire [3:0] status;
 
-regbank regbank0(clk, reset, z, x, isr[10:8], regw, 1);
+regbank regbank0(clk, reset, z, x, isr[10:8], regw, 1, out);
 alu alu0(x, y, isr[13:11], z, c, c2);
 memory memory0(clk, spout, meminp, y, memw, maxmem);
 flagff flagff0(clk, reset, c, c2, z, status, sflag);
@@ -41,8 +41,7 @@ signxtenbuf isrbuf(isr, xisr, 1);
 
 assign spincout = (spi==0)?spout:(spi==1?spout+1:spout-1);
 assign pcincout = (pci==0)?pcout+1:(cc==1?pcout+1+xisr:pcout+1);
-assign meminp = (memin==0)?x:(memin==1?pcout:xisr);
-
+assign meminp = (memin==0)?x:(memin==1?pcout+1:xisr);
 
 endmodule
 

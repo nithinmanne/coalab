@@ -1,24 +1,25 @@
-Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/Naganithin Manne/Documents/coalab/assgn5a/top_isim_beh.exe" -prj "C:/Users/Naganithin Manne/Documents/coalab/assgn5a/top_beh.prj" "work.top" "work.glbl" 
-ISim P.49d (signature 0x7708f090)
-Number of CPUs detected in this system: 8
-Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/student/Desktop/1/assgn5a/top_isim_beh.exe" -prj "C:/Users/student/Desktop/1/assgn5a/top_beh.prj" "work.top" "work.glbl" 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Analyzing Verilog file "C:/Users/Naganithin Manne/Documents/coalab/assgn5a/regbank.v" into library work
-Analyzing Verilog file "C:/Users/Naganithin Manne/Documents/coalab/assgn5a/datapath.v" into library work
-Analyzing Verilog file "C:/Users/Naganithin Manne/Documents/coalab/assgn5a/controller.v" into library work
-Analyzing Verilog file "C:/Users/Naganithin Manne/Documents/coalab/assgn5a/top.v" into library work
-Analyzing Verilog file "C:/Xilinx/14.4/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Analyzing Verilog file "C:/Users/student/Desktop/1/assgn5a/regbank.v" into library work
+Analyzing Verilog file "C:/Users/student/Desktop/1/assgn5a/datapath.v" into library work
+Analyzing Verilog file "C:/Users/student/Desktop/1/assgn5a/controller.v" into library work
+Analyzing Verilog file "C:/Users/student/Desktop/1/assgn5a/top.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
-WARNING:HDLCompiler:189 - "C:/Users/Naganithin Manne/Documents/coalab/assgn5a/datapath.v" Line 39: Size mismatch in connection of port <l>. Formal port size is 1-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "C:/Users/Naganithin Manne/Documents/coalab/assgn5a/datapath.v" Line 30: Size mismatch in connection of port <tr>. Formal port size is 1-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "C:/Users/Naganithin Manne/Documents/coalab/assgn5a/datapath.v" Line 38: Size mismatch in connection of port <l>. Formal port size is 1-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "C:/Users/Naganithin Manne/Documents/coalab/assgn5a/datapath.v" Line 40: Size mismatch in connection of port <tisr>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "C:/Users/student/Desktop/1/assgn5a/datapath.v" Line 39: Size mismatch in connection of port <l>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "C:/Users/student/Desktop/1/assgn5a/datapath.v" Line 30: Size mismatch in connection of port <tr>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "C:/Users/student/Desktop/1/assgn5a/datapath.v" Line 38: Size mismatch in connection of port <l>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "C:/Users/student/Desktop/1/assgn5a/datapath.v" Line 40: Size mismatch in connection of port <tisr>. Formal port size is 1-bit while actual signal size is 32-bit.
 Completed static elaboration
 Compiling module controller
 Compiling module dec
 Compiling module dff
 Compiling module buffer16
 Compiling module rgtr8
+Compiling module rgtr8o
 Compiling module regfile
 Compiling module regbank
 Compiling module alu
@@ -34,8 +35,8 @@ Compiling module isrmemory
 Compiling module top
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 1 sub-compilation(s) to finish...
-Compiled 19 Verilog Units
-Built simulation executable C:/Users/Naganithin Manne/Documents/coalab/assgn5a/top_isim_beh.exe
-Fuse Memory Usage: 28576 KB
-Fuse CPU Usage: 702 ms
+Waiting for 2 sub-compilation(s) to finish...
+Compiled 20 Verilog Units
+Built simulation executable C:/Users/student/Desktop/1/assgn5a/top_isim_beh.exe
+Fuse Memory Usage: 28060 KB
+Fuse CPU Usage: 373 ms

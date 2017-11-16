@@ -17,3 +17,5 @@ or r3
 push r3
 not r3
 bnz loop
+push r0
+pop r7

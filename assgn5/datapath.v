@@ -31,27 +31,30 @@ alu alu0(x, y, isr3[13:11], z, c, c2);
 ccgen ccgen0(cc, isr3[15:12], status);
 flagff flagff0(clk, reset, c, c2, z, status, sflag);
 
-pipreg pipisr(clk&stl, reset, isr, isr1);
-pipreg pipisr1(clk, reset, isr1, isr2);
-pipreg pipisr2(clk, reset, isr2, isr3);
-pipreg pipisr3(clk, reset, isr3, isr4);
-pipreg pipregout(clk, reset, regout, regout1);
-pipreg pipregout1(clk, reset, regout1, x);
-pipreg pipmemout(clk, reset, memout, y);
+pipreg pipisr(clk&stl, reset, isr, isr1, stl);
+pipreg pipisr1(clk, reset, isr1, isr2, 0);
+pipreg pipisr2(clk, reset, isr2, isr3, 0);
+pipreg pipisr3(clk, reset, isr3, isr4, 0);
+pipreg pipregout(clk, reset, regout, regout1, 0);
+pipreg pipregout1(clk, reset, regout1, x, 0);
+pipreg pipmemout(clk, reset, memout, y, 0);
 
 endmodule
 
-module pipreg(clk, reset, in, out);
-input clk, reset;
+module pipreg(clk, reset, in, out, stl);
+input clk, reset, stl;
 input [15:0] in;
 output out;
-reg [15:0] out;
+wire [15:0] out;
+reg [15:0] outr;
+
+assign out = outr&(~stl);
 
 always @(posedge clk)
 if(reset==1)
-out <= 0;
-else
-out <= in;
+outr <= 0;
+else if(stl==0)
+outr <= in;
 endmodule
 
 

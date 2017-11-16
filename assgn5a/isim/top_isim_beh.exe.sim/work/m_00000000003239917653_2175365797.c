@@ -21,11 +21,11 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/Naganithin Manne/Documents/coalab/assgn5a/regbank.v";
+static const char *ng0 = "C:/Users/student/Desktop/1/assgn5a/regbank.v";
 
 
 
-static void Cont_186_0(char *t0)
+static void Cont_209_0(char *t0)
 {
     char t3[8];
     char t5[8];
@@ -198,7 +198,7 @@ LAB0:    t1 = (t0 + 2368U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(186, ng0);
+LAB2:    xsi_set_current_line(209, ng0);
     t2 = (t0 + 1048U);
     t4 = *((char **)t2);
     memset(t5, 0, 8);
@@ -474,7 +474,7 @@ LAB25:    t130 = *((unsigned int *)t118);
 
 }
 
-static void Cont_187_1(char *t0)
+static void Cont_210_1(char *t0)
 {
     char t3[8];
     char t5[8];
@@ -629,7 +629,7 @@ LAB0:    t1 = (t0 + 2616U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(187, ng0);
+LAB2:    xsi_set_current_line(210, ng0);
     t2 = (t0 + 1048U);
     t4 = *((char **)t2);
     memset(t5, 0, 8);
@@ -864,7 +864,7 @@ LAB19:    t112 = *((unsigned int *)t100);
 
 }
 
-static void Cont_188_2(char *t0)
+static void Cont_211_2(char *t0)
 {
     char t3[8];
     char t5[8];
@@ -1019,7 +1019,7 @@ LAB0:    t1 = (t0 + 2864U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(188, ng0);
+LAB2:    xsi_set_current_line(211, ng0);
     t2 = (t0 + 1048U);
     t4 = *((char **)t2);
     memset(t5, 0, 8);
@@ -1254,7 +1254,7 @@ LAB19:    t112 = *((unsigned int *)t100);
 
 }
 
-static void Cont_189_3(char *t0)
+static void Cont_212_3(char *t0)
 {
     char t3[8];
     char t5[8];
@@ -1391,7 +1391,7 @@ LAB0:    t1 = (t0 + 3112U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(189, ng0);
+LAB2:    xsi_set_current_line(212, ng0);
     t2 = (t0 + 1048U);
     t4 = *((char **)t2);
     memset(t5, 0, 8);
@@ -1585,7 +1585,7 @@ LAB13:    t94 = *((unsigned int *)t82);
 
 }
 
-static void Cont_190_4(char *t0)
+static void Cont_213_4(char *t0)
 {
     char t4[8];
     char t12[8];
@@ -1740,7 +1740,7 @@ LAB0:    t1 = (t0 + 3360U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(190, ng0);
+LAB2:    xsi_set_current_line(213, ng0);
     t2 = (t0 + 1048U);
     t3 = *((char **)t2);
     memset(t4, 0, 8);
@@ -1975,7 +1975,7 @@ LAB19:    t112 = *((unsigned int *)t100);
 
 }
 
-static void Cont_191_5(char *t0)
+static void Cont_214_5(char *t0)
 {
     char t4[8];
     char t12[8];
@@ -2112,7 +2112,7 @@ LAB0:    t1 = (t0 + 3608U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(191, ng0);
+LAB2:    xsi_set_current_line(214, ng0);
     t2 = (t0 + 1048U);
     t3 = *((char **)t2);
     memset(t4, 0, 8);
@@ -2306,7 +2306,7 @@ LAB13:    t94 = *((unsigned int *)t82);
 
 }
 
-static void Cont_192_6(char *t0)
+static void Cont_215_6(char *t0)
 {
     char t4[8];
     char t14[8];
@@ -2443,7 +2443,7 @@ LAB0:    t1 = (t0 + 3856U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(192, ng0);
+LAB2:    xsi_set_current_line(215, ng0);
     t2 = (t0 + 1048U);
     t3 = *((char **)t2);
     memset(t4, 0, 8);
@@ -2637,7 +2637,7 @@ LAB13:    t94 = *((unsigned int *)t82);
 
 }
 
-static void Cont_193_7(char *t0)
+static void Cont_216_7(char *t0)
 {
     char t4[8];
     char t14[8];
@@ -2756,7 +2756,7 @@ LAB0:    t1 = (t0 + 4104U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(193, ng0);
+LAB2:    xsi_set_current_line(216, ng0);
     t2 = (t0 + 1048U);
     t3 = *((char **)t2);
     memset(t4, 0, 8);
@@ -2912,7 +2912,7 @@ LAB7:    t76 = *((unsigned int *)t64);
 
 extern void work_m_00000000003239917653_2175365797_init()
 {
-	static char *pe[] = {(void *)Cont_186_0,(void *)Cont_187_1,(void *)Cont_188_2,(void *)Cont_189_3,(void *)Cont_190_4,(void *)Cont_191_5,(void *)Cont_192_6,(void *)Cont_193_7};
+	static char *pe[] = {(void *)Cont_209_0,(void *)Cont_210_1,(void *)Cont_211_2,(void *)Cont_212_3,(void *)Cont_213_4,(void *)Cont_214_5,(void *)Cont_215_6,(void *)Cont_216_7};
 	xsi_register_didat("work_m_00000000003239917653_2175365797", "isim/top_isim_beh.exe.sim/work/m_00000000003239917653_2175365797.didat");
 	xsi_register_executes(pe);
 }

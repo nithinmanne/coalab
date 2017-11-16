@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/Naganithin Manne/Documents/coalab/assgn5a/datapath.v";
+static const char *ng0 = "C:/Users/student/Desktop/1/assgn5a/datapath.v";
 static int ng1[] = {0, 0};
 static int ng2[] = {1, 0};
 static int ng3[] = {2, 0};
@@ -34,7 +34,7 @@ static int ng9[] = {8, 0};
 
 
 
-static void Cont_150_0(char *t0)
+static void Cont_149_0(char *t0)
 {
     char t3[8];
     char t4[8];
@@ -468,7 +468,7 @@ LAB0:    t1 = (t0 + 2528U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(150, ng0);
+LAB2:    xsi_set_current_line(149, ng0);
     t2 = (t0 + 1048U);
     t5 = *((char **)t2);
     t2 = ((char*)((ng1)));
@@ -1399,7 +1399,7 @@ LAB164:    t400 = *((unsigned int *)t389);
 
 extern void work_m_00000000000218258228_3237598232_init()
 {
-	static char *pe[] = {(void *)Cont_150_0};
+	static char *pe[] = {(void *)Cont_149_0};
 	xsi_register_didat("work_m_00000000000218258228_3237598232", "isim/top_isim_beh.exe.sim/work/m_00000000000218258228_3237598232.didat");
 	xsi_register_executes(pe);
 }

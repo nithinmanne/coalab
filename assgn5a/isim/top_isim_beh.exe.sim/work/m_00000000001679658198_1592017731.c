@@ -21,12 +21,12 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/Naganithin Manne/Documents/coalab/assgn5a/top.v";
+static const char *ng0 = "C:/Users/student/Desktop/1/assgn5a/top.v";
 static int ng1[] = {1, 0};
 
 
 
-static void Cont_143_0(char *t0)
+static void Cont_197_0(char *t0)
 {
     char t5[8];
     char *t1;
@@ -62,7 +62,7 @@ LAB0:    t1 = (t0 + 3304U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(143, ng0);
+LAB2:    xsi_set_current_line(197, ng0);
     t2 = (t0 + 2384);
     t3 = (t2 + 56U);
     t4 = *((char **)t3);
@@ -100,7 +100,7 @@ LAB2:    xsi_set_current_line(143, ng0);
 LAB1:    return;
 }
 
-static void Cont_144_1(char *t0)
+static void Cont_198_1(char *t0)
 {
     char *t1;
     char *t2;
@@ -125,7 +125,7 @@ LAB0:    t1 = (t0 + 3552U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(144, ng0);
+LAB2:    xsi_set_current_line(198, ng0);
     t2 = (t0 + 472);
     t3 = *((char **)t2);
     t2 = (t0 + 4280);
@@ -151,7 +151,7 @@ LAB2:    xsi_set_current_line(144, ng0);
 LAB1:    return;
 }
 
-static void Always_146_2(char *t0)
+static void Always_200_2(char *t0)
 {
     char t6[8];
     char t30[8];
@@ -210,7 +210,7 @@ LAB0:    t1 = (t0 + 3800U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(146, ng0);
+LAB2:    xsi_set_current_line(200, ng0);
     t2 = (t0 + 4136);
     *((int *)t2) = 1;
     t3 = (t0 + 3832);
@@ -218,9 +218,9 @@ LAB2:    xsi_set_current_line(146, ng0);
     *((char **)t1) = &&LAB4;
 
 LAB1:    return;
-LAB4:    xsi_set_current_line(147, ng0);
+LAB4:    xsi_set_current_line(201, ng0);
 
-LAB5:    xsi_set_current_line(148, ng0);
+LAB5:    xsi_set_current_line(202, ng0);
     t4 = (t0 + 1344U);
     t5 = *((char **)t4);
     t4 = ((char*)((ng1)));
@@ -264,7 +264,7 @@ LAB8:    t21 = (t6 + 4);
     *((unsigned int *)t21) = 1;
     goto LAB9;
 
-LAB10:    xsi_set_current_line(149, ng0);
+LAB10:    xsi_set_current_line(203, ng0);
     t28 = (t0 + 1664U);
     t29 = *((char **)t28);
     t28 = (t0 + 2384);
@@ -301,7 +301,7 @@ LAB13:    t46 = *((unsigned int *)t30);
 
 extern void work_m_00000000001679658198_1592017731_init()
 {
-	static char *pe[] = {(void *)Cont_143_0,(void *)Cont_144_1,(void *)Always_146_2};
+	static char *pe[] = {(void *)Cont_197_0,(void *)Cont_198_1,(void *)Always_200_2};
 	xsi_register_didat("work_m_00000000001679658198_1592017731", "isim/top_isim_beh.exe.sim/work/m_00000000001679658198_1592017731.didat");
 	xsi_register_executes(pe);
 }
