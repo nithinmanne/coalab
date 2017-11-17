@@ -90,13 +90,13 @@
          <ClosedNode>/top C:|Users|student|Desktop|1|assgn5a|top.v/datapath0 - datapath/sp - specreg</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>controller0 - controller (C:/Users/student/Desktop/1/assgn5a/controller.v)</SelectedItem>
+         <SelectedItem>datapath0 - datapath (C:/Users/student/Desktop/1/assgn5a/datapath.v)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000011c000000020000000000000000000000000200000064ffffffff0000008100000003000000020000011c0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>controller0 - controller (C:/Users/student/Desktop/1/assgn5a/controller.v)</CurrentItem>
+      <CurrentItem>datapath0 - datapath (C:/Users/student/Desktop/1/assgn5a/datapath.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
